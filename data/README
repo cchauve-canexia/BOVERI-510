@@ -1,0 +1,3 @@
+# January 18, 2021
+grep _M runs_indel_testing_18012021.csv > runs_indel_testing_18012021_MiSeq.csv
+grep _NB runs_indel_testing_18012021.csv | grep ,20 > runs_indel_testing_18012021_NextSeq_1.csv
