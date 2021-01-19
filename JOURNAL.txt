@@ -1,0 +1,2 @@
+# 19/01/2021: test runs from cg-clinical
+./bin/analysis_utils.py data/runs_16012021_list.csv results/runs_16012021 | tee trace/runs_16012021.out

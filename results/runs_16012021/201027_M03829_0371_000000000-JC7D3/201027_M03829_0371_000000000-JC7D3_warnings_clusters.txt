@@ -1,0 +1,40 @@
+DNA-23037-CG001Qv42Run228-4_S4.CG001v3.4.130	no read in clusters
+DNA-23037-CG001Qv42Run228-4_S4.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23038-CG001Qv42Run228-5_S5.CG001v3.4.130	no read in clusters
+DNA-23038-CG001Qv42Run228-5_S5.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23100-CG001Qv42Run228-6_S6.CG001v3.4.130	no read in clusters
+DNA-23100-CG001Qv42Run228-6_S6.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23101-CG001Qv42Run228-7_S7.CG001v3.4.130	no read in clusters
+DNA-23101-CG001Qv42Run228-7_S7.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23102-CG001Qv42Run228-8_S8.CG001v3.4.130	no read in clusters
+DNA-23102-CG001Qv42Run228-8_S8.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23103-CG001Qv42Run228-9_S9.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23104-CG001Qv42Run228-10_S10.CG001v3.4.130	no read in clusters
+DNA-23104-CG001Qv42Run228-10_S10.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23105-CG001Qv42Run228-11_S11.CG001v3.4.130	no read in clusters
+DNA-23105-CG001Qv42Run228-11_S11.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23106-CG001Qv42Run228-12_S12.CG001v3.4.130	no read in clusters
+DNA-23106-CG001Qv42Run228-12_S12.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23107-CG001Qv42Run228-13_S13.CG001v3.4.130	no read in clusters
+DNA-23107-CG001Qv42Run228-13_S13.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23108-CG001Qv42Run228-14_S14.CG001v3.4.130	no read in clusters
+DNA-23108-CG001Qv42Run228-14_S14.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23109-CG001Qv42Run228-15_S15.CG001v3.4.130	no read in clusters
+DNA-23109-CG001Qv42Run228-15_S15.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23110-CG001Qv42Run228-16_S16.CG001v3.4.130	no read in clusters
+DNA-23110-CG001Qv42Run228-16_S16.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23111-CG001Qv42Run228-17_S17.CG001v3.4.130	no read in clusters
+DNA-23111-CG001Qv42Run228-17_S17.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23155-CG001Qv42Run228-18_S18.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23156-CG001Qv42Run228-19_S19.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23157-CG001Qv42Run228-20_S20.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23158-CG001Qv42Run228-21_S21.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23159-CG001Qv42Run228-22_S22.CG001v3.4.130	no read in clusters
+DNA-23159-CG001Qv42Run228-22_S22.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-23160-CG001Qv42Run228-23_S23.CG001v4.0.40	ratio of reads in largest cluster:0.0
+NF-CG001Qv42Run228-3_S3.CG001v3.4.130	no read in clusters
+NF-CG001Qv42Run228-3_S3.CG001v4.0.40	ratio of reads in largest cluster:0.0
+QMRS-CG001Qv42Run228-24_S24.CG001v3.4.130	no read in clusters
+QMRS-CG001Qv42Run228-24_S24.CG001v4.0.40	ratio of reads in largest cluster:0.0
+QMRS-CG001Qv42Run228-2_S2.CG001v3.4.130	no read in clusters
+QMRS-CG001Qv42Run228-2_S2.CG001v4.0.40	ratio of reads in largest cluster:0.0

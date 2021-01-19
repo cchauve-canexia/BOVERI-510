@@ -1,0 +1,28 @@
+DNA-26077-CG001Qv42Run261-4_S4.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-26116-CG001Qv42Run261-5_S5.CG001v3.4.130	no read in clusters
+DNA-26116-CG001Qv42Run261-5_S5.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-26117-CG001Qv42Run261-6_S6.CG001v3.4.130	no read in clusters
+DNA-26117-CG001Qv42Run261-6_S6.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-26166-CG001Qv42Run261-7_S7.CG001v3.4.130	no read in clusters
+DNA-26166-CG001Qv42Run261-7_S7.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-26167-CG001Qv42Run261-8_S8.CG001v3.4.130	no read in clusters
+DNA-26167-CG001Qv42Run261-8_S8.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-26168-CG001Qv42Run261-9_S9.CG001v3.4.130	no read in clusters
+DNA-26168-CG001Qv42Run261-9_S9.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-26169-CG001Qv42Run261-10_S10.CG001v3.4.130	no read in clusters
+DNA-26169-CG001Qv42Run261-10_S10.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-26170-CG001Qv42Run261-11_S11.CG001v3.4.130	no read in clusters
+DNA-26170-CG001Qv42Run261-11_S11.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-26171-CG001Qv42Run261-12_S12.CG001v3.4.130	no read in clusters
+DNA-26171-CG001Qv42Run261-12_S12.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-26172-CG001Qv42Run261-13_S13.CG001v3.4.130	no read in clusters
+DNA-26172-CG001Qv42Run261-13_S13.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-26173-CG001Qv42Run261-14_S14.CG001v3.4.130	no read in clusters
+DNA-26173-CG001Qv42Run261-14_S14.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-26174-CG001Qv42Run261-15_S15.CG001v4.0.40	ratio of reads in largest cluster:0.0
+DNA-26175-CG001Qv42Run261-16_S16.CG001v3.4.130	no read in clusters
+DNA-26175-CG001Qv42Run261-16_S16.CG001v4.0.40	ratio of reads in largest cluster:0.0
+NF-CG001Qv42Run261-3_S3.CG001v3.4.130	no read in clusters
+NF-CG001Qv42Run261-3_S3.CG001v4.0.40	ratio of reads in largest cluster:0.0
+QMRS-CG001Qv42Run261-2_S2.CG001v3.4.130	no read in clusters
+QMRS-CG001Qv42Run261-2_S2.CG001v4.0.40	ratio of reads in largest cluster:0.0
