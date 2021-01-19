@@ -1,6 +1,6 @@
 sample	chr	pos	ref	alt	VAF	source_coverage	total_coverage	max_coverage	source	annotation
-NF-CG001Qv42Run251-3_S3	chr12	25398298	CA	C	0.00581	2926	17	13	CG001v3.4.56	frameshift_variant|HIGH|KRAS,frameshift_variant|HIGH|KRAS
-NF-CG001Qv42Run251-3_S3	chr12	25398299	A	GC	0.00581	2926	17	13	CG001v3.4.56	frameshift_variant&missense_variant|HIGH|KRAS,frameshift_variant&missense_variant|HIGH|KRAS
-NF-CG001Qv42Run251-3_S3	chr12	25398297	C	CCG	0.00581	2926	17	13	CG001v3.4.56	frameshift_variant|HIGH|KRAS,frameshift_variant|HIGH|KRAS
-QMRS-CG001Qv42Run251-2_S2	chr3	41266133	CCTT	C	0.08374	8682	727	662	CG001v3.4.13	conservative_inframe_deletion|MODERATE|CTNNB1,conservative_inframe_deletion|MODERATE|CTNNB1,conservative_inframe_deletion|MODERATE|CTNNB1
-QMRS-CG001Qv42Run251-2_S2	chr7	55242464	AGGAATTAAGAGAAGC	A	0.02026	2912	59	54	CG001v3.4.20	disruptive_inframe_deletion|MODERATE|EGFR,downstream_gene_variant|MODIFIER|EGFR-AS1,downstream_gene_variant|MODIFIER|EGFR
+NF-CG001Qv42Run251-3_S3	chr12	25398298	CA	C	0.00581	2926	17	13	CG001v3.4.56	frameshift_variant|HIGH|KRAS
+NF-CG001Qv42Run251-3_S3	chr12	25398299	A	GC	0.00581	2926	17	13	CG001v3.4.56	frameshift_variant&missense_variant|HIGH|KRAS
+NF-CG001Qv42Run251-3_S3	chr12	25398297	C	CCG	0.00581	2926	17	13	CG001v3.4.56	frameshift_variant|HIGH|KRAS
+QMRS-CG001Qv42Run251-2_S2	chr3	41266133	CCTT	C	0.08374	8682	727	662	CG001v3.4.13	conservative_inframe_deletion|MODERATE|CTNNB1
+QMRS-CG001Qv42Run251-2_S2	chr7	55242464	AGGAATTAAGAGAAGC	A	0.02026	2912	59	54	CG001v3.4.20	downstream_gene_variant|MODIFIER|EGFR-AS1,disruptive_inframe_deletion|MODERATE|EGFR,downstream_gene_variant|MODIFIER|EGFR
