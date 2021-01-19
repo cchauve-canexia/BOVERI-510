@@ -76,5 +76,5 @@ if __name__ == "__main__":
         cmd_options += ['\"--input_dir\"', f"\"s3://{args.s3_bucket}/input/\""]
         cmd_options += ['\"-resume\"']
         aws_cmd += [','.join(cmd_options)]
-        aws_cmd += ['--region ca-central-1']
+        aws_cmd += ['--region', 'ca-central-1']
         subprocess.call(aws_cmd)
