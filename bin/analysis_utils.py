@@ -206,6 +206,7 @@ def extract_vcf_files(run_id,
     :param: v_type (str): SNPS or INDELS
     :param: prefix (str): prefix of the output directory
     :param: to_dump (bool): if True a dump file is created
+    :param: to_keep (bool): if True VCF file from the archive are not deleted
     """
     files = get_files_in_s3(run_id)
     for f in files:
@@ -280,10 +281,10 @@ if __name__ == "__main__":
     for run_id in runs_list:
         os.makedirs(out_dir(run_id, args.output_dir), exist_ok=True)
         # Extracting indels calls
-        # extract_vcf_files(run_id,
-        #                   v_type=INDELS,
-        #                   prefix=args.output_dir,
-        #                   to_dump=True,
-        #                   to_keep=False)
+        extract_vcf_files(run_id,
+                          v_type=INDELS,
+                          prefix=args.output_dir,
+                          to_dump=True,
+                          to_keep=False)
         # Extracting warnings
         extract_main_warnings(run_id, prefix=args.output_dir)
