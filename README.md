@@ -8,9 +8,9 @@ The repo contains two main scripts:
 - bin/run_utils.py to launch AWS jobs
 - bin/analysus_utils.py to retrieve results
 
-To start jobs:
-bin/run_utils runs_csv_file s3_bucket_input branch -o s3_bucket_output[OPTIONAL] -d aws_def[OPTIONAL] -q aws_queue[OPTIONAL]
-where
+To start jobs:  
+bin/run_utils runs_csv_file s3_bucket_input branch -o s3_bucket_output[OPTIONAL] -d aws_def[OPTIONAL] -q aws_queue[OPTIONAL]  
+where  
 - run_csv_file is a csv file with two fields: Run, ID
   (e.g. CG001Qv40Run10,180808_M03829_0152_000000000-BWL8C)
 - branch is a branch of indels-pipeline (for MSI: BOVERI-515)
@@ -23,16 +23,18 @@ where
 
 The script parses the beginning of Run to identify the amplicon manifest to use.
 
-To run it on the runs for testing MSI amplicons:
-bin/run_utils data/Runs_to_run_indel_caller_with_MSI_amplicons.csv ch-testdata/input BOVERI-515
+To run it on the runs for testing MSI amplicons:  
+bin/run_utils data/Runs_to_run_indel_caller_with_MSI_amplicons.csv ch-testdata/input BOVERI-515  
 
-The retrieve results
-bin/analysis_utils runs_csv_file output_dir -s3 s3_bucket[OPTIONAL]
-s3_bucket is an optional parameter (default 'cchauve-orchestration-ch')
+To retrieve results  
+bin/analysis_utils runs_csv_file output_dir -s3 s3_bucket[OPTIONAL]  
+where s3_bucket is an optional parameter (default 'cchauve-orchestration-ch')
 that specifies in which directory of s3:// to fetch the results of the indels
 pipeline.
+
+
 For each run in runs_csv_file, the script stores in output_dir/run_id six TSV
-files:
+files:  
 - <run_id>_indels_dump.tsv: indels calls in short format
 - <run_id>_warnings_reads.tsv: warnings raised while processing reads
 - <run_id>_warnings_clusters.tsv: warnings raised while creating read clusters
