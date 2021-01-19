@@ -1,7 +1,7 @@
 # BOVERI-510
 ## Process testing runs with indel NextFlow pipeline
 
-This repo contains scripts to launch AWs jobs for the indels pipeline and
+This repo contains scripts to launch AWS jobs for the indels pipeline and
 retrieve the results.
 
 The repo contains two main scripts:
@@ -9,13 +9,22 @@ The repo contains two main scripts:
 - bin/analysus_utils.py to retrieve results
 
 To start jobs:
-bin/run_utils runs_csv_file branch
-where run_csv_file is a csv file with two fields: Run, ID
-(e.g. CG001Qv40Run10,180808_M03829_0152_000000000-BWL8C)
+bin/run_utils runs_csv_file s3_bucket_input branch -o s3_bucket_output[OPTIONAL] -d aws_def[OPTIONAL] -q aws_queue[OPTIONAL]
+where
+- run_csv_file is a csv file with two fields: Run, ID
+  (e.g. CG001Qv40Run10,180808_M03829_0152_000000000-BWL8C)
+- branch is a branch of indels-pipeline (for MSI: BOVERI-515)
+- s3_bucket_output is the s3 directory that will contain one directory per run with the output
+  (default value in nextflow.config in repo indels-pipeline)
+- aws_def is the value for the option --job-definition of aws
+  (default: cchauve)
+- aws_queue is the value for the option --job-queue of aws
+  (default: cchauve-orchestration-default)
+
 The script parses the beginning of Run to identify the amplicon manifest to use.
 
 To run it on the runs for testing MSI amplicons:
-bin/run_utils data/Runs_to_run_indel_caller_with_MSI_amplicons.csv BOVERI-515
+bin/run_utils data/Runs_to_run_indel_caller_with_MSI_amplicons.csv ch-testdata/input BOVERI-515
 
 The retrieve results
 bin/analysis_utils runs_csv_file output_dir -s3 s3_bucket[OPTIONAL]

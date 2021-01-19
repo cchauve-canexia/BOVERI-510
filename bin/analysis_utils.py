@@ -293,8 +293,10 @@ if __name__ == "__main__":
                         help=ARGS_S3_BUCKET[2])
     args = parser.parse_args()
 
-    if not args.s3_bucket:
+    if args.s3_bucket is None:
         s3_bucket = CCHAUVE_S3_OUTPUT
+    else:
+        s3_bucket = args.s3_bucket
 
     runs_list = get_runs_list(args.runs_csv_file)
     for run_id in runs_list:

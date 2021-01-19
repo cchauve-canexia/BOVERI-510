@@ -49,23 +49,51 @@ if __name__ == "__main__":
     # Input file
     ARGS_RUNS_FILE = ['runs_csv_file', None, 'Runs CSV file']
     # S3 bucket where the input data is located
-    ARGS_INPUT_BUCKET = ['s3_bucket', None, 'Input S3 bucket']
+    ARGS_INPUT_BUCKET = ['s3_input', None, 'Input S3 bucket directory']
     # Branch to use
     ARGS_BRANCH = ['branch', None, 'indels-pipeline branch']
+    # S3 directory where to store the results
+    ARGS_OUTPUT_BUCKET = ['-o', '--s3_output', 'output S3 bucket directory']
+    # AWS def
+    ARGS_AWS_DEF = ['-d', '--aws_def', 'AWS definition']
+    # AWS queue
+    ARGS_AWS_QUEUE = ['-q', '--aws_queue', 'AWS queue']
+
     parser = argparse.ArgumentParser(description='Indels pipeline: run on AWS')
     parser.add_argument(ARGS_RUNS_FILE[0], type=str, help=ARGS_RUNS_FILE[2])
     parser.add_argument(ARGS_INPUT_BUCKET[0],
                         type=str,
                         help=ARGS_INPUT_BUCKET[2])
     parser.add_argument(ARGS_BRANCH[0], type=str, help=ARGS_BRANCH[2])
+    parser.add_argument(ARGS_OUTPUT_BUCKET[0],
+                        ARGS_OUTPUT_BUCKET[1],
+                        type=str,
+                        help=ARGS_OUTPUT_BUCKET[2])
+    parser.add_argument(ARGS_AWS_DEF[0],
+                        ARGS_AWS_DEF[1],
+                        type=str,
+                        help=ARGS_AWS_DEF[2])
+    parser.add_argument(ARGS_AWS_QUEUE[0],
+                        ARGS_AWS_QUEUE[1],
+                        type=str,
+                        help=ARGS_AWS_QUEUE[2])
     args = parser.parse_args()
+
+    if args.aws_def is None:
+        aws_def = AWS_DEF
+    else:
+        aws_def = args.aws_def
+    if args.aws_queue is None:
+        aws_queue = AWS_QUEUE
+    else:
+        aws_queue = args.aws_queue
 
     runs_manifests_list = get_runs_manifests_list(args.runs_csv_file)
     for (run_id, manifest) in runs_manifests_list:
         aws_cmd = ['aws', 'batch', 'submit-job']
         aws_cmd += ['--job-name', run_id]
-        aws_cmd += ['--job-queue', AWS_QUEUE]
-        aws_cmd += ['--job-definition', AWS_DEF]
+        aws_cmd += ['--job-queue', aws_queue]
+        aws_cmd += ['--job-definition', aws_def]
         aws_cmd += ['--container-overrides']
         cmd_options = ['command=contextual-genomics/indels-pipeline']
         cmd_options += ['\"-r\"', f"\"{args.branch}\""]
@@ -73,7 +101,9 @@ if __name__ == "__main__":
         cmd_options += ['\"--manifest\"', f"\"{manifest}\""]
         cmd_options += ['\"--snpeff_path\"', '\"/opt/snpEff\"']
         cmd_options += ['\"--publish_dir_name\"', f"\"{run_id}\""]
-        cmd_options += ['\"--input_dir\"', f"\"s3://{args.s3_bucket}/input/\""]
+        cmd_options += ['\"--input_dir\"', f"\"s3://{args.s3_input}/\""]
+        if args.s3_output is not None:
+            cmd_options += ['\"--output_dir\"', f"\"s3://{args.s3_output}/\""]
         cmd_options += ['\"-resume\"']
         aws_cmd += [','.join(cmd_options)]
         aws_cmd += ['--region', 'ca-central-1']
