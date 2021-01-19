@@ -71,29 +71,22 @@ if __name__ == "__main__":
                         help=ARGS_OUTPUT_BUCKET[2])
     parser.add_argument(ARGS_AWS_DEF[0],
                         ARGS_AWS_DEF[1],
+                        default=AWS_DEF,
                         type=str,
                         help=ARGS_AWS_DEF[2])
     parser.add_argument(ARGS_AWS_QUEUE[0],
                         ARGS_AWS_QUEUE[1],
+                        default=AWS_QUEUE,
                         type=str,
                         help=ARGS_AWS_QUEUE[2])
     args = parser.parse_args()
-
-    if args.aws_def is None:
-        aws_def = AWS_DEF
-    else:
-        aws_def = args.aws_def
-    if args.aws_queue is None:
-        aws_queue = AWS_QUEUE
-    else:
-        aws_queue = args.aws_queue
 
     runs_manifests_list = get_runs_manifests_list(args.runs_csv_file)
     for (run_id, manifest) in runs_manifests_list:
         aws_cmd = ['aws', 'batch', 'submit-job']
         aws_cmd += ['--job-name', run_id]
-        aws_cmd += ['--job-queue', aws_queue]
-        aws_cmd += ['--job-definition', aws_def]
+        aws_cmd += ['--job-queue', args.aws_queue]
+        aws_cmd += ['--job-definition', args.aws_def]
         aws_cmd += ['--container-overrides']
         cmd_options = ['command=contextual-genomics/indels-pipeline']
         cmd_options += ['\"-r\"', f"\"{args.branch}\""]
