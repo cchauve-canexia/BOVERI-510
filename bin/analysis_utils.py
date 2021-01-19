@@ -289,14 +289,10 @@ if __name__ == "__main__":
     parser.add_argument(ARGS_OUTPUT_DIR[0], type=str, help=ARGS_OUTPUT_DIR[2])
     parser.add_argument(ARGS_S3_BUCKET[0],
                         ARGS_S3_BUCKET[1],
+                        default=CCHAUVE_S3_OUTPUT,
                         type=str,
                         help=ARGS_S3_BUCKET[2])
     args = parser.parse_args()
-
-    if args.s3_bucket is None:
-        s3_bucket = CCHAUVE_S3_OUTPUT
-    else:
-        s3_bucket = args.s3_bucket
 
     runs_list = get_runs_list(args.runs_csv_file)
     for run_id in runs_list:
@@ -307,8 +303,8 @@ if __name__ == "__main__":
                           prefix=args.output_dir,
                           to_dump=True,
                           to_keep=False,
-                          s3_bucket=s3_bucket)
+                          s3_bucket=args.s3_bucket)
         # Extracting warnings
         extract_main_warnings(run_id,
                               prefix=args.output_dir,
-                              s3_bucket=s3_bucket)
+                              s3_bucket=args.s3_bucket)
