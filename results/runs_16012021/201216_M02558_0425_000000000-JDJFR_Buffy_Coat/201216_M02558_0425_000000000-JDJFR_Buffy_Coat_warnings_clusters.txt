@@ -1,6 +1,0 @@
-DNA-25304-CG001Qv42Run251-24_S24.CG001v3.4.130	no read in clusters
-DNA-25304-CG001Qv42Run251-24_S24.CG001v4.0.40	ratio of reads in largest cluster:0.0
-NF-CG001Qv42Run251-3_S3.CG001v3.4.130	no read in clusters
-NF-CG001Qv42Run251-3_S3.CG001v4.0.40	ratio of reads in largest cluster:0.0
-QMRS-CG001Qv42Run251-2_S2.CG001v3.4.130	no read in clusters
-QMRS-CG001Qv42Run251-2_S2.CG001v4.0.40	ratio of reads in largest cluster:0.0
