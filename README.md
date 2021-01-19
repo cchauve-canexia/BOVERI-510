@@ -18,7 +18,7 @@ To run it on the runs for testing MSI amplicons:
 bin/run_utils data/Runs_to_run_indel_caller_with_MSI_amplicons.csv BOVERI-515
 
 The retrieve results
-bin/analysis_utils runs_csv_file output_dir -s s3_bucket[OPTIONAL]
+bin/analysis_utils runs_csv_file output_dir -s3 s3_bucket[OPTIONAL]
 s3_bucket is an optional parameter (default 'cchauve-orchestration-ch')
 that specifies in which directory of s3:// to fetch the results of the indels
 pipeline.

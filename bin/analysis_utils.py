@@ -282,11 +282,15 @@ if __name__ == "__main__":
     # Results directory
     ARGS_OUTPUT_DIR = ['output_dir', None, 'Output directory']
     # S3 bucket containing the reuslts
-    ARGS_RUNS_FILE = ['-s3', 's3_bucket', 'S3 bucket containing the results']
+    ARGS_S3_BUCKET = ['-s3', '--s3_bucket', 'S3 bucket containing the results']
     parser = argparse.ArgumentParser(
         description='Indels pipeline: analysis of results on AWS')
     parser.add_argument(ARGS_RUNS_FILE[0], type=str, help=ARGS_RUNS_FILE[2])
     parser.add_argument(ARGS_OUTPUT_DIR[0], type=str, help=ARGS_OUTPUT_DIR[2])
+    parser.add_argument(ARGS_S3_BUCKET[0],
+                        ARGS_S3_BUCKET[1],
+                        type=str,
+                        help=ARGS_S3_BUCKET[2])
     args = parser.parse_args()
 
     if not args.s3_bucket:
