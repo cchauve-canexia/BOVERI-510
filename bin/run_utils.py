@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 """
 Functions to run the indels pipeline on AWS for a list of runs
 """
@@ -20,6 +19,7 @@ MANIFEST_KEY_LG = len(list(MANIFESTS.keys())[0])
 AWS_QUEUE = 'cchauve-orchestration-default'
 AWS_DEF = 'cchauve'
 
+
 def get_runs_manifests_list(runs_csv_file):
     """
     Get from a CSV file containing runs ID and runs name a list of pairs
@@ -39,11 +39,12 @@ def get_runs_manifests_list(runs_csv_file):
             result.append((run_id, manifest))
     return result
 
+
 if __name__ == "__main__":
     """
-    Reads a list of runs_id,run_names in a CSV file, a branch for the indels-pipeline
-    and an s3 bucket input directory and run the indels pipeline on AWS for all
-    the runs in the list.
+    Reads a list of runs_id,run_names in a CSV file, a branch for the
+    indels-pipeline and an s3 bucket input directory and run the indels
+    pipeline on AWS for all the runs in the list.
     """
     # Input file
     ARGS_RUNS_FILE = ['runs_csv_file', None, 'Runs CSV file']
@@ -53,7 +54,9 @@ if __name__ == "__main__":
     ARGS_BRANCH = ['branch', None, 'indels-pipeline branch']
     parser = argparse.ArgumentParser(description='Indels pipeline: run on AWS')
     parser.add_argument(ARGS_RUNS_FILE[0], type=str, help=ARGS_RUNS_FILE[2])
-    parser.add_argument(ARGS_INPUT_BUCKET[0], type=str, help=ARGS_INPUT_BUCKET[2])
+    parser.add_argument(ARGS_INPUT_BUCKET[0],
+                        type=str,
+                        help=ARGS_INPUT_BUCKET[2])
     parser.add_argument(ARGS_BRANCH[0], type=str, help=ARGS_BRANCH[2])
     args = parser.parse_args()
 
