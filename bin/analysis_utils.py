@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Functions to analyze the results of a run of the indels pipeline on AWS
 """
@@ -27,7 +28,7 @@ SNPS_FILE_SUFFIX = '_snps_filtered_snpeff.vcf'
 SNPS_FILE_SUFFIX_TGZ = f"{SNPS_FILE_SUFFIX}.tar.gz"
 FILTERS_LOG_FILE_SUFFIX = '_samples_filters.log'
 MAIN_FILE_SUFFIX = '_main.tar.gz'
-MAIN_LOG_FILE_DUFFIX = '_main.log'
+MAIN_LOG_FILE_SUFFIX = '_main.log'
 FASTQ_FILES_SUFFIX = '_annotated.fq.tar.gz'
 
 # Keys to differentiate indels and SNPs
@@ -55,6 +56,15 @@ SOURCE_COV = 'SCOV'
 TOTAL_COV = 'TCOV'
 MAX_COV = 'MCOV'
 SOURCE = 'AMPLICONS'
+
+# Log steps
+WARNINGS_OUTPUT_SUFFIX = {
+    'bin.reads_utils': '_reads.txt',
+    'bin.clusters_utils': '_clusters.txt',
+    'bin.alignments_utils': '_alignments.txt',
+    'bin.variants_utils': '_variants.txt',
+    'bin.variants_graph_utils': '_variants_graph.txt'
+}
 
 
 def get_files_in_s3(run_id):
@@ -217,6 +227,40 @@ def extract_vcf_files(run_id,
             os.remove(vcf_file_tgz)
 
 
+def extract_main_warnings(run_id, prefix='.'):
+    """
+    Reads main_log files of run run_id
+    :param: run_id (str): ID of the run
+    :param: prefix (str): prefix of the output directory
+    """
+    files = get_files_in_s3(run_id)
+    for warning_suffix in WARNINGS_OUTPUT_SUFFIX.values():
+        warning_out_path = os.path.join(out_dir(run_id, prefix),
+                                        f"{run_id}_warnings{warning_suffix}")
+        warning_out = open(warning_out_path, 'w')
+        warning_out.close()
+    warning_out_file = {}
+    for f in files:
+        if f.endswith(MAIN_LOG_FILE_SUFFIX):
+            for warning_key, warning_suffix in WARNINGS_OUTPUT_SUFFIX.items():
+                warning_out_path = os.path.join(
+                    out_dir(run_id, prefix),
+                    f"{run_id}_warnings{warning_suffix}")
+                warning_out_file[warning_key] = open(warning_out_path, 'a')
+            s3_file_path = os.path.join('s3://', S3_OUTPUT, f)
+            log_file = open(s3_file_path, 'r').readlines()
+            for line in log_file:
+                line_split = line.rstrip().split('\t')
+                if line_split[1] == '[WARNING]':
+                    step, sample_amplicon = line_split[2].split()
+                    msg = line_split[3]
+                    if sample_amplicon[0:5].lower() != 'blank':
+                        warning_out_file[step].write(
+                            f"{sample_amplicon}\t{msg}\n")
+            for warning_key, warning_out in warning_out_file.items():
+                warning_out.close()
+
+
 if __name__ == "__main__":
     """
     Reads a list of runs_id,run_names in a CSV file, and creates summaries of
@@ -236,8 +280,10 @@ if __name__ == "__main__":
     for run_id in runs_list:
         os.makedirs(out_dir(run_id, args.output_dir), exist_ok=True)
         # Extracting indels calls
-        extract_vcf_files(run_id,
-                          v_type=INDELS,
-                          prefix=args.output_dir,
-                          to_dump=True,
-                          to_keep=False)
+        # extract_vcf_files(run_id,
+        #                   v_type=INDELS,
+        #                   prefix=args.output_dir,
+        #                   to_dump=True,
+        #                   to_keep=False)
+        # Extracting warnings
+        extract_main_warnings(run_id, prefix=args.output_dir)
