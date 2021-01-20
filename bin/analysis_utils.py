@@ -67,7 +67,7 @@ WARNINGS_OUTPUT_SUFFIX = {
 }
 
 
-def get_files_in_s3(run_id, s3_bucket=CCHAUVE_S3_OUTPUT):
+def get_files_in_s3(run_id, s3_bucket):
     """
     Get a list of files from the indels pipeline output of a run.
     :param: run_id (str): e.g. 201014_M03829_0366_000000000-JBV6Y
@@ -75,6 +75,7 @@ def get_files_in_s3(run_id, s3_bucket=CCHAUVE_S3_OUTPUT):
     e.g. 'cchauve-orchestration-ch'
 
     :return: list(str): file paths of files for the output of run run_id
+    None if the directory is empty or does not exist
     """
     s3_client = boto3.client('s3')
     s3_objects = s3_client.list_objects_v2(Bucket=s3_bucket,
@@ -101,7 +102,7 @@ def get_runs_list(runs_csv_file):
     return result
 
 
-def get_samples_list(run_id, s3_bucket=CCHAUVE_S3_OUTPUT):
+def get_samples_list(run_id, s3_bucket):
     """
     Returns the list of samples for run run_id
     :params: run_id (str): ID of the run
@@ -205,20 +206,20 @@ def dump_file(run_id, prefix, v_type, init=True):
 
 def extract_vcf_files(run_id,
                       files,
+                      s3_bucket,
                       v_type=INDELS,
                       prefix='.',
                       to_dump=False,
-                      to_keep=True,
-                      s3_bucket=CCHAUVE_S3_OUTPUT):
+                      to_keep=True):
     """
     Reads indels files of run run_id
     :param: run_id (str): ID of the run
     :param" files (list(str)): list of s3 files for run_id
+    :param: s3_bucket (str): s3 bucket where to fetch the results
     :param: v_type (str): SNPS or INDELS
     :param: prefix (str): prefix of the output directory
     :param: to_dump (bool): if True a dump file is created
     :param: to_keep (bool): if True VCF file from the archive are not deleted
-    :param: s3_bucket (str): s3 bucket where to fetch the results
     """
     for f in files:
         if f.endswith(CALLS_FILE_SUFFIX_TGZ[v_type]):
@@ -239,16 +240,13 @@ def extract_vcf_files(run_id,
             os.remove(vcf_file_tgz)
 
 
-def extract_main_warnings(run_id,
-                          files,
-                          prefix='.',
-                          s3_bucket=CCHAUVE_S3_OUTPUT):
+def extract_main_warnings(run_id, files, s3_bucket, prefix='.'):
     """
     Reads main_log files of run run_id
     :param: run_id (str): ID of the run
     :param" files (list(str)): list of s3 files for run_id
-    :param: prefix (str): prefix of the output directory
     :param: s3_bucket (str): s3 bucket where to fetch the results
+    :param: prefix (str): prefix of the output directory
     """
     for warning_suffix in WARNINGS_OUTPUT_SUFFIX.values():
         warning_out_path = os.path.join(out_dir(run_id, prefix),
@@ -309,13 +307,13 @@ if __name__ == "__main__":
             # Extracting indels calls
             extract_vcf_files(run_id,
                               s3_files,
+                              args.s3_bucket,
                               v_type=INDELS,
                               prefix=args.output_dir,
                               to_dump=True,
-                              to_keep=False,
-                              s3_bucket=args.s3_bucket)
+                              to_keep=False)
             # Extracting warnings
             extract_main_warnings(run_id,
                                   s3_files,
-                                  prefix=args.output_dir,
-                                  s3_bucket=args.s3_bucket)
+                                  args.s3_bucket,
+                                  prefix=args.output_dir)
