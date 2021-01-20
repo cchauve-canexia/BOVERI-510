@@ -10,3 +10,8 @@ Runs available on s3://cg-clinical/input and processed on January 16, 2021.
 runs_16012021_list.txt
 runs_16012021_list.csv
 
+# January 20, 2021
+Some runs from runs_indel_testing_18012021_MiSeq.csv did fail for unexplained reasons.
+They are listed in runs_indel_testing_18012021_MiSeq_run1_fail.txt.
+The corresponding csv file runs_indel_testing_18012021_MiSeq_run1_fail_retry.csv is obtained with
+./extract_runs_to_retry.py runs_indel_testing_18012021_MiSeq.csv runs_indel_testing_18012021_MiSeq_run1_fail.txt
