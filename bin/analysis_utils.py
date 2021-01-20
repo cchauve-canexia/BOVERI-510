@@ -81,7 +81,7 @@ def get_files_in_s3(run_id, s3_bucket=CCHAUVE_S3_OUTPUT):
                                            Prefix=run_id + '/')
     if s3_objects['KeyCount'] == 0:
         return None
-    return [obj['Key'] for obj in s3_objects]
+    return [obj['Key'] for obj in s3_objects['Content']]
 
 
 def get_runs_list(runs_csv_file):
