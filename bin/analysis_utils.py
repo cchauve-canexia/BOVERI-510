@@ -102,14 +102,13 @@ def get_runs_list(runs_csv_file):
     return result
 
 
-def get_samples_list(run_id, s3_bucket):
+def get_samples_list(files):
     """
     Returns the list of samples for run run_id
-    :params: run_id (str): ID of the run
+    :param" files (list(str)): list of s3 files for the considered run
 
     :return: list(str): list of sample IDs
     """
-    files = get_files_in_s3(run_id, s3_bucket)
     samples_list = []
     for f in files:
         if f.endswith(MAIN_FILE_SUFFIX):
@@ -229,7 +228,7 @@ def extract_vcf_files(run_id,
                          'r:gz').extractall(path=out_dir(run_id, prefix))
             if to_dump:
                 out_dump_file = dump_file(run_id, prefix, v_type, init=True)
-                for sample_id in get_samples_list(run_id):
+                for sample_id in get_samples_list(files):
                     in_vcf = sample_vcf_file(run_id, sample_id, prefix, v_type)
                     dump_vcf_file(sample_id,
                                   in_vcf,
