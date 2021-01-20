@@ -29,11 +29,15 @@ if __name__ == "__main__":
     retry_csv_file_name = args.failed_runs_txt_file.replace(
         '.txt', '_retry.csv')
     retry_csv_file = open(retry_csv_file_name, 'w')
-    retry_csv_file.write('Run, ID')
+    first_entry = True
     with open(args.runs_csv_file) as csvfile:
         runs_data = csv.reader(csvfile, delimiter=',')
         for row in runs_data:
             run_id = row[1]
             if run_id in failed_runs:
-                retry_csv_file.write(f"\n{row[0]},{row[1]}")
+                if first_entry:
+                    retry_csv_file.write(f"{row[0]},{row[1]}")
+                    first_entry = False
+                else:
+                    retry_csv_file.write(f"\n{row[0]},{row[1]}")
     retry_csv_file.close()
