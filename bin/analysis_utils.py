@@ -74,15 +74,19 @@ def get_files_in_s3(run_id, s3_bucket):
     :param: s3_bucket (ste): S3 bucket containing results,
     e.g. 'cchauve-orchestration-ch'
 
-    :return: list(str): file paths of files for the output of run run_id
-    None if the directory is empty or does not exist
+    :return: generator for list(str): file paths of files for the output of
+    run run_id; None if the directory is empty or does not exist
     """
-    s3_client = boto3.client('s3')
-    s3_objects = s3_client.list_objects_v2(Bucket=s3_bucket,
-                                           Prefix=run_id + '/')
-    if s3_objects['KeyCount'] == 0:
-        return None
-    return [obj['Key'] for obj in s3_objects['Contents']]
+    s3 = boto3.client('s3')
+    paginator = s3.get_paginator('list_objects_v2')
+    kwargs = {'Bucket': s3_bucket, 'Prefix': run_id}
+    for page in paginator.paginate(**kwargs):
+        try:
+            contents = page['Contents']
+        except KeyError:
+            break
+        for obj in contents:
+            yield obj
 
 
 def get_runs_list(runs_csv_file):
