@@ -77,12 +77,11 @@ def get_files_in_s3(run_id, s3_bucket=CCHAUVE_S3_OUTPUT):
     :return: list(str): file paths of files for the output of run run_id
     """
     s3_client = boto3.client('s3')
-    files = [
-        obj['Key']
-        for obj in s3_client.list_objects_v2(Bucket=s3_bucket,
-                                             Prefix=run_id + '/')['Contents']
-    ]
-    return files
+    s3_objects = s3_client.list_objects_v2(Bucket=s3_bucket,
+                                           Prefix=run_id + '/')
+    if s3_objects['KeyCount'] == 0:
+        return None
+    return [obj['Key'] for obj in s3_objects]
 
 
 def get_runs_list(runs_csv_file):
@@ -205,6 +204,7 @@ def dump_file(run_id, prefix, v_type, init=True):
 
 
 def extract_vcf_files(run_id,
+                      files,
                       v_type=INDELS,
                       prefix='.',
                       to_dump=False,
@@ -213,12 +213,13 @@ def extract_vcf_files(run_id,
     """
     Reads indels files of run run_id
     :param: run_id (str): ID of the run
+    :param" files (list(str)): list of s3 files for run_id
     :param: v_type (str): SNPS or INDELS
     :param: prefix (str): prefix of the output directory
     :param: to_dump (bool): if True a dump file is created
     :param: to_keep (bool): if True VCF file from the archive are not deleted
+    :param: s3_bucket (str): s3 bucket where to fetch the results
     """
-    files = get_files_in_s3(run_id, s3_bucket)
     for f in files:
         if f.endswith(CALLS_FILE_SUFFIX_TGZ[v_type]):
             subprocess.call(AWS_CP + [f"s3://{s3_bucket}/{f}", '.'])
@@ -238,13 +239,17 @@ def extract_vcf_files(run_id,
             os.remove(vcf_file_tgz)
 
 
-def extract_main_warnings(run_id, prefix='.', s3_bucket=CCHAUVE_S3_OUTPUT):
+def extract_main_warnings(run_id,
+                          files,
+                          prefix='.',
+                          s3_bucket=CCHAUVE_S3_OUTPUT):
     """
     Reads main_log files of run run_id
     :param: run_id (str): ID of the run
+    :param" files (list(str)): list of s3 files for run_id
     :param: prefix (str): prefix of the output directory
+    :param: s3_bucket (str): s3 bucket where to fetch the results
     """
-    files = get_files_in_s3(run_id, s3_bucket)
     for warning_suffix in WARNINGS_OUTPUT_SUFFIX.values():
         warning_out_path = os.path.join(out_dir(run_id, prefix),
                                         f"{run_id}_warnings{warning_suffix}")
@@ -297,14 +302,20 @@ if __name__ == "__main__":
     runs_list = get_runs_list(args.runs_csv_file)
     for run_id in runs_list:
         os.makedirs(out_dir(run_id, args.output_dir), exist_ok=True)
-        # Extracting indels calls
-        extract_vcf_files(run_id,
-                          v_type=INDELS,
-                          prefix=args.output_dir,
-                          to_dump=True,
-                          to_keep=False,
-                          s3_bucket=args.s3_bucket)
-        # Extracting warnings
-        extract_main_warnings(run_id,
+        s3_files = get_files_in_s3(run_id, args.s3_bucket)
+        if s3_files is None:
+            print(f"WARNING: no result file for {run_id}")
+        else:
+            # Extracting indels calls
+            extract_vcf_files(run_id,
+                              s3_files,
+                              v_type=INDELS,
                               prefix=args.output_dir,
+                              to_dump=True,
+                              to_keep=False,
                               s3_bucket=args.s3_bucket)
+            # Extracting warnings
+            extract_main_warnings(run_id,
+                                  s3_files,
+                                  prefix=args.output_dir,
+                                  s3_bucket=args.s3_bucket)
