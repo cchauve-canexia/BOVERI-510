@@ -1,2 +1,7 @@
-# 19/01/2021: test runs from cg-clinical
-./bin/analysis_utils.py data/runs_16012021_list.csv results/runs_16012021 | tee trace/runs_16012021.out
+# January 21, 2021
+
+A first set of runs have been processed from the file data/runs_indel_testing_18012021_MiSeq.csv
+using ad-hoc scripts.
+
+To ensure consistency, they are re-started
+./bin/run_utils.py data/runs_indel_testing_18012021_MiSeq.csv ch-testdata BOVERI-448-nf
