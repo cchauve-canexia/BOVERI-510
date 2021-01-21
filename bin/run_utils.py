@@ -226,7 +226,8 @@ if __name__ == "__main__":
     # Creating a log file located in the same directory than the YAML
     # configuration file and with the same name with .yaml replaced by .log
     _, run_file_name = os.path.split(args.runs_csv_file)
-    log_file_path = os.path.join('log', run_file_name.replace('.csv', '.log'))
+    log_file_path = os.path.join('log',
+                                 run_file_name.replace('.csv', '_input.log'))
     log_file = open(log_file_path, 'w')
 
     runs_manifests_list = get_runs_manifests_list(args.runs_csv_file)
