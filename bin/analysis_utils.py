@@ -5,17 +5,15 @@ Functions to analyze the results of a run of the indels pipeline on AWS
 
 # Standard imports
 import argparse
-import csv
 import os
 import subprocess
 import tarfile
 
 # Third-party imports
-import boto3
-# mMre user friendly version of some parts of boto3
-# Useful for opening files
-# Defaults to regular open when it can
 import vcf
+# Local imports
+from common_utils import (ERROR_RUN_UNPROCESSED, RUN_ID, RUN_SAMPLES, WARNING,
+                          get_files_in_s3)
 from smart_open import open
 
 # Default S3 directory containing results
@@ -29,7 +27,8 @@ SNPS_FILE_SUFFIX_TGZ = f"{SNPS_FILE_SUFFIX}.tar.gz"
 FILTERS_LOG_FILE_SUFFIX = '_samples_filters.log'
 MAIN_FILE_SUFFIX = '_main.tar.gz'
 MAIN_LOG_FILE_SUFFIX = '_main.log'
-FASTQ_FILES_SUFFIX = '_annotated.fq.tar.gz'
+PRE_LOG_FILE_SUFFIX = '_preprocessing.log'
+FASTQ_FILES_SUFFIX = '_L001_annotated.fq.tar.gz'
 
 # Keys to differentiate indels and SNPs
 INDELS, SNPS = 'indels', 'snps'
@@ -67,61 +66,95 @@ WARNINGS_OUTPUT_SUFFIX = {
 }
 
 
-def get_files_in_s3(run_id, s3_bucket):
+def out_dir(run_id, prefix):
     """
-    Get a list of files from the indels pipeline output of a run.
-    :param: run_id (str): e.g. 201014_M03829_0366_000000000-JBV6Y
-    :param: s3_bucket (ste): S3 bucket containing results,
-    e.g. 'cchauve-orchestration-ch'
+    Returns the path to the output directory for a run
+    :param: run_id (str) run ID
+    :param: prefix (str): prefix of the path
 
-    :return: generator for list(str): file paths of files for the output of
-    run run_id; None if the directory is empty or does not exist
+    :return: str: output directory path
     """
-    s3 = boto3.client('s3')
-    paginator = s3.get_paginator('list_objects_v2')
-    kwargs = {'Bucket': s3_bucket, 'Prefix': run_id}
-    for page in paginator.paginate(**kwargs):
-        try:
-            contents = page['Contents']
-        except KeyError:
-            break
-        for obj in contents:
-            yield obj
+    return os.path.join(prefix, run_id)
 
 
-def get_runs_list(runs_csv_file):
+def read_input_log_file(log_file_path):
     """
-    Get from a CSV file containing runs ID and runs name a list run IDs
-    :param: runs_csv_file (str): path to the input CSV file
-    :assumption: column 0 is run name, column 1 is run ID
-
-    :return: list(str): list of runs ID
+    Reads an input log file to extract the run IDs and the sample IDs  list for
+    each run.
+    Writes a CSV file
+    :param: log_file_path (str): path to input log file
+    :return: dict(str,list(str)), list((str,str)):
+    dictionary, indexed by pairs (run_id, run_name), of sample lists
+    list (run_id, run_name) of unprocessed runs
     """
-    result = []
-    with open(runs_csv_file) as csvfile:
-        runs_data = csv.reader(csvfile, delimiter=',')
-        for row in runs_data:
-            run_id = row[1]
-            result.append(run_id)
-    return result
+    log_file = open(log_file_path, 'r').readlines()
+    unprocessed_runs, sample_id_lists, run_names = [], {}, {}
+    for log in log_file:
+        log_split = log.rstrip().split('\t')
+        log_header = log_split[0].split(':')
+        log_type = log_header[0]
+        if log_type == RUN_ID:
+            (run_id, run_name) = log_header[1].split('.')
+            run_names[run_id] = run_name
+        elif log_type == WARNING and log_split[1] == ERROR_RUN_UNPROCESSED:
+            run_id = log_header[1]
+            unprocessed_runs.append((run_id, run_names[run_id]))
+        elif log_type == RUN_SAMPLES:
+            run_id = log_header[1]
+            sample_id_lists[(run_id, run_names[run_id])] = log_split[1].split()
+    return (sample_id_lists, unprocessed_runs)
 
 
-def get_samples_list(files):
+# Checks all expected output files are in the output directory
+
+
+def check_output_files(run_id, sample_id_list, s3_files):
     """
-    Returns the list of samples for run run_id
-    :param" files (list(str)): list of s3 files for the considered run
+    Checks that the output directory for run_id has all the expected files:
+    - a run parameters YAML file <run_id>.yaml
+    - a filters log file <run_id>_samples_filters.log
+    - an indels VCF archive <run_id>_indels_filtered_snpeff.vcf.tar.gz
+    - a SNPs VCF archive <run_id>_snpss_filtered_snpeff.vcf.tar.gz
+    - for each sample sample_id:
+        - a preprocessing log file for each sample:
+          <run_id>_<sample_id>_preprocessing.log
+        - a main log file file for each sample:
+          <run_id>_<sample_id>_main.log
+        - an annotated FASTQ files archive <sample_id>_annotated.fq.tar.gz
+        - a main output archive <sample_id>_main.tar.gz
 
-    :return: list(str): list of sample IDs
+    :param: run_id (str): run ID
+    :param: sample_id_list (list(str)): list of sample ID
+    :param: s3_files (list(str)): list of s3 files for run_id
+
+    :return: bool: True if all expected files are present and not other one.
     """
-    samples_list = []
-    for f in files:
-        if f.endswith(MAIN_FILE_SUFFIX):
-            _, main_file_tgz = os.path.split(f)
-            samples_list.append(main_file_tgz.replace(MAIN_FILE_SUFFIX, ''))
-    return samples_list
+    # Extracting S3 file names
+    s3_file_names = []
+    for file_path in s3_files:
+        _, file_name = os.path.split(file_path)
+        if file_name != '':
+            s3_file_names.append(file_name)
+    # Building the list of expected files
+    expected_file_names = []
+    expected_file_names.append(f"{run_id}.yaml")
+    expected_file_names.append(f"{run_id}{INDELS_FILE_SUFFIX_TGZ}")
+    expected_file_names.append(f"{run_id}{SNPS_FILE_SUFFIX_TGZ}")
+    expected_file_names.append(f"{run_id}{FILTERS_LOG_FILE_SUFFIX}")
+    for sample_id in sample_id_list:
+        expected_file_names.append(
+            f"{run_id}_{sample_id}{PRE_LOG_FILE_SUFFIX}")
+        expected_file_names.append(
+            f"{run_id}_{sample_id}{MAIN_LOG_FILE_SUFFIX}")
+        expected_file_names.append(f"{sample_id}{FASTQ_FILES_SUFFIX}")
+        expected_file_names.append(f"{sample_id}{MAIN_FILE_SUFFIX}")
+    return set(s3_file_names) == set(expected_file_names)
 
 
-def init_dump_vcf_file(dump_file):
+# VCF files dumping
+
+
+def init_vcf_dump_file(dump_file):
     """
     Create a dump_file with the dump header
     :param: dump_file (str): path to the dump file
@@ -131,7 +164,7 @@ def init_dump_vcf_file(dump_file):
     out_dump.close()
 
 
-def dump_vcf_file(sample_id, in_file, out_file, append=True):
+def dump_sample_vcf_file(sample_id, in_file, out_file, append=True):
     """
     Dump a VCF file for a sample into a TSV file
     :param: sample_id (str): sample ID
@@ -166,18 +199,7 @@ def dump_vcf_file(sample_id, in_file, out_file, append=True):
     out_file.close()
 
 
-def out_dir(run_id, prefix):
-    """
-    Returns the path to the output dir for a run
-    :param: run_id (str) run ID
-    :param: prefix (str): prefix of the path
-
-    :return: str: output directory path
-    """
-    return os.path.join(prefix, run_id)
-
-
-def sample_vcf_file(run_id, sample_id, prefix, v_type):
+def get_sample_vcf_file(run_id, sample_id, prefix, v_type):
     """
     Returns the path to a VCF file for a given sample of a run
     :param: run_id (str): run ID
@@ -191,7 +213,7 @@ def sample_vcf_file(run_id, sample_id, prefix, v_type):
                         f"{sample_id}{CALLS_FILE_SUFFIX[v_type]}")
 
 
-def dump_file(run_id, prefix, v_type, init=True):
+def get_vcf_dump_file(run_id, prefix, v_type, init=True):
     """
     Returns the path to a variant dump file for a run
     :param: run_id (str): run ID
@@ -203,88 +225,151 @@ def dump_file(run_id, prefix, v_type, init=True):
     dump_file = os.path.join(prefix, run_id,
                              f"{run_id}_{v_type}{VCF_DUMP_EXT}")
     if init:
-        init_dump_vcf_file(dump_file)
+        init_vcf_dump_file(dump_file)
     return dump_file
 
 
 def extract_vcf_files(run_id,
-                      files,
+                      sample_id_list,
                       s3_bucket,
                       v_type=INDELS,
                       prefix='.',
                       to_dump=False,
                       to_keep=True):
     """
-    Reads indels files of run run_id
+    Reads and optionally dump indels VCF files of run run_id.
     :param: run_id (str): ID of the run
-    :param" files (list(str)): list of s3 files for run_id
+    :param: sample_id_list (list(str)): list of sample ID
     :param: s3_bucket (str): s3 bucket where to fetch the results
     :param: v_type (str): SNPS or INDELS
     :param: prefix (str): prefix of the output directory
     :param: to_dump (bool): if True a dump file is created
     :param: to_keep (bool): if True VCF file from the archive are not deleted
     """
-    for f in files:
-        if f.endswith(CALLS_FILE_SUFFIX_TGZ[v_type]):
-            subprocess.call(AWS_CP + [f"s3://{s3_bucket}/{f}", '.'])
-            _, vcf_file_tgz = os.path.split(f)
-            tarfile.open(vcf_file_tgz,
-                         'r:gz').extractall(path=out_dir(run_id, prefix))
-            if to_dump:
-                out_dump_file = dump_file(run_id, prefix, v_type, init=True)
-                for sample_id in get_samples_list(files):
-                    in_vcf = sample_vcf_file(run_id, sample_id, prefix, v_type)
-                    dump_vcf_file(sample_id,
-                                  in_vcf,
-                                  out_dump_file,
-                                  append=True)
-                    if not to_keep:
-                        os.remove(in_vcf)
-            os.remove(vcf_file_tgz)
+    vcf_file_name = f"{run_id}{CALLS_FILE_SUFFIX_TGZ[v_type]}"
+    vcf_file_path = os.path.join('s3://', s3_bucket, run_id, vcf_file_name)
+    subprocess.call(AWS_CP + [vcf_file_path, '.'])
+    tarfile.open(vcf_file_name,
+                 'r:gz').extractall(path=out_dir(run_id, prefix))
+    if to_dump:
+        out_dump_file = get_vcf_dump_file(run_id, prefix, v_type, init=True)
+        for sample_id in sample_id_list:
+            in_vcf = get_sample_vcf_file(run_id, sample_id, prefix, v_type)
+            dump_sample_vcf_file(sample_id, in_vcf, out_dump_file, append=True)
+            if not to_keep:
+                os.remove(in_vcf)
+    os.remove(vcf_file_name)
 
 
-def extract_main_warnings(run_id, files, s3_bucket, prefix='.'):
+# Analysis of log files
+
+
+def check_log_files(run_id, sample_id_list, s3_bucket):
     """
-    Reads main_log files of run run_id
+    Checks that all log files are complete
+    :param: run_id (str): run ID
+    :param: sample_i_list (list(str): list of samples ID
+    :param: s3_bucket (str): S3 bucket containing the output results
+
+    :return: bool: True if all log files are complete
+    """
+    def get_last_line(file):
+        return open(file).readlines()[-1].rstrip()
+
+    filters_log_name = f"{run_id}{FILTERS_LOG_FILE_SUFFIX}"
+    filters_log_path = os.path.join('s3://', s3_bucket, run_id,
+                                    filters_log_name)
+    filters_last_line = get_last_line(filters_log_path)
+    if not ('FILTERS' in filters_last_line and 'total' in filters_last_line):
+        return False
+    for sample_id in sample_id_list:
+        pre_log_name = f"{run_id}_{sample_id}{PRE_LOG_FILE_SUFFIX}"
+        pre_log_path = os.path.join('s3://', s3_bucket, run_id, pre_log_name)
+        pre_last_line = get_last_line(pre_log_path)
+        if not ('PREPROCESSING' in pre_last_line and 'total' in pre_last_line):
+            return False
+        main_log_name = f"{run_id}_{sample_id}{MAIN_LOG_FILE_SUFFIX}"
+        main_log_path = os.path.join('s3://', s3_bucket, run_id, main_log_name)
+        main_last_line = get_last_line(main_log_path)
+        if not ('PIPELINE' in main_last_line
+                and 'total_time' in main_last_line):
+            return False
+    return True
+
+
+def extract_main_warnings(run_id, sample_id_list, s3_bucket, prefix='.'):
+    """
+    Reads main_log files of run run_id and extracts warnings
     :param: run_id (str): ID of the run
-    :param" files (list(str)): list of s3 files for run_id
+    :param" sample_id_list (list(str)): sample ID list
     :param: s3_bucket (str): s3 bucket where to fetch the results
     :param: prefix (str): prefix of the output directory
     """
+    def get_warning_out_path(run_id, prefix, warning_suffix):
+        return os.path.join(out_dir(run_id, prefix),
+                            f"{run_id}_warnings{warning_suffix}")
+
     for warning_suffix in WARNINGS_OUTPUT_SUFFIX.values():
-        warning_out_path = os.path.join(out_dir(run_id, prefix),
-                                        f"{run_id}_warnings{warning_suffix}")
+        warning_out_path = get_warning_out_path(run_id, prefix, warning_suffix)
         warning_out = open(warning_out_path, 'w')
         warning_out.close()
     warning_out_file = {}
-    for f in files:
-        if f.endswith(MAIN_LOG_FILE_SUFFIX):
-            for warning_key, warning_suffix in WARNINGS_OUTPUT_SUFFIX.items():
-                warning_out_path = os.path.join(
-                    out_dir(run_id, prefix),
-                    f"{run_id}_warnings{warning_suffix}")
-                warning_out_file[warning_key] = open(warning_out_path, 'a')
-            s3_file_path = os.path.join('s3://', s3_bucket, f)
-            log_file = open(s3_file_path, 'r').readlines()
-            for line in log_file:
-                line_split = line.rstrip().split('\t')
-                if line_split[1] == '[WARNING]':
-                    step, sample_amplicon = line_split[2].split()
-                    msg = line_split[3]
-                    if sample_amplicon[0:5].lower() != 'blank':
-                        warning_out_file[step].write(
-                            f"{sample_amplicon}\t{msg}\n")
-            for warning_key, warning_out in warning_out_file.items():
-                warning_out.close()
+    for sample_id in sample_id_list:
+        for warning_key, warning_suffix in WARNINGS_OUTPUT_SUFFIX.items():
+            warning_out_path = get_warning_out_path(run_id, prefix,
+                                                    warning_suffix)
+            warning_out_file[warning_key] = open(warning_out_path, 'a')
+        main_log_name = f"{run_id}_{sample_id}{MAIN_LOG_FILE_SUFFIX}"
+        main_log_path = os.path.join('s3://', s3_bucket, run_id, main_log_name)
+        main_log_file = open(main_log_path, 'r').readlines()
+        for line in main_log_file:
+            line_split = line.rstrip().split('\t')
+            if line_split[1] == '[WARNING]':
+                step, sample_amplicon = line_split[2].split()
+                msg = line_split[3]
+                if sample_amplicon[0:5].lower() != 'blank':
+                    warning_out_file[step].write(f"{sample_amplicon}\t{msg}\n")
+        for warning_key, warning_out in warning_out_file.items():
+            warning_out.close()
 
 
 if __name__ == "__main__":
     """
-    Reads a list of runs_id,run_names in a CSV file, and creates summaries of
-    calls and warnings
+    Reads the input log from a set of runs and checks for each run that was
+    processed if
+    - the output directory in the S3 bucket (default cchauve-orchestration-ch)
+      does exist
+    - all the expected files (results and logs) are in the directory
+    - all the log files are complete
+    If any of these conditions is not met, the run ID and run name are added to
+    the list of unprocessed runs that is written in a CSV file to be ran later.
+    Otherwise, the warnings of the main log files are extrcated and the indels
+    VCF are dumped into a single file.
+    The extracted warnings and dumped VCF files are in the directory
+    output_dir/run_id
+    The log is in input_log_file.replace(_input.log, _output.log)
+    The CSV file of runs to re-launch is in data and has the same name than the
+    log file where _output.log is replaced by _failed.csv.
+    For each successful run, the script stores in output_dir/run_id six TSV
+    files:
+    - <run_id>_indels_dump.tsv: indels calls in short format
+    - <run_id>_warnings_reads.tsv: warnings raised while processing reads
+    - <run_id>_warnings_clusters.tsv: warnings raised while creating read
+      clusters
+    - <run_id>_warnings_alignments.tsv: warnings raised while aligning reads
+    - <run_id>_warnings_variants.tsv: warnings raised while detecting variants
+      from alignments
+    - <run_id>_warnings_variants_graph.tsv: warnings raised while creating
+      variants graphs.
+
+    Arguments:
+    - input_log_file: input log file from a set of runs
+    - output_dir: directory where the results are written
+    - s3_bucket (optional, default cchauve-orchestration-ch): bucket where to
+      fetch indels pipeline output files.
     """
     # Input file
-    ARGS_RUNS_FILE = ['runs_csv_file', None, 'Runs CSV file']
+    ARGS_RUNS_FILE = ['input_log_file', None, 'Input log file']
     # Results directory
     ARGS_OUTPUT_DIR = ['output_dir', None, 'Output directory']
     # S3 bucket containing the reuslts
@@ -300,23 +385,50 @@ if __name__ == "__main__":
                         help=ARGS_S3_BUCKET[2])
     args = parser.parse_args()
 
-    runs_list = get_runs_list(args.runs_csv_file)
-    for run_id in runs_list:
+    log_file_path = args.input_log_file.replace('_input.log', '_output.log')
+    log_file = open(log_file_path, 'w')
+
+    (sample_id_lists,
+     unprocessed_runs) = read_input_log_file(args.input_log_file)
+
+    for (run_id, run_name), sample_id_list in sample_id_lists.items():
         os.makedirs(out_dir(run_id, args.output_dir), exist_ok=True)
         s3_files = get_files_in_s3(run_id, args.s3_bucket)
         if s3_files is None:
-            print(f"WARNING: no result file for {run_id}")
+            log_file.write(f"{WARNING}:{run_id}\tno output\n")
+            unprocessed_runs.append((run_id, run_name))
+        elif not check_output_files(run_id, sample_id_list, s3_files):
+            log_file.write(f"{WARNING}:{run_id}\tmissing output files\n")
+            unprocessed_runs.append((run_id, run_name))
+        elif not check_log_files(run_id, sample_id_list, args.s3_bucket):
+            log_file.write(f"{WARNING}:{run_id}\tincomplete log file\n")
+            unprocessed_runs.append((run_id, run_name))
         else:
+            log_file.write(f"INFO:{run_id}\tOK\n")
+            # Extracting warnings
+            extract_main_warnings(run_id,
+                                  sample_id_list,
+                                  args.s3_bucket,
+                                  prefix=args.output_dir)
             # Extracting indels calls
             extract_vcf_files(run_id,
-                              s3_files,
+                              sample_id_list,
                               args.s3_bucket,
                               v_type=INDELS,
                               prefix=args.output_dir,
                               to_dump=True,
                               to_keep=False)
-            # Extracting warnings
-            extract_main_warnings(run_id,
-                                  s3_files,
-                                  args.s3_bucket,
-                                  prefix=args.output_dir)
+    # Exporting the list of runs to reprocess
+    _, log_file_name = os.path.split(log_file_path)
+    unprocessed_file_path = os.path.join(
+        'data', log_file_name.replace('_input.log', '_failed.csv'))
+    unprocessed_file = open(unprocessed_file_path, 'w')
+    unprocessed_run_first = True
+    for (run_id, run_name) in unprocessed_runs:
+        if unprocessed_run_first:
+            unprocessed_file.write(f"{run_name},{run_id}")
+            unprocessed_run_first = False
+        else:
+            unprocessed_file.write(f"\n{run_name},{run_id}")
+    unprocessed_file.close()
+    log_file.close()
