@@ -8,6 +8,8 @@ import csv
 import os
 from collections import defaultdict
 
+from common_utils import INFO
+
 
 def read_output_log_file(log_file_path):
     """
@@ -21,7 +23,7 @@ def read_output_log_file(log_file_path):
         log_split = log.rstrip().split('\t')
         log_header = log_split[0].split(':')
         log_type = log_header[0]
-        if log_type == 'INFO':
+        if log_type == INFO:
             run_id = log_header[1]
             run_id_list.append(run_id)
     return run_id_list
