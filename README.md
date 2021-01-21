@@ -6,22 +6,40 @@ retrieve the results.
 
 The repo contains two main scripts:
 - bin/run_utils.py to launch AWS jobs
-- bin/analysus_utils.py to retrieve results
+- bin/analysis_utils.py to retrieve results
 
-To start jobs:  
-bin/run_utils runs_csv_file s3_bucket_input branch -o s3_bucket_output[OPTIONAL] -d aws_def[OPTIONAL] -q aws_queue[OPTIONAL]  
-where  
-- run_csv_file is a csv file with two fields: Run, ID
-  (e.g. CG001Qv40Run10,180808_M03829_0152_000000000-BWL8C)
-  for MSI: data/Runs_to_run_indel_caller_with_MSI_amplicons.csv
-- branch is a branch of indels-pipeline (for MSI: BOVERI-515)
-- s3_bucket_output is the s3 directory that will contain one directory per run with the output
-  (default value in nextflow.config in repo indels-pipeline)
-- aws_def is the value for the option --job-definition of aws
-  (default: cchauve)
-- aws_queue is the value for the option --job-queue of aws
-  (default: cchauve-orchestration-default)  
-The script parses the beginning of Run to identify the amplicon manifest to use.
+
+The script bin/run_utils.py checks the input data for a list of runs and submits
+AWS jobs for each valid run.
+
+Arguments:
+- runs_csv_file: CSV file with 2 fields <run_name>,<run_id>
+  run_name is used to define the amplicon manifest
+- s3_input: S3 bucket containing the runs input data
+  assumed structure of a run input directory:
+  configuration files and set of subdirectories
+  <s3_input>/input/<run_id>/<sample_id>/<sample_id>_L001_[R1,R2]_001.fastq.gz
+- branch: branch of the indels-pipeline repo to use (currently BOVERI-448-nf or
+  BOVERI-515 for MSI amplicons)
+- s3_output: S3 bucket where to store the results
+  results for run_id go into <s3_output>/<run_id>
+  default value in nextflow.config
+- aws_def: --job-definition value for aws
+  default value: cchauve (AWS_DEF)
+- aws_queue: queue to send the jobs to, --job-queue value for aws
+  default value: cchauve-orchestration-default (AWS_QUEUE)
+
+Checks the directory <s3_input>/input/<run_id> for each run and looks into
+every subdirectory ending by -XX_SYY where XX and YY are integers (not assumed to
+be equal) that there are only two files, that are two gzipped raw FASTQ files
+Any run
+- with a directory whose name does not match the definition of a sample ID,  or
+- with a sample directory without only the two FASTQ files,
+is not processed.
+
+Generates a log file indicating processed runs and unprocessed runs.
+Errors are prefixed by WARNING.
+
 
 To retrieve results  
 bin/analysis_utils runs_csv_file output_dir -s3 s3_bucket[OPTIONAL]  
