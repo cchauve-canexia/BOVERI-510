@@ -421,7 +421,7 @@ if __name__ == "__main__":
     # Exporting the list of runs to reprocess
     _, log_file_name = os.path.split(log_file_path)
     unprocessed_file_path = os.path.join(
-        'data', log_file_name.replace('_input.log', '_failed.csv'))
+        'data', log_file_name.replace('_output.log', '_failed.csv'))
     unprocessed_file = open(unprocessed_file_path, 'w')
     unprocessed_run_first = True
     for (run_id, run_name) in unprocessed_runs:
