@@ -6,7 +6,12 @@ Functions to run the indels pipeline on AWS for a list of runs
 # Standard imports
 import argparse
 import csv
+import os
 import subprocess
+from collections import defaultdict
+
+# Local imports
+from analysis_utils import get_files_in_s3
 
 # Manifests
 MANIFESTS = {
@@ -36,15 +41,152 @@ def get_runs_manifests_list(runs_csv_file):
             run_id = row[1]
             run_name = row[0]
             manifest = MANIFESTS[run_name[0:MANIFEST_KEY_LG]]
-            result.append((run_id, manifest))
+            result.append((run_id, manifest, run_name))
     return result
+
+
+# Return codes for checking if a path is an input raw FASTQ file
+CHECK_SAMPLE_OUT_FILE = 'file'  # checked path is a file within run directory
+CHECK_SAMPLE_OUT_ERROR_DIR = 'not a sample dir'  # checked if sample directory
+CHECK_SAMPLE_OUT_ERROR_FILE = 'not a raw fastq file'  # Sample dir. not a FASTQ
+CHECK_SAMPLE_OUT_OK = 'raw fastq file'  # Sample directory and FASTQ file
+FASTQ_EXT = '_001.fastq.gz'
+
+
+def is_sample_file(file_path_split):
+    """
+    Checks if a path corresponds to an expected sample input file
+    :param: file_path (list(str)): path of file in s3 bucket split by '/'
+    :return: (int, str):
+    field 1: see values above
+    field 2: string where the error occured or pair (sample_id, FASTQ file) if
+    the result is CHECK_SAMPLE_OUT_OK
+    :assumption: sample input file is of the form
+    input/run_id/<sample_id>/<sample_id>_L001_[R1,R2]_001.fastq.gz
+    :assumption: sample_id is of the form *-X_SX where X is an integer
+    :assumption: an input directory contains only directories for samples plus
+    some configuration files
+    """
+    if len(file_path_split) != 4:
+        return (CHECK_SAMPLE_OUT_FILE, '')
+    else:
+        sample_dir = file_path_split[2]
+        sample_dir_suffix = sample_dir.split('-')[-1]
+        if '_' not in sample_dir_suffix:
+            return (CHECK_SAMPLE_OUT_ERROR_DIR, sample_dir)
+        sample_dir_nb = sample_dir_suffix.split('_')
+        if not sample_dir_nb[0].isdigit():
+            return (CHECK_SAMPLE_OUT_ERROR_DIR, sample_dir)
+        if sample_dir_nb[1][0] != 'S' or not sample_dir_nb[1][1:].isdigit():
+            return (CHECK_SAMPLE_OUT_ERROR_DIR, sample_dir)
+        sample_id = sample_dir  # Directory is a proper sample id
+        fastq = [
+            f"{sample_id}_L001_R1{FASTQ_EXT}",
+            f"{sample_id}_L001_R2{FASTQ_EXT}"
+        ]
+        if file_path_split[3] not in fastq:
+            return (CHECK_SAMPLE_OUT_ERROR_FILE, file_path_split[3])
+        return (CHECK_SAMPLE_OUT_OK, (sample_id, file_path_split[3]))
+
+
+ERROR_RUN_NO_DATA = 'no data'
+ERROR_RUN_NO_SAMPLE = 'no sample'
+ERROR_RUN_NO_CORRECT_SAMPLE = 'no correct sample'
+ERROR_RUN_UNPROCESSED = 'unprocessed'
+ERROR_SAMPLE_FASTQ = 'error FASTQ files'
+ERROR_SAMPLE_NONE = 'OK'
+
+
+def check_input_data(run_id, s3_bucket, log_file):
+    """
+    Checks that the input data for run_id exists and is composed of two raw
+    FASTQ files per sample
+    :param: run_id (str): run ID
+    :param: s3_bucket (str): bucket containing the data (in input directory)
+    :param: log_file (opened file): log file
+    :return: bool: True if all samples have the expected files
+    """
+    prefix = f"input/{run_id}"
+    s3_files = get_files_in_s3(prefix, s3_bucket)
+    if s3_files is None:
+        log_file.write(f"WARNING.{run_id}\t{ERROR_RUN_NO_DATA}\n")
+        return False
+    else:
+        fastq_files = defaultdict(list)
+        for file in s3_files:
+            # Expected format: input/run_id/sample_id/gzipped_fastq_file
+            s3_file_path = file.split('/')
+            s3_check_sample = is_sample_file(s3_file_path)
+            if s3_check_sample[0] not in [
+                    CHECK_SAMPLE_OUT_OK, CHECK_SAMPLE_OUT_FILE
+            ]:
+                log_file.write(
+                    f"WARNING:{run_id}\t{' '.join(s3_check_sample)}\n")
+                return False
+            if s3_check_sample[0] != CHECK_SAMPLE_OUT_FILE:
+                fastq_files[s3_check_sample[1][0]].append(
+                    s3_check_sample[1][1])
+        sample_id_list = list(fastq_files.keys())
+        if len(sample_id_list) == 0:
+            log_file.write(f"WARNING:{run_id}\t{ERROR_RUN_NO_SAMPLE}\n")
+            return False
+        else:
+            sample_id_correct = []
+            for sample_id in sample_id_list:
+                fastq = [
+                    f"{sample_id}_L001_R1{FASTQ_EXT}",
+                    f"{sample_id}_L001_R2{FASTQ_EXT}"
+                ]
+                test1 = len(fastq_files[sample_id]) == 2
+                test2 = test1 and (fastq_files[sample_id][0] !=
+                                   fastq_files[sample_id][1])
+                test3 = test2 and fastq_files[sample_id][0] in fastq
+                test4 = test3 and fastq_files[sample_id][1] in fastq
+                if not test4:
+                    log_file.write(
+                        f"WARNING:{run_id}:{sample_id}\t{ERROR_SAMPLE_FASTQ}\n"
+                    )
+                    return False
+                else:
+                    sample_id_correct.append(sample_id)
+            log_file.write(
+                f"RUN.SAMPLES:{run_id}\t{' '.join(sample_id_correct)}\n")
+    return True
 
 
 if __name__ == "__main__":
     """
-    Reads a list of runs_id,run_names in a CSV file, a branch for the
-    indels-pipeline and an s3 bucket input directory and run the indels
-    pipeline on AWS for all the runs in the list.
+    Checks the input data for a list of runs and submits AWS jobs for each
+    valid run.
+
+    Arguments:
+    - runs_csv_file: CSV file with 2 fields <run_name>,<run_id>
+      run_name is used to define the amplicon manifest
+    - s3_input: S3 bucket containing the runs input data
+      assumed structure of a run input directory:
+      configuration files and set of subdirectories
+      <s3_input>/input/<run_id>/<sample_id>/<sample_id>_L001_[R1,R2]_001.fastq.gz
+    - branch: branch of the indels-pipeline repo to use (currently
+      BOVERI-448-nf or BOVERI-515 for MSI amplicons)
+    - s3_output: S3 bucket where to store the results
+      results for run_id go into <s3_output>/<run_id>
+      default value in nextflow.config
+    - aws_def: --job-definition value for aws
+      default value: cchauve (AWS_DEF)
+    - aws_queue: queue to send the jobs to, --job-queue value for aws
+      default value: cchauve-orchestration-default (AWS_QUEUE)
+
+    Checks the directory <s3_input>/input/<run_id> for each run and looks into
+    every directory ending by -XX_SYY where XX and YY are integers that there
+    are two gzipped raw FASTQ files
+    Any run
+    - with a directory whose name does not match the definition of a sample ID
+    - with a sample directory without only the two FASTQ files
+    is not processed.
+
+    Generates a log file log/run_csv_file ".csv" replaced by ".log" indicating
+    processed runs and unprocessed runs. Errors in the log file are prefixed by
+    WARNING.
     """
     # Input file
     ARGS_RUNS_FILE = ['runs_csv_file', None, 'Runs CSV file']
@@ -81,24 +223,39 @@ if __name__ == "__main__":
                         help=ARGS_AWS_QUEUE[2])
     args = parser.parse_args()
 
+    # Creating a log file located in the same directory than the YAML
+    # configuration file and with the same name with .yaml replaced by .log
+    _, run_file_name = os.path.split(args.runs_csv_file)
+    log_file_path = os.path.join('log', run_file_name.replace('.csv', '.log'))
+    log_file = open(log_file_path, 'w')
+
     runs_manifests_list = get_runs_manifests_list(args.runs_csv_file)
-    for (run_id, manifest) in runs_manifests_list:
-        aws_cmd = ['aws', 'batch', 'submit-job']
-        aws_cmd += ['--job-name', run_id]
-        aws_cmd += ['--job-queue', args.aws_queue]
-        aws_cmd += ['--job-definition', args.aws_def]
-        aws_cmd += ['--container-overrides']
-        cmd_options = ['command=contextual-genomics/indels-pipeline']
-        cmd_options += ['\"-r\"', f"\"{args.branch}\""]
-        cmd_options += ['\"--run_id\"', f"\"{run_id}\""]
-        cmd_options += ['\"--manifest\"', f"\"{manifest}\""]
-        cmd_options += ['\"--snpeff_path\"', '\"/opt/snpEff\"']
-        cmd_options += ['\"--publish_dir_name\"', f"\"{run_id}\""]
-        cmd_options += ['\"--input_dir\"', f"\"s3://{args.s3_input}/\""]
-        if args.s3_output is not None:
-            # Otherwise it uses the params.output_dir value in nextflow.config
-            cmd_options += ['\"--output_dir\"', f"\"s3://{args.s3_output}/\""]
-        cmd_options += ['\"-resume\"']
-        aws_cmd += [','.join(cmd_options)]
-        aws_cmd += ['--region', 'ca-central-1']
-        subprocess.call(aws_cmd)
+    for (run_id, manifest, run_name) in runs_manifests_list:
+        log_file.write(f"RUN.ID:{run_id}.{run_name}\n")
+        check_run = check_input_data(run_id, args.s3_input, log_file)
+        if check_run:
+            aws_cmd = ['aws', 'batch', 'submit-job']
+            aws_cmd += ['--job-name', run_id]
+            aws_cmd += ['--job-queue', args.aws_queue]
+            aws_cmd += ['--job-definition', args.aws_def]
+            aws_cmd += ['--container-overrides']
+            cmd_options = ['command=contextual-genomics/indels-pipeline']
+            cmd_options += ['\"-r\"', f"\"{args.branch}\""]
+            cmd_options += ['\"--run_id\"', f"\"{run_id}\""]
+            cmd_options += ['\"--manifest\"', f"\"{manifest}\""]
+            cmd_options += ['\"--snpeff_path\"', '\"/opt/snpEff\"']
+            cmd_options += ['\"--publish_dir_name\"', f"\"{run_id}\""]
+            cmd_options += ['\"--input_dir\"', f"\"s3://{args.s3_input}/\""]
+            if args.s3_output is not None:
+                # Otherwise it uses arams.output_dir from nextflow.config
+                cmd_options += [
+                    '\"--output_dir\"', f"\"s3://{args.s3_output}/\""
+                ]
+            cmd_options += ['\"-resume\"']
+            aws_cmd += [','.join(cmd_options)]
+            aws_cmd += ['--region', 'ca-central-1']
+            log_file.write(f"AWS:{run_id}\t{' '.join(aws_cmd)}\n")
+            subprocess.call(aws_cmd)
+        else:
+            log_file.write(f"WARNING:{run_id}\t{ERROR_RUN_UNPROCESSED}\n")
+    log_file.close()
