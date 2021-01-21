@@ -12,8 +12,8 @@ import tarfile
 # Third-party imports
 import vcf
 # Local imports
-from common_utils import (ERROR_RUN_UNPROCESSED, RUN_ID, RUN_SAMPLES, WARNING,
-                          get_files_in_s3)
+from common_utils import (ERROR_NONE, ERROR_RUN_UNPROCESSED, INFO, RUN_ID,
+                          RUN_SAMPLES, WARNING, get_files_in_s3)
 from smart_open import open
 
 # Default S3 directory containing results
@@ -404,7 +404,7 @@ if __name__ == "__main__":
             log_file.write(f"{WARNING}:{run_id}\tincomplete log file\n")
             unprocessed_runs.append((run_id, run_name))
         else:
-            log_file.write(f"INFO:{run_id}\tOK\n")
+            log_file.write(f"{INFO}:{run_id}\t{ERROR_NONE}\n")
             # Extracting warnings
             extract_main_warnings(run_id,
                                   sample_id_list,

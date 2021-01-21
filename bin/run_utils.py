@@ -11,7 +11,9 @@ import subprocess
 from collections import defaultdict
 
 # Local imports
-from analysis_utils import get_files_in_s3
+from common_utils import (AWS_CMD, ERROR_FASTQ, ERROR_NONE, ERROR_RUN_NO_DATA,
+                          ERROR_RUN_NO_SAMPLE, ERROR_RUN_UNPROCESSED, INFO,
+                          RUN_ID, RUN_SAMPLES, WARNING, get_files_in_s3)
 
 # Manifests
 MANIFESTS = {
@@ -89,14 +91,6 @@ def is_sample_file(file_path_split):
         return (CHECK_SAMPLE_OUT_OK, (sample_id, file_path_split[3]))
 
 
-ERROR_RUN_NO_DATA = 'no data'
-ERROR_RUN_NO_SAMPLE = 'no sample'
-ERROR_RUN_NO_CORRECT_SAMPLE = 'no correct sample'
-ERROR_RUN_UNPROCESSED = 'unprocessed'
-ERROR_SAMPLE_FASTQ = 'error FASTQ files'
-ERROR_SAMPLE_NONE = 'OK'
-
-
 def check_input_data(run_id, s3_bucket, log_file):
     """
     Checks that the input data for run_id exists and is composed of two raw
@@ -109,7 +103,7 @@ def check_input_data(run_id, s3_bucket, log_file):
     prefix = f"input/{run_id}"
     s3_files = get_files_in_s3(prefix, s3_bucket)
     if s3_files is None:
-        log_file.write(f"WARNING.{run_id}\t{ERROR_RUN_NO_DATA}\n")
+        log_file.write(f"{WARNING}.{run_id}\t{ERROR_RUN_NO_DATA}\n")
         return False
     else:
         fastq_files = defaultdict(list)
@@ -121,14 +115,14 @@ def check_input_data(run_id, s3_bucket, log_file):
                     CHECK_SAMPLE_OUT_OK, CHECK_SAMPLE_OUT_FILE
             ]:
                 log_file.write(
-                    f"WARNING:{run_id}\t{' '.join(s3_check_sample)}\n")
+                    f"{WARNING}:{run_id}\t{' '.join(s3_check_sample)}\n")
                 return False
             if s3_check_sample[0] != CHECK_SAMPLE_OUT_FILE:
                 fastq_files[s3_check_sample[1][0]].append(
                     s3_check_sample[1][1])
         sample_id_list = list(fastq_files.keys())
         if len(sample_id_list) == 0:
-            log_file.write(f"WARNING:{run_id}\t{ERROR_RUN_NO_SAMPLE}\n")
+            log_file.write(f"{WARNING}:{run_id}\t{ERROR_RUN_NO_SAMPLE}\n")
             return False
         else:
             sample_id_correct = []
@@ -144,13 +138,12 @@ def check_input_data(run_id, s3_bucket, log_file):
                 test4 = test3 and fastq_files[sample_id][1] in fastq
                 if not test4:
                     log_file.write(
-                        f"WARNING:{run_id}:{sample_id}\t{ERROR_SAMPLE_FASTQ}\n"
-                    )
+                        f"{WARNING}:{run_id}:{sample_id}\t{ERROR_FASTQ}\n")
                     return False
                 else:
                     sample_id_correct.append(sample_id)
             log_file.write(
-                f"RUN.SAMPLES:{run_id}\t{' '.join(sample_id_correct)}\n")
+                f"{RUN_SAMPLES}:{run_id}\t{' '.join(sample_id_correct)}\n")
     return True
 
 
@@ -232,7 +225,7 @@ if __name__ == "__main__":
 
     runs_manifests_list = get_runs_manifests_list(args.runs_csv_file)
     for (run_id, manifest, run_name) in runs_manifests_list:
-        log_file.write(f"RUN.ID:{run_id}.{run_name}\n")
+        log_file.write(f"{RUN_ID}:{run_id}.{run_name}\n")
         check_run = check_input_data(run_id, args.s3_input, log_file)
         if check_run:
             aws_cmd = ['aws', 'batch', 'submit-job']
@@ -246,7 +239,9 @@ if __name__ == "__main__":
             cmd_options += ['\"--manifest\"', f"\"{manifest}\""]
             cmd_options += ['\"--snpeff_path\"', '\"/opt/snpEff\"']
             cmd_options += ['\"--publish_dir_name\"', f"\"{run_id}\""]
-            cmd_options += ['\"--input_dir\"', f"\"s3://{args.s3_input}/\""]
+            cmd_options += [
+                '\"--input_dir\"', f"\"s3://{args.s3_input}/input/\""
+            ]
             if args.s3_output is not None:
                 # Otherwise it uses arams.output_dir from nextflow.config
                 cmd_options += [
@@ -255,8 +250,9 @@ if __name__ == "__main__":
             cmd_options += ['\"-resume\"']
             aws_cmd += [','.join(cmd_options)]
             aws_cmd += ['--region', 'ca-central-1']
-            log_file.write(f"AWS:{run_id}\t{' '.join(aws_cmd)}\n")
+            log_file.write(f"{INFO}:{run_id}\t{ERROR_NONE}\n")
+            log_file.write(f"{AWS_CMD}:{run_id}\t{' '.join(aws_cmd)}\n")
             subprocess.call(aws_cmd)
         else:
-            log_file.write(f"WARNING:{run_id}\t{ERROR_RUN_UNPROCESSED}\n")
+            log_file.write(f"{WARNING}:{run_id}\t{ERROR_RUN_UNPROCESSED}\n")
     log_file.close()
