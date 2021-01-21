@@ -4,4 +4,12 @@ A first set of runs have been processed from the file data/runs_indel_testing_18
 using ad-hoc scripts.
 
 To ensure consistency, they are re-started
-./bin/run_utils.py data/runs_indel_testing_18012021_MiSeq.csv ch-testdata BOVERI-448-nf
+> ./bin/run_utils.py data/runs_indel_testing_18012021_MiSeq.csv ch-testdata BOVERI-448-nf
+
+> grep "WARNING" log/runs_indel_testing_18012021_MiSeq_input.log
+WARNING:181203_M02558_0269_000000000-C5GG5:5000-CG001Q40Run57-8_S8      error FASTQ files
+WARNING:181203_M02558_0269_000000000-C5GG5      unprocessed
+WARNING:181203_M03829_0181_000000000-C6M8R:BLANK-CG001Q40Run58-1_S1     error FASTQ files
+WARNING:181203_M03829_0181_000000000-C6M8R      unprocessed
+> grep "RUN.ID" log/runs_indel_testing_18012021_MiSeq_input.log | wc -l
+248
