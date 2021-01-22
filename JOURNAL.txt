@@ -13,3 +13,9 @@ WARNING:181203_M03829_0181_000000000-C6M8R:BLANK-CG001Q40Run58-1_S1     error FA
 WARNING:181203_M03829_0181_000000000-C6M8R      unprocessed
 > grep "RUN.ID" log/runs_indel_testing_18012021_MiSeq_input.log | wc -l
 248
+
+Comment.
+Noticed error: 181122_M03829_0176_000000000-C5GP7, Essential container in task exited
+
+Comment.
+As of January 21, 6:12PM, the processes seem to be blocked in the queue.
