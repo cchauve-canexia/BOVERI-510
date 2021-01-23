@@ -7,6 +7,7 @@ Functions to run the indels pipeline on AWS for a list of runs
 import argparse
 import csv
 import os
+import re
 import subprocess
 from collections import defaultdict
 
@@ -82,11 +83,8 @@ def is_sample_file(file_path_split):
         if sample_dir_nb[1][0] != 'S' or not sample_dir_nb[1][1:].isdigit():
             return (CHECK_SAMPLE_OUT_ERROR_DIR, sample_dir)
         sample_id = sample_dir  # Directory is a proper sample id
-        fastq = [
-            f"{sample_id}_L001_R1{FASTQ_EXT}",
-            f"{sample_id}_L001_R2{FASTQ_EXT}"
-        ]
-        if file_path_split[3] not in fastq:
+        fastq_pattern = re.compile(f"{sample_id}_L00._R[1-2]{FASTQ_EXT}")
+        if fastq_pattern.match(file_path_split[3]) is None:
             return (CHECK_SAMPLE_OUT_ERROR_FILE, file_path_split[3])
         return (CHECK_SAMPLE_OUT_OK, (sample_id, file_path_split[3]))
 
@@ -127,21 +125,20 @@ def check_input_data(run_id, s3_bucket, log_file):
         else:
             sample_id_correct = []
             for sample_id in sample_id_list:
-                fastq = [
-                    f"{sample_id}_L001_R1{FASTQ_EXT}",
-                    f"{sample_id}_L001_R2{FASTQ_EXT}"
-                ]
-                test1 = len(fastq_files[sample_id]) == 2
-                test2 = test1 and (fastq_files[sample_id][0] !=
-                                   fastq_files[sample_id][1])
-                test3 = test2 and fastq_files[sample_id][0] in fastq
-                test4 = test3 and fastq_files[sample_id][1] in fastq
-                if not test4:
+                files_list = fastq_files[sample_id]
+                files_nb = len(files_list)
+                if files_nb % 2 != 0:
                     log_file.write(
                         f"{WARNING}:{run_id}:{sample_id}\t{ERROR_FASTQ}\n")
                     return False
-                else:
-                    sample_id_correct.append(sample_id)
+                files_list.sort()
+                for i in range(0, files_nb, 2):
+                    R1, R2 = files_list[i], files_list[i + 1]
+                    if R1.replace('_R1_', '') != R2.replace('_R2_', ''):
+                        log_file.write(
+                            f"{WARNING}:{run_id}:{sample_id}\t{ERROR_FASTQ}\n")
+                        return False
+                sample_id_correct.append(sample_id)
             log_file.write(
                 f"{RUN_SAMPLES}:{run_id}\t{' '.join(sample_id_correct)}\n")
     return True
