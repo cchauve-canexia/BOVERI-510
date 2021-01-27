@@ -23,7 +23,16 @@ def sort_chr(chrom):
 
 if __name__ == "__main__":
     """
-        TODO
+    Aggregate all VCF dump files for a set of runs in three files:
+    - a file DNA_samples_dump.tsv for indels calls from patient samples
+      (starting with DNA-)
+    - a file control_samples_dump.tsv indels calls from control samples
+      (starting with nf-, qmrs-, blank-)
+    - a file misc_samples_dump.tsv indels calls from all other samples
+    Arguments:
+    - input_log_file: input log file from a set of runs
+    - output_dir: directory where the results are written
+
     """
     # Input file
     ARGS_RUNS_FILE = ['input_log_file', None, 'Input log file']
@@ -38,26 +47,33 @@ if __name__ == "__main__":
     (sample_id_lists,
      unprocessed_runs) = read_input_log_file(args.input_log_file)
 
-    indels = []
+    indels = {}
+    indels['DNA'], indels['ctrl'], indels['misc'] = [], [], []
     for (run_id, run_name), sample_id_list in sample_id_lists.items():
         prefix = args.output_dir
         in_dump_file = get_vcf_dump_file(run_id, prefix, INDELS, init=False)
         if os.path.isfile(in_dump_file):
             for data_row in csv.reader(open(in_dump_file),
                                        delimiter=VCF_DUMP_FIELDS_SEP):
-                if data_row[0] != 'sample':
-                    indels.append(data_row)
+                sample = data_row[0].lower()
+                if sample.startswith('dna-'):
+                    indels['DNA'].append(data_row)
+                elif sample.startswith('nf-') or sample.startswith(
+                        'blank-') or sample.startswith('qmrs-'):
+                    indels['ctrl'].append(data_row)
+                else:
+                    indels['misc'].append(data_row)
         else:
             print(f"{in_dump_file} missing")
-    indels.sort(key=lambda x: float(x[5]))
-    indels.sort(key=lambda x: x[0].replace('-CG001', ' '))
-    indels.sort(key=itemgetter(3, 4))
-    indels.sort(key=lambda x: (sort_chr(x[1]), int(x[2])))
-
-    out_dump_file = get_aggregated_dump_file('all_samples',
-                                             prefix,
-                                             INDELS,
-                                             init=True)
-    with open(out_dump_file, 'a') as out_dump:
-        writer = csv.writer(out_dump, delimiter=VCF_DUMP_FIELDS_SEP)
-        writer.writerows(indels)
+    for sample_type, indels_dump in indels.items():
+        indels_dump.sort(key=lambda x: float(x[5]))
+        indels_dump.sort(key=lambda x: x[0].replace('-CG001', ' '))
+        indels_dump.sort(key=itemgetter(3, 4))
+        indels_dump.sort(key=lambda x: (sort_chr(x[1]), int(x[2])))
+        out_dump_file = get_aggregated_dump_file(f"{sample_type}_samples",
+                                                 prefix,
+                                                 INDELS,
+                                                 init=True)
+        with open(out_dump_file, 'a') as out_dump:
+            writer = csv.writer(out_dump, delimiter=VCF_DUMP_FIELDS_SEP)
+            writer.writerows(indels_dump)
