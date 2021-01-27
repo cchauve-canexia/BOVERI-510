@@ -7,11 +7,13 @@ then position, then sequence
 import argparse
 import csv
 import os
+from itertools import groupby
 from operator import itemgetter
 
+import numpy as np
 from analysis_utils import INDELS
-from common_utils import (VCF_DUMP_FIELDS_SEP, get_aggregated_dump_file,
-                          get_vcf_dump_file)
+from common_utils import (VCF_DUMP_FIELDS_SEP, VCF_DUMP_VALUES_SEP,
+                          get_aggregated_dump_file, get_vcf_dump_file)
 
 
 def sort_chr(chrom):
@@ -19,6 +21,19 @@ def sort_chr(chrom):
         return 23
     else:
         return int(chrom.replace('chr', ''))
+
+
+def aggregate_group(variant, group):
+    sample_list, vaf_list = [], []
+    for v_sample in group:
+        vaf = float(v_sample[5])
+        sample_list.append(f"{v_sample[0]}:{round(vaf,4)}")
+        vaf_list.append(vaf)
+    avg_vaf = round(np.mean(vaf_list), 4)
+    std_vaf = round(np.std(vaf_list), 4)
+    out_group = [len(sample_list)
+                 ] + list(variant) + [avg_vaf, std_vaf, sample_list]
+    return out_group
 
 
 if __name__ == "__main__":
@@ -78,3 +93,23 @@ if __name__ == "__main__":
         with open(out_dump_file, 'a') as out_dump:
             writer = csv.writer(out_dump, delimiter=VCF_DUMP_FIELDS_SEP)
             writer.writerows(indels_dump)
+
+    for sample_type, indels_dump in indels.items():
+        aggregated_groups = []
+        for variant, group in groupby(indels_dump,
+                                      key=lambda x: (x[1], x[2], x[3], x[4])):
+            aggregated_groups.append(aggregate_group(variant, group))
+        aggregated_groups.sort(key=lambda x: x[0], reverse=True)
+        out_dump_file = get_aggregated_dump_file(
+            f"{sample_type}_grouped_samples", prefix, INDELS, init=False)
+        nb_groups = len(aggregated_groups)
+        print(f"INFO\tindels groups in {sample_type} samples:\t{nb_groups}")
+        out_dump = open(out_dump_file, 'w')
+        out_dump.write(
+            'nb\tchr\tpos\tref\talt\tavg_vaf\tstd_vaf\tsamples:vaf\n')
+        out_dump.close()
+        for aggregated_group in aggregated_groups:
+            aggregated_group[7] = VCF_DUMP_VALUES_SEP.join(aggregated_group[7])
+        with open(out_dump_file, 'a') as out_dump:
+            writer = csv.writer(out_dump, delimiter=VCF_DUMP_FIELDS_SEP)
+            writer.writerows(aggregated_groups)
