@@ -92,6 +92,11 @@ delete: s3://cchauve-orchestration-ch/201113_M02558_0416_000000000-JC7JL/201113_
 
 > grep WARNING log/runs_indel_testing_18012021_MiSeq_failed_empty_output.log
 
+> ./bin/count_samples.py log/runs_indel_testing_18012021_MiSeq_input.log
+INFO    patient samples:        4798
+INFO    control samples:        919
+INFO    misc. samples:  70
+
 > ./bin/aggregate_dump_files.py results/runs_indel_testing_18012021_MiSeq
 INFO    indels calls in DNA samples:    10327
 INFO    indels calls in ctrl samples:   1522

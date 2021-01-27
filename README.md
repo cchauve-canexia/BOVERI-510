@@ -10,6 +10,7 @@ The repo contains three main scripts:
 - bin/extract_colocated_indels.py
 - bin/aggregate_dump_files.py
 - bin/retrieve_run.py
+- bin/count_samples.py
 
 ### run_utils
 The script bin/run_utils.py checks the input data for a list of runs and submits
@@ -119,3 +120,9 @@ Arguments:
 - output_dir: files are downloaded and unarchived in this directory, in a
   subdirectory run_id
 - s3: bucket where to fetch the files (in directory run_id)
+
+### count_samples
+Counts the number of samples of each group in a set of runs.
+
+Arguments:
+-  input_log_file: input log file from a set of runs
