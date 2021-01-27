@@ -59,7 +59,7 @@ if __name__ == "__main__":
                 elif sample.startswith('nf-') or sample.startswith(
                         'blank-') or sample.startswith('qmrs-'):
                     indels['ctrl'].append(data_row)
-                else:
+                elif sample != 'sample':
                     indels['misc'].append(data_row)
         else:
             print(f"{in_dump_file} missing")
