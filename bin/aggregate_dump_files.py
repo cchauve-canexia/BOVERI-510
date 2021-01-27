@@ -56,8 +56,8 @@ if __name__ == "__main__":
                 sample = data_row[0].lower()
                 if sample.startswith('dna-'):
                     indels['DNA'].append(data_row)
-                elif sample.startswith('nf-') or sample.startswith(
-                        'blank-') or sample.startswith('qmrs-'):
+                elif sample.startswith('nf') or sample.startswith(
+                        'blank') or sample.startswith('qmrs'):
                     indels['ctrl'].append(data_row)
                 elif sample != 'sample':
                     indels['misc'].append(data_row)

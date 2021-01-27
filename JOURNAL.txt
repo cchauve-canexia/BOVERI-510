@@ -94,5 +94,5 @@ delete: s3://cchauve-orchestration-ch/201113_M02558_0416_000000000-JC7JL/201113_
 
 > ./bin/aggregate_dump_files.py results/runs_indel_testing_18012021_MiSeq
 INFO    indels calls in DNA samples:    10327
-INFO    indels calls in ctrl samples:   1490
-INFO    indels calls in misc samples:   280
+INFO    indels calls in ctrl samples:   1522
+INFO    indels calls in misc samples:   248
