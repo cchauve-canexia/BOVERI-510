@@ -27,12 +27,15 @@ def aggregate_group(variant, group):
     sample_list, vaf_list = [], []
     for v_sample in group:
         vaf = float(v_sample[5])
+        annotation = v_sample[10]
         sample_list.append(f"{v_sample[0]}:{round(vaf,4)}")
         vaf_list.append(vaf)
     avg_vaf = round(np.mean(vaf_list), 4)
     std_vaf = round(np.std(vaf_list), 4)
-    out_group = [len(sample_list)
-                 ] + list(variant) + [avg_vaf, std_vaf, sample_list]
+    out_group = [len(sample_list)] + list(variant) + [
+        annotation, avg_vaf, std_vaf,
+        list(sample_list)
+    ]
     return out_group
 
 
@@ -111,11 +114,12 @@ if __name__ == "__main__":
         nb_groups = len(aggregated_groups)
         print(f"INFO\tindels groups in {sample_type} samples:\t{nb_groups}")
         out_dump = open(out_dump_file, 'w')
-        out_dump.write(
-            'nb\tchr\tpos\tref\talt\tavg_vaf\tstd_vaf\tsamples:vaf\n')
+        header = 'nb\tchr\tpos\tref\talt\tannotation\t'
+        header += 'avg_vaf\tstd_vaf\tsamples:vaf\n'
+        out_dump.write(header)
         out_dump.close()
         for aggregated_group in aggregated_groups:
-            aggregated_group[7] = VCF_DUMP_VALUES_SEP.join(aggregated_group[7])
+            aggregated_group[8] = VCF_DUMP_VALUES_SEP.join(aggregated_group[8])
         with open(out_dump_file, 'a') as out_dump:
             writer = csv.writer(out_dump, delimiter=VCF_DUMP_FIELDS_SEP)
             writer.writerows(aggregated_groups)
