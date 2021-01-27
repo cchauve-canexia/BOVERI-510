@@ -7,6 +7,7 @@ WARNING:181203_M02558_0269_000000000-C5GG5:5000-CG001Q40Run57-8_S8      error FA
 WARNING:181203_M02558_0269_000000000-C5GG5      unprocessed
 WARNING:181203_M03829_0181_000000000-C6M8R:BLANK-CG001Q40Run58-1_S1     error FASTQ files
 WARNING:181203_M03829_0181_000000000-C6M8R      unprocessed
+
 > grep "RUN.ID" log/runs_indel_testing_18012021_MiSeq_input.log | wc -l
 248
 
@@ -45,3 +46,53 @@ WARNING:201113_M02558_0416_000000000-JC7JL.Blank-CG001Qv42Run235-1_S1   results/
 23 data/runs_indel_testing_18012021_MiSeq_failed.csv
 
 > ./bin/run_utils.py data/runs_indel_testing_18012021_MiSeq_failed.csv ch-testdata BOVERI-448
+
+> ./bin/analysis_utils.py log/runs_indel_testing_18012021_MiSeq_failed_input.log results/runs_indel_testing_18012021_MiSeq
+
+> grep WARNING log/runs_indel_testing_18012021_MiSeq_failed_output.log
+WARNING:191231_M03829_0283_000000000-CT9RM      missing output files
+WARNING:200824_M02558_0391_000000000-JB8JD      missing output files
+WARNING:201019_M02558_0410_000000000-JBV74      missing output files
+
+> wc -l data/runs_indel_testing_18012021_MiSeq_failed_failed.csv
+2 data/runs_indel_testing_18012021_MiSeq_failed_failed.csv
+
+> ./bin/run_utils.py data/runs_indel_testing_18012021_MiSeq_failed_failed.csv ch-testdata BOVERI-448
+
+# January 27, 2021
+
+> ./bin/analysis_utils.py log/runs_indel_testing_18012021_MiSeq_failed_failed_input.log results/runs_indel_testing_18012021_MiSeq
+
+> grep WARNING log/runs_indel_testing_18012021_MiSeq_failed_failed_output.log
+
+>  wc -l data/runs_indel_testing_18012021_MiSeq_failed_failed_failed.csv
+0 data/runs_indel_testing_18012021_MiSeq_failed_failed_failed.csv
+
+## Removing VCF files for runs with an empty VCF file
+> aws s3 rm s3://cchauve-orchestration-ch/200817_M03829_0348_000000000-J6WCH/200817_M03829_0348_000000000-J6WCH_indels_filtered_snpeff.vcf.tar.gz
+delete: s3://cchauve-orchestration-ch/200817_M03829_0348_000000000-J6WCH/200817_M03829_0348_000000000-J6WCH_indels_filtered_snpeff.vcf.tar.gz
+> aws s3 rm s3://cchauve-orchestration-ch/200817_M03829_0348_000000000-J6WCH/200817_M03829_0348_000000000-J6WCH_snps_filtered_snpeff.vcf.tar.gz
+delete: s3://cchauve-orchestration-ch/200817_M03829_0348_000000000-J6WCH/200817_M03829_0348_000000000-J6WCH_snps_filtered_snpeff.vcf.tar.gz
+> aws s3 rm s3://cchauve-orchestration-ch/180926_M02558_0250_000000000-C39DN/180926_M02558_0250_000000000-C39DN_indels_filtered_snpeff.vcf.tar.gz
+delete: s3://cchauve-orchestration-ch/180926_M02558_0250_000000000-C39DN/180926_M02558_0250_000000000-C39DN_indels_filtered_snpeff.vcf.tar.gz
+> aws s3 rm s3://cchauve-orchestration-ch/180926_M02558_0250_000000000-C39DN/180926_M02558_0250_000000000-C39DN_snps_filtered_snpeff.vcf.tar.gz
+delete: s3://cchauve-orchestration-ch/180926_M02558_0250_000000000-C39DN/180926_M02558_0250_000000000-C39DN_snps_filtered_snpeff.vcf.tar.gz
+> aws s3 rm s3://cchauve-orchestration-ch/201113_M02558_0416_000000000-JC7JL/201113_M02558_0416_000000000-JC7JL_indels_filtered_snpeff.vcf.tar.gz
+delete: s3://cchauve-orchestration-ch/201113_M02558_0416_000000000-JC7JL/201113_M02558_0416_000000000-JC7JL_indels_filtered_snpeff.vcf.tar.gz
+> aws s3 rm s3://cchauve-orchestration-ch/201113_M02558_0416_000000000-JC7JL/201113_M02558_0416_000000000-JC7JL_snps_filtered_snpeff.vcf.tar.gz
+delete: s3://cchauve-orchestration-ch/201113_M02558_0416_000000000-JC7JL/201113_M02558_0416_000000000-JC7JL_snps_filtered_snpeff.vcf.tar.gz
+
+> grep 200817_M03829_0348_000000000-J6WCH data/runs_indel_testing_18012021_MiSeq.csv > data/runs_indel_testing_18012021_MiSeq_failed_empty.csv
+> grep 180926_M02558_0250_000000000-C39DN data/runs_indel_testing_18012021_MiSeq.csv >> data/runs_indel_testing_18012021_MiSeq_failed_empty.csv
+> grep 201113_M02558_0416_000000000-JC7JL data/runs_indel_testing_18012021_MiSeq.csv >> data/runs_indel_testing_18012021_MiSeq_failed_empty.csv
+
+> ./bin/run_utils.py data/runs_indel_testing_18012021_MiSeq_failed_empty.csv ch-testdata BOVERI-448
+
+> ./bin/analysis_utils.py log/runs_indel_testing_18012021_MiSeq_failed_empty_input.log results/runs_indel_testing_18012021_MiSeq
+
+> grep WARNING log/runs_indel_testing_18012021_MiSeq_failed_empty_output.log
+
+> ./bin/aggregate_dump_files.py results/runs_indel_testing_18012021_MiSeq
+INFO    indels calls in DNA samples:    10327
+INFO    indels calls in ctrl samples:   1490
+INFO    indels calls in misc samples:   280

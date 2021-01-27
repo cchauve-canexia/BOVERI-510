@@ -1,331 +1,268 @@
-10000-CG001Q40Run56-5_S5.CG001v3.4.16	max number of variants:7
-10000-CG001Q40Run56-5_S5.CG001v3.4.18	max number of variants:10
-10000-CG001Q40Run56-5_S5.CG001v3.4.20	max number of variants:11
-10000-CG001Q40Run56-5_S5.CG001v3.4.22	max number of variants:8
-10000-CG001Q40Run56-5_S5.CG001v3.4.39	max number of variants:6
-10000-CG001Q40Run56-5_S5.CG001v3.4.50	max number of variants:8
-10000-CG001Q40Run56-5_S5.CG001v3.4.53	max normalized_alignments:60
-10000-CG001Q40Run56-5_S5.CG001v3.4.53	average normalized_alignments:1.118
-10000-CG001Q40Run56-5_S5.CG001v3.4.53	max number of variants:6
-10000-CG001Q40Run56-5_S5.CG001v3.4.53	average number of variants:2.02
-10000-CG001Q40Run56-5_S5.CG001v3.4.59	max number of variants:6
-10000-CG001Q40Run56-5_S5.CG001v3.4.76	max number of variants:6
-10000-CG001Q40Run56-5_S5.CG001v3.4.89	max number of variants:17
-10000-CG001Q40Run56-5_S5.CG001v3.4.91	max normalized_alignments:12
-10000-CG001Q40Run56-5_S5.CG001v3.4.91	max number of variants:27
-10000-CG001Q40Run56-5_S5.CG001v3.4.91	average number of variants:2.4
-10000-CG001Q40Run56-5_S5.CG001v3.4.94	average number of variants:1.6
-10000-CG001Q40Run56-5_S5.CG001v3.4.96	max number of variants:6
-10000-CG001Q40Run56-5_S5.CG001v3.4.102	max number of variants:34
-10000-CG001Q40Run56-5_S5.CG001v3.4.102	average number of variants:1.61
-10000-CG001Q40Run56-5_S5.CG001v3.4.103	average number of variants:1.51
-10000-CG001Q40Run56-5_S5.CG001v3.4.105	max normalized_alignments:26
-10000-CG001Q40Run56-5_S5.CG001v3.4.105	average normalized_alignments:1.359
-10000-CG001Q40Run56-5_S5.CG001v3.4.105	max number of variants:45
-10000-CG001Q40Run56-5_S5.CG001v3.4.105	average number of variants:14.92
-10000-CG001Q40Run56-5_S5.CG001v3.4.118	max number of variants:6
-10000-CG001Q40Run56-5_S5.CG001v3.4.118	average number of variants:1.55
-10000-CG001Q40Run56-5_S5.CG001v3.4.122	average number of variants:1.51
-10000-CG001Q40Run56-5_S5.CG001v3.4.125	average number of variants:1.59
+10000-CG001Q40Run56-5_S5.CG001v3.4.16	max/average number of variants:7 1.33
+10000-CG001Q40Run56-5_S5.CG001v3.4.18	max/average number of variants:10 1.45
+10000-CG001Q40Run56-5_S5.CG001v3.4.20	max/average number of variants:11 1.47
+10000-CG001Q40Run56-5_S5.CG001v3.4.22	max/average number of variants:8 1.41
+10000-CG001Q40Run56-5_S5.CG001v3.4.39	max/average number of variants:6 1.28
+10000-CG001Q40Run56-5_S5.CG001v3.4.50	max/average number of variants:8 1.22
+10000-CG001Q40Run56-5_S5.CG001v3.4.53	aligned_clusters:451 nb/max/average normalized_alignments:504 60 1.118
+10000-CG001Q40Run56-5_S5.CG001v3.4.53	max/average number of variants:6 2.02
+10000-CG001Q40Run56-5_S5.CG001v3.4.59	max/average number of variants:6 1.21
+10000-CG001Q40Run56-5_S5.CG001v3.4.76	max/average number of variants:6 1.47
+10000-CG001Q40Run56-5_S5.CG001v3.4.89	max/average number of variants:17 1.4
+10000-CG001Q40Run56-5_S5.CG001v3.4.91	aligned_clusters:434 nb/max/average normalized_alignments:442 12 1.018
+10000-CG001Q40Run56-5_S5.CG001v3.4.91	max/average number of variants:27 2.4
+10000-CG001Q40Run56-5_S5.CG001v3.4.94	max/average number of variants:4 1.6
+10000-CG001Q40Run56-5_S5.CG001v3.4.96	max/average number of variants:6 1.47
+10000-CG001Q40Run56-5_S5.CG001v3.4.102	max/average number of variants:34 1.61
+10000-CG001Q40Run56-5_S5.CG001v3.4.103	max/average number of variants:5 1.51
+10000-CG001Q40Run56-5_S5.CG001v3.4.105	aligned_clusters:652 nb/max/average normalized_alignments:886 26 1.359
+10000-CG001Q40Run56-5_S5.CG001v3.4.105	max/average number of variants:45 14.92
+10000-CG001Q40Run56-5_S5.CG001v3.4.118	max/average number of variants:6 1.55
+10000-CG001Q40Run56-5_S5.CG001v3.4.122	max/average number of variants:4 1.51
+10000-CG001Q40Run56-5_S5.CG001v3.4.125	max/average number of variants:5 1.59
 10000-CG001Q40Run56-5_S5.CG001v3.4.130	no normalized_alignment
 10000-CG001Q40Run56-5_S5.CG001v3.4.130	no variant
-10000-CG001Q40Run56-5_S5.CG001v3.4.131	max number of variants:9
-10000-CG001Q40Run56-5_S5.CG001v3.4.135	average number of variants:1.55
-10000-CG001Q40Run56-5_S5.CG001v4.0.7	max number of variants:6
-10000-CG001Q40Run56-5_S5.CG001v4.0.8	max normalized_alignments:18
-10000-CG001Q40Run56-5_S5.CG001v4.0.8	max number of variants:29
-10000-CG001Q40Run56-5_S5.CG001v4.0.8	average number of variants:2.49
-10000-CG001Q40Run56-5_S5.CG001v4.0.11	average number of variants:1.78
-10000-CG001Q40Run56-5_S5.CG001v4.0.21	average number of variants:1.56
-10000-CG001Q40Run56-5_S5.CG001v4.0.32	max number of variants:6
-10000-CG001Q40Run56-5_S5.CG001v4.0.34	max number of variants:6
-10000-CG001Q40Run56-5_S5.CG001v4.0.34	average number of variants:1.68
-10000-CG001Q40Run56-5_S5.CG001v4.0.44	average number of variants:1.51
-10000-CG001Q40Run56-5_S5.CG001v4.0.45	max number of variants:6
-10000-CG001Q40Run56-5_S5.CG001v4.0.51	average number of variants:1.82
-10000-CG001Q40Run56-5_S5.CG001v4.0.53	average number of variants:1.62
-10000-CG001Q40Run56-5_S5.CG001v4.0.57	max number of variants:10
-10000-CG001Q40Run56-5_S5.CG001v4.0.57	average number of variants:1.78
-10000-CG001Q40Run56-5_S5.CG001v4.0.58	max number of variants:6
-10000-CG001Q40Run56-5_S5.CG001v4.0.58	average number of variants:1.59
-10000-CG001Q40Run56-5_S5.CG001v4.0.59	average number of variants:1.66
-10000-CG001Q40Run56-5_S5.CG001v4.0.60	max normalized_alignments:15
-10000-CG001Q40Run56-5_S5.CG001v4.0.60	average number of variants:1.55
-10000-CG001Q40Run56-5_S5.CG001v3.4.56	max number of variants:7
-10000-CG001Q40Run56-5_S5.CG001v3.4.56	average number of variants:2.04
-10000-CG001Q40Run56-6_S6.CG001v3.4.5	max number of variants:7
-10000-CG001Q40Run56-6_S6.CG001v3.4.7	max number of variants:6
-10000-CG001Q40Run56-6_S6.CG001v3.4.11	average number of variants:1.51
-10000-CG001Q40Run56-6_S6.CG001v3.4.24	max number of variants:6
-10000-CG001Q40Run56-6_S6.CG001v3.4.49	max number of variants:7
-10000-CG001Q40Run56-6_S6.CG001v3.4.72	max number of variants:8
-10000-CG001Q40Run56-6_S6.CG001v3.4.82	max number of variants:7
-10000-CG001Q40Run56-6_S6.CG001v3.4.83	max number of variants:6
-10000-CG001Q40Run56-6_S6.CG001v3.4.91	max normalized_alignments:12
-10000-CG001Q40Run56-6_S6.CG001v3.4.91	max number of variants:27
-10000-CG001Q40Run56-6_S6.CG001v3.4.91	average number of variants:2.52
-10000-CG001Q40Run56-6_S6.CG001v3.4.92	max number of variants:6
-10000-CG001Q40Run56-6_S6.CG001v3.4.94	average number of variants:1.59
-10000-CG001Q40Run56-6_S6.CG001v3.4.96	average number of variants:1.51
-10000-CG001Q40Run56-6_S6.CG001v3.4.97	max number of variants:10
-10000-CG001Q40Run56-6_S6.CG001v3.4.103	max number of variants:6
-10000-CG001Q40Run56-6_S6.CG001v3.4.103	average number of variants:1.52
-10000-CG001Q40Run56-6_S6.CG001v3.4.105	max normalized_alignments:42
-10000-CG001Q40Run56-6_S6.CG001v3.4.105	average normalized_alignments:1.496
-10000-CG001Q40Run56-6_S6.CG001v3.4.105	max number of variants:45
-10000-CG001Q40Run56-6_S6.CG001v3.4.105	average number of variants:18.29
-10000-CG001Q40Run56-6_S6.CG001v3.4.111	max number of variants:7
-10000-CG001Q40Run56-6_S6.CG001v3.4.113	max number of variants:10
-10000-CG001Q40Run56-6_S6.CG001v3.4.118	max number of variants:11
-10000-CG001Q40Run56-6_S6.CG001v3.4.118	average number of variants:1.8
-10000-CG001Q40Run56-6_S6.CG001v3.4.125	average number of variants:1.61
+10000-CG001Q40Run56-5_S5.CG001v3.4.131	max/average number of variants:9 1.24
+10000-CG001Q40Run56-5_S5.CG001v3.4.135	max/average number of variants:4 1.55
+10000-CG001Q40Run56-5_S5.CG001v4.0.7	max/average number of variants:6 1.31
+10000-CG001Q40Run56-5_S5.CG001v4.0.8	aligned_clusters:913 nb/max/average normalized_alignments:929 18 1.018
+10000-CG001Q40Run56-5_S5.CG001v4.0.8	max/average number of variants:29 2.49
+10000-CG001Q40Run56-5_S5.CG001v4.0.11	max/average number of variants:4 1.78
+10000-CG001Q40Run56-5_S5.CG001v4.0.21	max/average number of variants:4 1.56
+10000-CG001Q40Run56-5_S5.CG001v4.0.32	max/average number of variants:6 1.28
+10000-CG001Q40Run56-5_S5.CG001v4.0.34	max/average number of variants:6 1.68
+10000-CG001Q40Run56-5_S5.CG001v4.0.44	max/average number of variants:4 1.51
+10000-CG001Q40Run56-5_S5.CG001v4.0.45	max/average number of variants:6 1.32
+10000-CG001Q40Run56-5_S5.CG001v4.0.51	max/average number of variants:4 1.82
+10000-CG001Q40Run56-5_S5.CG001v4.0.53	max/average number of variants:3 1.62
+10000-CG001Q40Run56-5_S5.CG001v4.0.57	max/average number of variants:10 1.78
+10000-CG001Q40Run56-5_S5.CG001v4.0.58	max/average number of variants:6 1.59
+10000-CG001Q40Run56-5_S5.CG001v4.0.59	max/average number of variants:4 1.66
+10000-CG001Q40Run56-5_S5.CG001v4.0.60	aligned_clusters:641 nb/max/average normalized_alignments:648 15 1.011
+10000-CG001Q40Run56-5_S5.CG001v4.0.60	max/average number of variants:5 1.55
+10000-CG001Q40Run56-5_S5.CG001v3.4.56	max/average number of variants:7 2.04
+10000-CG001Q40Run56-6_S6.CG001v3.4.5	max/average number of variants:7 1.27
+10000-CG001Q40Run56-6_S6.CG001v3.4.7	max/average number of variants:6 1.37
+10000-CG001Q40Run56-6_S6.CG001v3.4.11	max/average number of variants:3 1.51
+10000-CG001Q40Run56-6_S6.CG001v3.4.24	max/average number of variants:6 1.29
+10000-CG001Q40Run56-6_S6.CG001v3.4.49	max/average number of variants:7 1.36
+10000-CG001Q40Run56-6_S6.CG001v3.4.72	max/average number of variants:8 1.34
+10000-CG001Q40Run56-6_S6.CG001v3.4.82	max/average number of variants:7 1.32
+10000-CG001Q40Run56-6_S6.CG001v3.4.83	max/average number of variants:6 1.29
+10000-CG001Q40Run56-6_S6.CG001v3.4.91	aligned_clusters:395 nb/max/average normalized_alignments:404 12 1.023
+10000-CG001Q40Run56-6_S6.CG001v3.4.91	max/average number of variants:27 2.52
+10000-CG001Q40Run56-6_S6.CG001v3.4.92	max/average number of variants:6 1.29
+10000-CG001Q40Run56-6_S6.CG001v3.4.94	max/average number of variants:4 1.59
+10000-CG001Q40Run56-6_S6.CG001v3.4.96	max/average number of variants:5 1.51
+10000-CG001Q40Run56-6_S6.CG001v3.4.97	max/average number of variants:10 1.36
+10000-CG001Q40Run56-6_S6.CG001v3.4.103	max/average number of variants:6 1.52
+10000-CG001Q40Run56-6_S6.CG001v3.4.105	aligned_clusters:710 nb/max/average normalized_alignments:1062 42 1.496
+10000-CG001Q40Run56-6_S6.CG001v3.4.105	max/average number of variants:45 18.29
+10000-CG001Q40Run56-6_S6.CG001v3.4.111	max/average number of variants:7 1.31
+10000-CG001Q40Run56-6_S6.CG001v3.4.113	max/average number of variants:10 1.34
+10000-CG001Q40Run56-6_S6.CG001v3.4.118	max/average number of variants:11 1.8
+10000-CG001Q40Run56-6_S6.CG001v3.4.125	max/average number of variants:4 1.61
 10000-CG001Q40Run56-6_S6.CG001v3.4.130	no normalized_alignment
 10000-CG001Q40Run56-6_S6.CG001v3.4.130	no variant
-10000-CG001Q40Run56-6_S6.CG001v3.4.135	average number of variants:1.6
-10000-CG001Q40Run56-6_S6.CG001v4.0.2	max number of variants:8
-10000-CG001Q40Run56-6_S6.CG001v4.0.10	max number of variants:9
-10000-CG001Q40Run56-6_S6.CG001v4.0.11	max number of variants:11
-10000-CG001Q40Run56-6_S6.CG001v4.0.11	average number of variants:1.78
-10000-CG001Q40Run56-6_S6.CG001v4.0.25	max number of variants:6
-10000-CG001Q40Run56-6_S6.CG001v4.0.29	max number of variants:6
-10000-CG001Q40Run56-6_S6.CG001v4.0.30	max number of variants:9
-10000-CG001Q40Run56-6_S6.CG001v4.0.30	average number of variants:1.55
-10000-CG001Q40Run56-6_S6.CG001v4.0.32	max number of variants:6
-10000-CG001Q40Run56-6_S6.CG001v4.0.34	average number of variants:1.6
-10000-CG001Q40Run56-6_S6.CG001v4.0.35	max number of variants:6
-10000-CG001Q40Run56-6_S6.CG001v4.0.38	max normalized_alignments:15
-10000-CG001Q40Run56-6_S6.CG001v4.0.38	max number of variants:23
-10000-CG001Q40Run56-6_S6.CG001v4.0.38	average number of variants:2.14
-10000-CG001Q40Run56-6_S6.CG001v4.0.45	max normalized_alignments:22
-10000-CG001Q40Run56-6_S6.CG001v4.0.48	max number of variants:9
-10000-CG001Q40Run56-6_S6.CG001v4.0.49	max number of variants:6
-10000-CG001Q40Run56-6_S6.CG001v4.0.51	average number of variants:1.79
-10000-CG001Q40Run56-6_S6.CG001v4.0.52	max number of variants:6
-10000-CG001Q40Run56-6_S6.CG001v4.0.53	average number of variants:1.71
-10000-CG001Q40Run56-6_S6.CG001v4.0.57	average number of variants:1.75
-10000-CG001Q40Run56-6_S6.CG001v4.0.58	average number of variants:1.64
-10000-CG001Q40Run56-6_S6.CG001v4.0.59	average number of variants:1.6
-10000-CG001Q40Run56-6_S6.CG001v3.4.56	max number of variants:7
-10000-CG001Q40Run56-6_S6.CG001v3.4.56	average number of variants:1.76
-10000-CG001Q40Run56-6_S6.CG001v3.4.62	average number of variants:1.51
-10000-CG001Q40Run56-7_S7.CG001v3.4.5	max number of variants:6
-10000-CG001Q40Run56-7_S7.CG001v3.4.24	max number of variants:8
-10000-CG001Q40Run56-7_S7.CG001v3.4.38	max number of variants:8
-10000-CG001Q40Run56-7_S7.CG001v3.4.43	max number of variants:8
-10000-CG001Q40Run56-7_S7.CG001v3.4.89	max number of variants:6
-10000-CG001Q40Run56-7_S7.CG001v3.4.91	max normalized_alignments:12
-10000-CG001Q40Run56-7_S7.CG001v3.4.91	max number of variants:27
-10000-CG001Q40Run56-7_S7.CG001v3.4.91	average number of variants:3.8
-10000-CG001Q40Run56-7_S7.CG001v3.4.94	average number of variants:1.61
-10000-CG001Q40Run56-7_S7.CG001v3.4.96	max normalized_alignments:12
-10000-CG001Q40Run56-7_S7.CG001v3.4.96	max number of variants:24
-10000-CG001Q40Run56-7_S7.CG001v3.4.96	average number of variants:1.79
-10000-CG001Q40Run56-7_S7.CG001v3.4.102	max normalized_alignments:36
-10000-CG001Q40Run56-7_S7.CG001v3.4.102	max number of variants:35
-10000-CG001Q40Run56-7_S7.CG001v3.4.102	average number of variants:5.04
-10000-CG001Q40Run56-7_S7.CG001v3.4.103	average number of variants:1.53
-10000-CG001Q40Run56-7_S7.CG001v3.4.105	max normalized_alignments:34
-10000-CG001Q40Run56-7_S7.CG001v3.4.105	average normalized_alignments:1.392
-10000-CG001Q40Run56-7_S7.CG001v3.4.105	max number of variants:45
-10000-CG001Q40Run56-7_S7.CG001v3.4.105	average number of variants:15.61
-10000-CG001Q40Run56-7_S7.CG001v3.4.118	average number of variants:1.51
-10000-CG001Q40Run56-7_S7.CG001v3.4.125	max number of variants:7
-10000-CG001Q40Run56-7_S7.CG001v3.4.125	average number of variants:1.63
+10000-CG001Q40Run56-6_S6.CG001v3.4.135	max/average number of variants:5 1.6
+10000-CG001Q40Run56-6_S6.CG001v4.0.2	max/average number of variants:8 1.31
+10000-CG001Q40Run56-6_S6.CG001v4.0.10	max/average number of variants:9 1.25
+10000-CG001Q40Run56-6_S6.CG001v4.0.11	max/average number of variants:11 1.78
+10000-CG001Q40Run56-6_S6.CG001v4.0.25	max/average number of variants:6 1.34
+10000-CG001Q40Run56-6_S6.CG001v4.0.29	max/average number of variants:6 1.3
+10000-CG001Q40Run56-6_S6.CG001v4.0.30	max/average number of variants:9 1.55
+10000-CG001Q40Run56-6_S6.CG001v4.0.32	max/average number of variants:6 1.34
+10000-CG001Q40Run56-6_S6.CG001v4.0.34	max/average number of variants:4 1.6
+10000-CG001Q40Run56-6_S6.CG001v4.0.35	max/average number of variants:6 1.27
+10000-CG001Q40Run56-6_S6.CG001v4.0.38	aligned_clusters:628 nb/max/average normalized_alignments:633 15 1.008
+10000-CG001Q40Run56-6_S6.CG001v4.0.38	max/average number of variants:23 2.14
+10000-CG001Q40Run56-6_S6.CG001v4.0.45	aligned_clusters:717 nb/max/average normalized_alignments:735 22 1.025
+10000-CG001Q40Run56-6_S6.CG001v4.0.48	max/average number of variants:9 1.3
+10000-CG001Q40Run56-6_S6.CG001v4.0.49	max/average number of variants:6 1.27
+10000-CG001Q40Run56-6_S6.CG001v4.0.51	max/average number of variants:5 1.79
+10000-CG001Q40Run56-6_S6.CG001v4.0.52	max/average number of variants:6 1.36
+10000-CG001Q40Run56-6_S6.CG001v4.0.53	max/average number of variants:5 1.71
+10000-CG001Q40Run56-6_S6.CG001v4.0.57	max/average number of variants:4 1.75
+10000-CG001Q40Run56-6_S6.CG001v4.0.58	max/average number of variants:5 1.64
+10000-CG001Q40Run56-6_S6.CG001v4.0.59	max/average number of variants:3 1.6
+10000-CG001Q40Run56-6_S6.CG001v3.4.56	max/average number of variants:7 1.76
+10000-CG001Q40Run56-6_S6.CG001v3.4.62	max/average number of variants:5 1.51
+10000-CG001Q40Run56-7_S7.CG001v3.4.5	max/average number of variants:6 1.28
+10000-CG001Q40Run56-7_S7.CG001v3.4.24	max/average number of variants:8 1.34
+10000-CG001Q40Run56-7_S7.CG001v3.4.38	max/average number of variants:8 1.29
+10000-CG001Q40Run56-7_S7.CG001v3.4.43	max/average number of variants:8 1.48
+10000-CG001Q40Run56-7_S7.CG001v3.4.89	max/average number of variants:6 1.22
+10000-CG001Q40Run56-7_S7.CG001v3.4.91	aligned_clusters:445 nb/max/average normalized_alignments:468 12 1.052
+10000-CG001Q40Run56-7_S7.CG001v3.4.91	max/average number of variants:27 3.8
+10000-CG001Q40Run56-7_S7.CG001v3.4.94	max/average number of variants:4 1.61
+10000-CG001Q40Run56-7_S7.CG001v3.4.96	aligned_clusters:1025 nb/max/average normalized_alignments:1052 12 1.026
+10000-CG001Q40Run56-7_S7.CG001v3.4.96	max/average number of variants:24 1.79
+10000-CG001Q40Run56-7_S7.CG001v3.4.102	aligned_clusters:411 nb/max/average normalized_alignments:442 36 1.075
+10000-CG001Q40Run56-7_S7.CG001v3.4.102	max/average number of variants:35 5.04
+10000-CG001Q40Run56-7_S7.CG001v3.4.103	max/average number of variants:5 1.53
+10000-CG001Q40Run56-7_S7.CG001v3.4.105	aligned_clusters:692 nb/max/average normalized_alignments:963 34 1.392
+10000-CG001Q40Run56-7_S7.CG001v3.4.105	max/average number of variants:45 15.61
+10000-CG001Q40Run56-7_S7.CG001v3.4.118	max/average number of variants:4 1.51
+10000-CG001Q40Run56-7_S7.CG001v3.4.125	max/average number of variants:7 1.63
 10000-CG001Q40Run56-7_S7.CG001v3.4.130	no normalized_alignment
 10000-CG001Q40Run56-7_S7.CG001v3.4.130	no variant
-10000-CG001Q40Run56-7_S7.CG001v3.4.135	average number of variants:1.53
-10000-CG001Q40Run56-7_S7.CG001v3.4.138	max number of variants:11
-10000-CG001Q40Run56-7_S7.CG001v4.0.7	max number of variants:10
-10000-CG001Q40Run56-7_S7.CG001v4.0.8	max normalized_alignments:18
-10000-CG001Q40Run56-7_S7.CG001v4.0.8	max number of variants:29
-10000-CG001Q40Run56-7_S7.CG001v4.0.8	average number of variants:2.35
-10000-CG001Q40Run56-7_S7.CG001v4.0.10	max number of variants:8
-10000-CG001Q40Run56-7_S7.CG001v4.0.11	max number of variants:6
-10000-CG001Q40Run56-7_S7.CG001v4.0.11	average number of variants:1.74
-10000-CG001Q40Run56-7_S7.CG001v4.0.21	average number of variants:1.53
-10000-CG001Q40Run56-7_S7.CG001v4.0.30	max number of variants:8
-10000-CG001Q40Run56-7_S7.CG001v4.0.34	average number of variants:1.62
-10000-CG001Q40Run56-7_S7.CG001v4.0.38	max normalized_alignments:15
-10000-CG001Q40Run56-7_S7.CG001v4.0.38	max number of variants:23
-10000-CG001Q40Run56-7_S7.CG001v4.0.38	average number of variants:3.46
-10000-CG001Q40Run56-7_S7.CG001v4.0.40	max number of variants:7
-10000-CG001Q40Run56-7_S7.CG001v4.0.42	max number of variants:7
-10000-CG001Q40Run56-7_S7.CG001v4.0.48	max number of variants:8
-10000-CG001Q40Run56-7_S7.CG001v4.0.51	max number of variants:9
-10000-CG001Q40Run56-7_S7.CG001v4.0.51	average number of variants:1.77
-10000-CG001Q40Run56-7_S7.CG001v4.0.53	max number of variants:8
-10000-CG001Q40Run56-7_S7.CG001v4.0.53	average number of variants:1.66
-10000-CG001Q40Run56-7_S7.CG001v4.0.54	average number of variants:1.52
-10000-CG001Q40Run56-7_S7.CG001v4.0.57	average number of variants:1.82
-10000-CG001Q40Run56-7_S7.CG001v4.0.58	average number of variants:1.56
-10000-CG001Q40Run56-7_S7.CG001v4.0.59	average number of variants:1.66
-10000-CG001Q40Run56-7_S7.CG001v3.4.56	max number of variants:7
-10000-CG001Q40Run56-7_S7.CG001v3.4.56	average number of variants:2.05
-10000-CG001Q40Run56-8_S8.CG001v3.4.26	max number of variants:7
-10000-CG001Q40Run56-8_S8.CG001v3.4.41	max number of variants:7
-10000-CG001Q40Run56-8_S8.CG001v3.4.42	max number of variants:8
-10000-CG001Q40Run56-8_S8.CG001v3.4.43	max number of variants:13
-10000-CG001Q40Run56-8_S8.CG001v3.4.43	average number of variants:1.56
-10000-CG001Q40Run56-8_S8.CG001v3.4.81	average number of variants:1.51
-10000-CG001Q40Run56-8_S8.CG001v3.4.90	max number of variants:7
-10000-CG001Q40Run56-8_S8.CG001v3.4.94	average number of variants:1.58
-10000-CG001Q40Run56-8_S8.CG001v3.4.96	average number of variants:1.51
-10000-CG001Q40Run56-8_S8.CG001v3.4.102	max number of variants:6
-10000-CG001Q40Run56-8_S8.CG001v3.4.103	average number of variants:1.54
-10000-CG001Q40Run56-8_S8.CG001v3.4.105	max normalized_alignments:36
-10000-CG001Q40Run56-8_S8.CG001v3.4.105	average normalized_alignments:1.422
-10000-CG001Q40Run56-8_S8.CG001v3.4.105	max number of variants:46
-10000-CG001Q40Run56-8_S8.CG001v3.4.105	average number of variants:15.75
-10000-CG001Q40Run56-8_S8.CG001v3.4.113	max number of variants:8
-10000-CG001Q40Run56-8_S8.CG001v3.4.118	average number of variants:1.52
-10000-CG001Q40Run56-8_S8.CG001v3.4.122	average number of variants:1.51
-10000-CG001Q40Run56-8_S8.CG001v3.4.125	average number of variants:1.62
+10000-CG001Q40Run56-7_S7.CG001v3.4.135	max/average number of variants:4 1.53
+10000-CG001Q40Run56-7_S7.CG001v3.4.138	max/average number of variants:11 1.34
+10000-CG001Q40Run56-7_S7.CG001v4.0.7	max/average number of variants:10 1.34
+10000-CG001Q40Run56-7_S7.CG001v4.0.8	aligned_clusters:858 nb/max/average normalized_alignments:867 18 1.01
+10000-CG001Q40Run56-7_S7.CG001v4.0.8	max/average number of variants:29 2.35
+10000-CG001Q40Run56-7_S7.CG001v4.0.10	max/average number of variants:8 1.24
+10000-CG001Q40Run56-7_S7.CG001v4.0.11	max/average number of variants:6 1.74
+10000-CG001Q40Run56-7_S7.CG001v4.0.21	max/average number of variants:3 1.53
+10000-CG001Q40Run56-7_S7.CG001v4.0.30	max/average number of variants:8 1.5
+10000-CG001Q40Run56-7_S7.CG001v4.0.34	max/average number of variants:5 1.62
+10000-CG001Q40Run56-7_S7.CG001v4.0.38	aligned_clusters:621 nb/max/average normalized_alignments:660 15 1.063
+10000-CG001Q40Run56-7_S7.CG001v4.0.38	max/average number of variants:23 3.46
+10000-CG001Q40Run56-7_S7.CG001v4.0.40	max/average number of variants:7 1.12
+10000-CG001Q40Run56-7_S7.CG001v4.0.42	max/average number of variants:7 1.28
+10000-CG001Q40Run56-7_S7.CG001v4.0.48	max/average number of variants:8 1.26
+10000-CG001Q40Run56-7_S7.CG001v4.0.51	max/average number of variants:9 1.77
+10000-CG001Q40Run56-7_S7.CG001v4.0.53	max/average number of variants:8 1.66
+10000-CG001Q40Run56-7_S7.CG001v4.0.54	max/average number of variants:4 1.52
+10000-CG001Q40Run56-7_S7.CG001v4.0.57	max/average number of variants:4 1.82
+10000-CG001Q40Run56-7_S7.CG001v4.0.58	max/average number of variants:4 1.56
+10000-CG001Q40Run56-7_S7.CG001v4.0.59	max/average number of variants:4 1.66
+10000-CG001Q40Run56-7_S7.CG001v3.4.56	max/average number of variants:7 2.05
+10000-CG001Q40Run56-8_S8.CG001v3.4.26	max/average number of variants:7 1.29
+10000-CG001Q40Run56-8_S8.CG001v3.4.41	max/average number of variants:7 1.29
+10000-CG001Q40Run56-8_S8.CG001v3.4.42	max/average number of variants:8 1.31
+10000-CG001Q40Run56-8_S8.CG001v3.4.43	max/average number of variants:13 1.56
+10000-CG001Q40Run56-8_S8.CG001v3.4.81	max/average number of variants:3 1.51
+10000-CG001Q40Run56-8_S8.CG001v3.4.90	max/average number of variants:7 1.31
+10000-CG001Q40Run56-8_S8.CG001v3.4.94	max/average number of variants:4 1.58
+10000-CG001Q40Run56-8_S8.CG001v3.4.96	max/average number of variants:4 1.51
+10000-CG001Q40Run56-8_S8.CG001v3.4.102	max/average number of variants:6 1.31
+10000-CG001Q40Run56-8_S8.CG001v3.4.103	max/average number of variants:4 1.54
+10000-CG001Q40Run56-8_S8.CG001v3.4.105	aligned_clusters:748 nb/max/average normalized_alignments:1064 36 1.422
+10000-CG001Q40Run56-8_S8.CG001v3.4.105	max/average number of variants:46 15.75
+10000-CG001Q40Run56-8_S8.CG001v3.4.113	max/average number of variants:8 1.29
+10000-CG001Q40Run56-8_S8.CG001v3.4.118	max/average number of variants:4 1.52
+10000-CG001Q40Run56-8_S8.CG001v3.4.122	max/average number of variants:4 1.51
+10000-CG001Q40Run56-8_S8.CG001v3.4.125	max/average number of variants:5 1.62
 10000-CG001Q40Run56-8_S8.CG001v3.4.130	no normalized_alignment
 10000-CG001Q40Run56-8_S8.CG001v3.4.130	no variant
-10000-CG001Q40Run56-8_S8.CG001v3.4.135	average number of variants:1.55
-10000-CG001Q40Run56-8_S8.CG001v4.0.2	max number of variants:10
-10000-CG001Q40Run56-8_S8.CG001v4.0.8	max normalized_alignments:18
-10000-CG001Q40Run56-8_S8.CG001v4.0.8	max number of variants:29
-10000-CG001Q40Run56-8_S8.CG001v4.0.8	average number of variants:2.3
-10000-CG001Q40Run56-8_S8.CG001v4.0.11	average number of variants:1.72
-10000-CG001Q40Run56-8_S8.CG001v4.0.12	max number of variants:6
-10000-CG001Q40Run56-8_S8.CG001v4.0.14	max number of variants:9
-10000-CG001Q40Run56-8_S8.CG001v4.0.21	average number of variants:1.51
-10000-CG001Q40Run56-8_S8.CG001v4.0.29	max number of variants:6
-10000-CG001Q40Run56-8_S8.CG001v4.0.30	max number of variants:10
-10000-CG001Q40Run56-8_S8.CG001v4.0.30	average number of variants:1.56
-10000-CG001Q40Run56-8_S8.CG001v4.0.34	max normalized_alignments:20
-10000-CG001Q40Run56-8_S8.CG001v4.0.34	average number of variants:1.62
-10000-CG001Q40Run56-8_S8.CG001v4.0.35	max normalized_alignments:36
-10000-CG001Q40Run56-8_S8.CG001v4.0.35	max number of variants:35
-10000-CG001Q40Run56-8_S8.CG001v4.0.35	average number of variants:5.15
-10000-CG001Q40Run56-8_S8.CG001v4.0.40	max number of variants:6
-10000-CG001Q40Run56-8_S8.CG001v4.0.45	max number of variants:9
-10000-CG001Q40Run56-8_S8.CG001v4.0.51	max number of variants:8
-10000-CG001Q40Run56-8_S8.CG001v4.0.51	average number of variants:1.79
-10000-CG001Q40Run56-8_S8.CG001v4.0.53	max number of variants:6
-10000-CG001Q40Run56-8_S8.CG001v4.0.53	average number of variants:1.65
-10000-CG001Q40Run56-8_S8.CG001v4.0.57	average number of variants:1.73
-10000-CG001Q40Run56-8_S8.CG001v4.0.58	average number of variants:1.59
-10000-CG001Q40Run56-8_S8.CG001v4.0.59	average number of variants:1.61
-10000-CG001Q40Run56-8_S8.CG001v3.4.56	max number of variants:7
-10000-CG001Q40Run56-8_S8.CG001v3.4.56	average number of variants:1.84
-10000-CG001Q40Run56-8_S8.CG001v3.4.64	max number of variants:10
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.11	max number of variants:8
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.49	max number of variants:9
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.53	max number of variants:7
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.74	max number of variants:10
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.94	average number of variants:1.6
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.96	max normalized_alignments:12
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.96	max number of variants:24
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.96	average number of variants:1.91
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.97	max number of variants:6
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.102	max number of variants:9
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.105	max normalized_alignments:20
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.105	average normalized_alignments:1.276
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.105	max number of variants:48
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.105	average number of variants:13.31
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.118	average number of variants:1.52
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.125	average number of variants:1.54
+10000-CG001Q40Run56-8_S8.CG001v3.4.135	max/average number of variants:3 1.55
+10000-CG001Q40Run56-8_S8.CG001v4.0.2	max/average number of variants:10 1.33
+10000-CG001Q40Run56-8_S8.CG001v4.0.8	aligned_clusters:864 nb/max/average normalized_alignments:879 18 1.017
+10000-CG001Q40Run56-8_S8.CG001v4.0.8	max/average number of variants:29 2.3
+10000-CG001Q40Run56-8_S8.CG001v4.0.11	max/average number of variants:5 1.72
+10000-CG001Q40Run56-8_S8.CG001v4.0.12	max/average number of variants:6 1.23
+10000-CG001Q40Run56-8_S8.CG001v4.0.14	max/average number of variants:9 1.25
+10000-CG001Q40Run56-8_S8.CG001v4.0.21	max/average number of variants:3 1.51
+10000-CG001Q40Run56-8_S8.CG001v4.0.29	max/average number of variants:6 1.43
+10000-CG001Q40Run56-8_S8.CG001v4.0.30	max/average number of variants:10 1.56
+10000-CG001Q40Run56-8_S8.CG001v4.0.34	aligned_clusters:365 nb/max/average normalized_alignments:391 20 1.071
+10000-CG001Q40Run56-8_S8.CG001v4.0.34	max/average number of variants:4 1.62
+10000-CG001Q40Run56-8_S8.CG001v4.0.35	aligned_clusters:676 nb/max/average normalized_alignments:732 36 1.083
+10000-CG001Q40Run56-8_S8.CG001v4.0.35	max/average number of variants:35 5.15
+10000-CG001Q40Run56-8_S8.CG001v4.0.40	max/average number of variants:6 1.11
+10000-CG001Q40Run56-8_S8.CG001v4.0.45	max/average number of variants:9 1.31
+10000-CG001Q40Run56-8_S8.CG001v4.0.51	max/average number of variants:8 1.79
+10000-CG001Q40Run56-8_S8.CG001v4.0.53	max/average number of variants:6 1.65
+10000-CG001Q40Run56-8_S8.CG001v4.0.57	max/average number of variants:4 1.73
+10000-CG001Q40Run56-8_S8.CG001v4.0.58	max/average number of variants:4 1.59
+10000-CG001Q40Run56-8_S8.CG001v4.0.59	max/average number of variants:3 1.61
+10000-CG001Q40Run56-8_S8.CG001v3.4.56	max/average number of variants:7 1.84
+10000-CG001Q40Run56-8_S8.CG001v3.4.64	max/average number of variants:10 1.36
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.11	max/average number of variants:8 1.44
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.49	max/average number of variants:9 1.45
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.53	max/average number of variants:7 1.26
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.74	max/average number of variants:10 1.3
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.94	max/average number of variants:3 1.6
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.96	aligned_clusters:655 nb/max/average normalized_alignments:667 12 1.018
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.96	max/average number of variants:24 1.91
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.97	max/average number of variants:6 1.29
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.102	max/average number of variants:9 1.24
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.105	aligned_clusters:439 nb/max/average normalized_alignments:560 20 1.276
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.105	max/average number of variants:48 13.31
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.118	max/average number of variants:3 1.52
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.125	max/average number of variants:4 1.54
 HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.130	no normalized_alignment
 HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.130	no variant
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.135	average number of variants:1.54
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.11	average number of variants:1.72
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.23	max number of variants:8
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.31	max number of variants:7
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.34	average number of variants:1.61
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.35	max normalized_alignments:36
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.35	max number of variants:30
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.35	average number of variants:4.79
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.38	max number of variants:27
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.38	average number of variants:2.17
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.40	max number of variants:6
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.43	max normalized_alignments:16
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.43	max number of variants:10
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.43	average number of variants:1.95
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.44	average number of variants:1.54
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.48	max number of variants:6
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.51	average number of variants:1.7
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.53	average number of variants:1.55
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.54	average number of variants:1.51
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.57	average number of variants:1.78
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.58	average number of variants:1.57
-HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.59	average number of variants:1.62
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.56	max number of variants:7
-HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.56	average number of variants:2.19
-NF-CG001Q40Run56-3_S3.CG001v3.4.7	max number of variants:6
-NF-CG001Q40Run56-3_S3.CG001v3.4.11	max number of variants:6
-NF-CG001Q40Run56-3_S3.CG001v3.4.24	max number of variants:8
-NF-CG001Q40Run56-3_S3.CG001v3.4.25	max number of variants:6
-NF-CG001Q40Run56-3_S3.CG001v3.4.43	max number of variants:11
-NF-CG001Q40Run56-3_S3.CG001v3.4.89	max normalized_alignments:48
-NF-CG001Q40Run56-3_S3.CG001v3.4.89	max number of variants:33
-NF-CG001Q40Run56-3_S3.CG001v3.4.89	average number of variants:5.98
-NF-CG001Q40Run56-3_S3.CG001v3.4.90	max number of variants:7
-NF-CG001Q40Run56-3_S3.CG001v3.4.91	max normalized_alignments:52
-NF-CG001Q40Run56-3_S3.CG001v3.4.91	average normalized_alignments:1.192
-NF-CG001Q40Run56-3_S3.CG001v3.4.91	max number of variants:29
-NF-CG001Q40Run56-3_S3.CG001v3.4.91	average number of variants:8.43
-NF-CG001Q40Run56-3_S3.CG001v3.4.94	max number of variants:6
-NF-CG001Q40Run56-3_S3.CG001v3.4.94	average number of variants:1.68
-NF-CG001Q40Run56-3_S3.CG001v3.4.96	average number of variants:1.54
-NF-CG001Q40Run56-3_S3.CG001v3.4.102	max number of variants:33
-NF-CG001Q40Run56-3_S3.CG001v3.4.102	average number of variants:1.57
-NF-CG001Q40Run56-3_S3.CG001v3.4.103	max number of variants:8
-NF-CG001Q40Run56-3_S3.CG001v3.4.103	average number of variants:1.56
-NF-CG001Q40Run56-3_S3.CG001v3.4.105	max normalized_alignments:42
-NF-CG001Q40Run56-3_S3.CG001v3.4.105	average normalized_alignments:1.354
-NF-CG001Q40Run56-3_S3.CG001v3.4.105	max number of variants:48
-NF-CG001Q40Run56-3_S3.CG001v3.4.105	average number of variants:16.65
-NF-CG001Q40Run56-3_S3.CG001v3.4.125	average number of variants:1.51
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.135	max/average number of variants:4 1.54
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.11	max/average number of variants:4 1.72
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.23	max/average number of variants:8 1.26
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.31	max/average number of variants:7 1.23
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.34	max/average number of variants:4 1.61
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.35	aligned_clusters:441 nb/max/average normalized_alignments:471 36 1.068
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.35	max/average number of variants:30 4.79
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.38	max/average number of variants:27 2.17
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.40	max/average number of variants:6 1.12
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.43	aligned_clusters:197 nb/max/average normalized_alignments:211 16 1.071
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.43	max/average number of variants:10 1.95
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.44	max/average number of variants:4 1.54
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.48	max/average number of variants:6 1.21
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.51	max/average number of variants:4 1.7
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.53	max/average number of variants:3 1.55
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.54	max/average number of variants:3 1.51
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.57	max/average number of variants:3 1.78
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.58	max/average number of variants:4 1.57
+HorizonWT-CG001Q40Run56-4_S4.CG001v4.0.59	max/average number of variants:3 1.62
+HorizonWT-CG001Q40Run56-4_S4.CG001v3.4.56	max/average number of variants:7 2.19
+NF-CG001Q40Run56-3_S3.CG001v3.4.7	max/average number of variants:6 1.29
+NF-CG001Q40Run56-3_S3.CG001v3.4.11	max/average number of variants:6 1.21
+NF-CG001Q40Run56-3_S3.CG001v3.4.24	max/average number of variants:8 1.32
+NF-CG001Q40Run56-3_S3.CG001v3.4.25	max/average number of variants:6 1.25
+NF-CG001Q40Run56-3_S3.CG001v3.4.43	max/average number of variants:11 1.33
+NF-CG001Q40Run56-3_S3.CG001v3.4.89	aligned_clusters:716 nb/max/average normalized_alignments:751 48 1.049
+NF-CG001Q40Run56-3_S3.CG001v3.4.89	max/average number of variants:33 5.98
+NF-CG001Q40Run56-3_S3.CG001v3.4.90	max/average number of variants:7 1.29
+NF-CG001Q40Run56-3_S3.CG001v3.4.91	aligned_clusters:318 nb/max/average normalized_alignments:379 52 1.192
+NF-CG001Q40Run56-3_S3.CG001v3.4.91	max/average number of variants:29 8.43
+NF-CG001Q40Run56-3_S3.CG001v3.4.94	max/average number of variants:6 1.68
+NF-CG001Q40Run56-3_S3.CG001v3.4.96	max/average number of variants:5 1.54
+NF-CG001Q40Run56-3_S3.CG001v3.4.102	max/average number of variants:33 1.57
+NF-CG001Q40Run56-3_S3.CG001v3.4.103	max/average number of variants:8 1.56
+NF-CG001Q40Run56-3_S3.CG001v3.4.105	aligned_clusters:913 nb/max/average normalized_alignments:1236 42 1.354
+NF-CG001Q40Run56-3_S3.CG001v3.4.105	max/average number of variants:48 16.65
+NF-CG001Q40Run56-3_S3.CG001v3.4.125	max/average number of variants:3 1.51
 NF-CG001Q40Run56-3_S3.CG001v3.4.130	no normalized_alignment
 NF-CG001Q40Run56-3_S3.CG001v3.4.130	no variant
-NF-CG001Q40Run56-3_S3.CG001v3.4.131	max number of variants:7
-NF-CG001Q40Run56-3_S3.CG001v3.4.135	average number of variants:1.52
-NF-CG001Q40Run56-3_S3.CG001v4.0.2	max number of variants:6
-NF-CG001Q40Run56-3_S3.CG001v4.0.8	max number of variants:8
-NF-CG001Q40Run56-3_S3.CG001v4.0.11	average number of variants:2.0
-NF-CG001Q40Run56-3_S3.CG001v4.0.19	average number of variants:1.55
-NF-CG001Q40Run56-3_S3.CG001v4.0.20	average number of variants:1.75
-NF-CG001Q40Run56-3_S3.CG001v4.0.21	average number of variants:1.51
-NF-CG001Q40Run56-3_S3.CG001v4.0.34	max normalized_alignments:20
-NF-CG001Q40Run56-3_S3.CG001v4.0.34	average number of variants:1.51
-NF-CG001Q40Run56-3_S3.CG001v4.0.40	max number of variants:7
-NF-CG001Q40Run56-3_S3.CG001v4.0.49	max number of variants:6
-NF-CG001Q40Run56-3_S3.CG001v4.0.50	max number of variants:6
-NF-CG001Q40Run56-3_S3.CG001v4.0.51	average number of variants:1.66
-NF-CG001Q40Run56-3_S3.CG001v4.0.52	max number of variants:10
-NF-CG001Q40Run56-3_S3.CG001v4.0.53	average number of variants:1.6
-NF-CG001Q40Run56-3_S3.CG001v4.0.55	average number of variants:1.52
-NF-CG001Q40Run56-3_S3.CG001v4.0.58	average number of variants:1.7
-NF-CG001Q40Run56-3_S3.CG001v4.0.59	average number of variants:1.68
-NF-CG001Q40Run56-3_S3.CG001v3.4.56	max number of variants:7
-NF-CG001Q40Run56-3_S3.CG001v3.4.56	average number of variants:1.61
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.7	max number of variants:6
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.20	max normalized_alignments:12
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.20	max number of variants:10
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.20	average number of variants:1.56
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.25	max number of variants:6
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.82	max number of variants:8
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.94	average number of variants:1.55
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.103	average number of variants:1.56
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.105	max normalized_alignments:24
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.105	average normalized_alignments:1.209
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.105	max number of variants:48
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.105	average number of variants:11.21
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.125	average number of variants:1.52
+NF-CG001Q40Run56-3_S3.CG001v3.4.131	max/average number of variants:7 1.23
+NF-CG001Q40Run56-3_S3.CG001v3.4.135	max/average number of variants:3 1.52
+NF-CG001Q40Run56-3_S3.CG001v4.0.2	max/average number of variants:6 1.2
+NF-CG001Q40Run56-3_S3.CG001v4.0.8	max/average number of variants:8 1.24
+NF-CG001Q40Run56-3_S3.CG001v4.0.11	max/average number of variants:5 2.0
+NF-CG001Q40Run56-3_S3.CG001v4.0.19	max/average number of variants:3 1.55
+NF-CG001Q40Run56-3_S3.CG001v4.0.20	max/average number of variants:4 1.75
+NF-CG001Q40Run56-3_S3.CG001v4.0.21	max/average number of variants:3 1.51
+NF-CG001Q40Run56-3_S3.CG001v4.0.34	aligned_clusters:525 nb/max/average normalized_alignments:548 20 1.044
+NF-CG001Q40Run56-3_S3.CG001v4.0.34	max/average number of variants:5 1.51
+NF-CG001Q40Run56-3_S3.CG001v4.0.40	max/average number of variants:7 1.15
+NF-CG001Q40Run56-3_S3.CG001v4.0.49	max/average number of variants:6 1.2
+NF-CG001Q40Run56-3_S3.CG001v4.0.50	max/average number of variants:6 1.46
+NF-CG001Q40Run56-3_S3.CG001v4.0.51	max/average number of variants:4 1.66
+NF-CG001Q40Run56-3_S3.CG001v4.0.52	max/average number of variants:10 1.34
+NF-CG001Q40Run56-3_S3.CG001v4.0.53	max/average number of variants:4 1.6
+NF-CG001Q40Run56-3_S3.CG001v4.0.55	max/average number of variants:4 1.52
+NF-CG001Q40Run56-3_S3.CG001v4.0.58	max/average number of variants:3 1.7
+NF-CG001Q40Run56-3_S3.CG001v4.0.59	max/average number of variants:4 1.68
+NF-CG001Q40Run56-3_S3.CG001v3.4.56	max/average number of variants:7 1.61
+QMRS-CG001Q40Run56-2_S2.CG001v3.4.7	max/average number of variants:6 1.25
+QMRS-CG001Q40Run56-2_S2.CG001v3.4.20	aligned_clusters:405 nb/max/average normalized_alignments:414 12 1.022
+QMRS-CG001Q40Run56-2_S2.CG001v3.4.20	max/average number of variants:10 1.56
+QMRS-CG001Q40Run56-2_S2.CG001v3.4.25	max/average number of variants:6 1.28
+QMRS-CG001Q40Run56-2_S2.CG001v3.4.82	max/average number of variants:8 1.38
+QMRS-CG001Q40Run56-2_S2.CG001v3.4.94	max/average number of variants:4 1.55
+QMRS-CG001Q40Run56-2_S2.CG001v3.4.103	max/average number of variants:4 1.56
+QMRS-CG001Q40Run56-2_S2.CG001v3.4.105	aligned_clusters:635 nb/max/average normalized_alignments:768 24 1.209
+QMRS-CG001Q40Run56-2_S2.CG001v3.4.105	max/average number of variants:48 11.21
+QMRS-CG001Q40Run56-2_S2.CG001v3.4.125	max/average number of variants:3 1.52
 QMRS-CG001Q40Run56-2_S2.CG001v3.4.130	no normalized_alignment
 QMRS-CG001Q40Run56-2_S2.CG001v3.4.130	no variant
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.131	max number of variants:8
-QMRS-CG001Q40Run56-2_S2.CG001v4.0.11	average number of variants:1.88
-QMRS-CG001Q40Run56-2_S2.CG001v4.0.27	average number of variants:1.52
-QMRS-CG001Q40Run56-2_S2.CG001v4.0.34	max normalized_alignments:20
-QMRS-CG001Q40Run56-2_S2.CG001v4.0.34	average normalized_alignments:1.104
-QMRS-CG001Q40Run56-2_S2.CG001v4.0.34	average number of variants:1.62
-QMRS-CG001Q40Run56-2_S2.CG001v4.0.40	max number of variants:6
-QMRS-CG001Q40Run56-2_S2.CG001v4.0.51	average number of variants:1.73
-QMRS-CG001Q40Run56-2_S2.CG001v4.0.53	average number of variants:1.64
-QMRS-CG001Q40Run56-2_S2.CG001v4.0.57	average number of variants:1.72
-QMRS-CG001Q40Run56-2_S2.CG001v4.0.59	average number of variants:1.53
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.56	max number of variants:7
-QMRS-CG001Q40Run56-2_S2.CG001v3.4.56	average number of variants:1.72
+QMRS-CG001Q40Run56-2_S2.CG001v3.4.131	max/average number of variants:8 1.25
+QMRS-CG001Q40Run56-2_S2.CG001v4.0.11	max/average number of variants:4 1.88
+QMRS-CG001Q40Run56-2_S2.CG001v4.0.27	max/average number of variants:4 1.52
+QMRS-CG001Q40Run56-2_S2.CG001v4.0.34	aligned_clusters:434 nb/max/average normalized_alignments:479 20 1.104
+QMRS-CG001Q40Run56-2_S2.CG001v4.0.34	max/average number of variants:4 1.62
+QMRS-CG001Q40Run56-2_S2.CG001v4.0.40	max/average number of variants:6 1.15
+QMRS-CG001Q40Run56-2_S2.CG001v4.0.51	max/average number of variants:4 1.73
+QMRS-CG001Q40Run56-2_S2.CG001v4.0.53	max/average number of variants:3 1.64
+QMRS-CG001Q40Run56-2_S2.CG001v4.0.57	max/average number of variants:3 1.72
+QMRS-CG001Q40Run56-2_S2.CG001v4.0.59	max/average number of variants:3 1.53
+QMRS-CG001Q40Run56-2_S2.CG001v3.4.56	max/average number of variants:7 1.72

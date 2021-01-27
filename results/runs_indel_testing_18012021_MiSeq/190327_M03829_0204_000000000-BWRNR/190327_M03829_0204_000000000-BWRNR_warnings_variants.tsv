@@ -1,721 +1,588 @@
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.4	max number of variants:7
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.5	max number of variants:9
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.7	max number of variants:11
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.8	max number of variants:8
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.18	max number of variants:6
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.20	max number of variants:8
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.22	max number of variants:8
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.22	average number of variants:1.6
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.24	max number of variants:6
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.25	max number of variants:10
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.27	max number of variants:10
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.28	max normalized_alignments:15
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.28	max number of variants:24
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.28	average number of variants:1.66
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.41	max number of variants:11
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.43	max normalized_alignments:12
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.43	max number of variants:17
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.43	average number of variants:1.52
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.48	max number of variants:8
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.49	max number of variants:8
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.50	max number of variants:9
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.54	max number of variants:8
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.68	max number of variants:8
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.70	max number of variants:7
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.71	max number of variants:7
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.73	max number of variants:6
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.89	max number of variants:9
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.91	max normalized_alignments:16
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.91	max number of variants:31
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.91	average number of variants:3.23
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.94	max number of variants:11
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.94	average number of variants:1.57
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.96	max normalized_alignments:12
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.96	max number of variants:24
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.96	average number of variants:1.58
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.97	max number of variants:6
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.102	max number of variants:42
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.103	max number of variants:16
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.103	average number of variants:1.59
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.105	max normalized_alignments:52
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.105	average normalized_alignments:1.189
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.105	max number of variants:45
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.105	average number of variants:11.58
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.106	max number of variants:7
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.108	max number of variants:9
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.111	max normalized_alignments:12
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.111	max number of variants:10
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.113	max number of variants:9
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.122	max number of variants:6
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.125	max number of variants:10
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.125	average number of variants:1.7
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.4	max/average number of variants:7 1.29
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.5	max/average number of variants:9 1.41
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.7	max/average number of variants:11 1.44
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.8	max/average number of variants:8 1.35
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.18	max/average number of variants:6 1.32
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.20	max/average number of variants:8 1.34
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.22	max/average number of variants:8 1.6
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.24	max/average number of variants:6 1.38
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.25	max/average number of variants:10 1.38
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.27	max/average number of variants:10 1.33
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.28	aligned_clusters:2232 nb/max/average normalized_alignments:2228 15 0.998
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.28	max/average number of variants:24 1.66
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.41	max/average number of variants:11 1.32
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.43	aligned_clusters:2999 nb/max/average normalized_alignments:3006 12 1.002
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.43	max/average number of variants:17 1.52
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.48	max/average number of variants:8 1.34
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.49	max/average number of variants:8 1.39
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.50	max/average number of variants:9 1.42
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.54	max/average number of variants:8 1.4
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.68	max/average number of variants:8 1.31
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.70	max/average number of variants:7 1.32
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.71	max/average number of variants:7 1.29
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.73	max/average number of variants:6 1.32
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.89	max/average number of variants:9 1.35
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.91	aligned_clusters:1868 nb/max/average normalized_alignments:1914 16 1.025
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.91	max/average number of variants:31 3.23
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.94	max/average number of variants:11 1.57
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.96	aligned_clusters:3640 nb/max/average normalized_alignments:3731 12 1.025
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.96	max/average number of variants:24 1.58
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.97	max/average number of variants:6 1.31
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.102	max/average number of variants:42 1.49
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.103	max/average number of variants:16 1.59
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.105	aligned_clusters:4015 nb/max/average normalized_alignments:4774 52 1.189
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.105	max/average number of variants:45 11.58
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.106	max/average number of variants:7 1.33
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.108	max/average number of variants:9 1.35
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.111	aligned_clusters:3110 nb/max/average normalized_alignments:3115 12 1.002
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.111	max/average number of variants:10 1.43
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.113	max/average number of variants:9 1.36
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.122	max/average number of variants:6 1.4
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.125	max/average number of variants:10 1.7
 DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.130	no normalized_alignment
 DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.130	no variant
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.135	max number of variants:12
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.135	average number of variants:1.57
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.138	max number of variants:9
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.143	max number of variants:6
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.2	max number of variants:10
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.6	max number of variants:11
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.7	max number of variants:7
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.8	max normalized_alignments:18
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.8	max number of variants:30
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.8	average number of variants:1.86
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.10	max number of variants:7
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.11	max number of variants:9
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.11	average number of variants:2.06
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.14	max number of variants:10
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.21	max number of variants:11
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.21	average number of variants:1.52
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.25	max number of variants:22
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.27	max number of variants:6
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.29	max number of variants:8
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.30	max number of variants:8
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.32	max number of variants:8
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.33	max number of variants:7
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.34	max number of variants:6
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.35	max number of variants:10
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.35	average number of variants:1.58
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.38	max number of variants:6
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.40	max number of variants:8
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.41	max normalized_alignments:16
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.41	max number of variants:12
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.41	average number of variants:1.58
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.42	max number of variants:6
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.43	max number of variants:6
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.44	average number of variants:1.56
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.45	max number of variants:11
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.48	max number of variants:11
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.49	max number of variants:9
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.50	average number of variants:1.52
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.51	max number of variants:12
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.51	average number of variants:1.66
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.53	max number of variants:7
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.53	average number of variants:1.63
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.55	max number of variants:7
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.55	average number of variants:1.64
-DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.57	max number of variants:7
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.56	max number of variants:8
-DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.56	average number of variants:1.96
-DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.41	max number of variants:8
-DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.89	max number of variants:7
-DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.94	max number of variants:11
-DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.97	max number of variants:6
-DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.105	max normalized_alignments:30
-DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.105	average normalized_alignments:1.151
-DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.105	max number of variants:42
-DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.105	average number of variants:10.81
-DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.108	max number of variants:6
-DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.110	max number of variants:10
-DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.111	max number of variants:7
-DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.122	max number of variants:8
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.135	max/average number of variants:12 1.57
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.138	max/average number of variants:9 1.34
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.143	max/average number of variants:6 1.3
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.2	max/average number of variants:10 1.36
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.6	max/average number of variants:11 1.33
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.7	max/average number of variants:7 1.33
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.8	aligned_clusters:4272 nb/max/average normalized_alignments:4274 18 1.0
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.8	max/average number of variants:30 1.86
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.10	max/average number of variants:7 1.26
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.11	max/average number of variants:9 2.06
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.14	max/average number of variants:10 1.42
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.21	max/average number of variants:11 1.52
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.25	max/average number of variants:22 1.37
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.27	max/average number of variants:6 1.37
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.29	max/average number of variants:8 1.36
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.30	max/average number of variants:8 1.42
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.32	max/average number of variants:8 1.34
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.33	max/average number of variants:7 1.36
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.34	max/average number of variants:6 1.28
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.35	max/average number of variants:10 1.58
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.38	max/average number of variants:6 1.33
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.40	max/average number of variants:8 1.23
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.41	aligned_clusters:1256 nb/max/average normalized_alignments:1265 16 1.007
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.41	max/average number of variants:12 1.58
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.42	max/average number of variants:6 1.25
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.43	max/average number of variants:6 1.21
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.44	max/average number of variants:4 1.56
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.45	max/average number of variants:11 1.42
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.48	max/average number of variants:11 1.32
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.49	max/average number of variants:9 1.34
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.50	max/average number of variants:4 1.52
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.51	max/average number of variants:12 1.66
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.53	max/average number of variants:7 1.63
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.55	max/average number of variants:7 1.64
+DNA-10894-CG001Qv40Run85-19_S19.CG001v4.0.57	max/average number of variants:7 1.49
+DNA-10894-CG001Qv40Run85-19_S19.CG001v3.4.56	max/average number of variants:8 1.96
+DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.41	max/average number of variants:8 1.29
+DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.89	max/average number of variants:7 1.22
+DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.94	max/average number of variants:11 1.49
+DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.97	max/average number of variants:6 1.22
+DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.105	aligned_clusters:530 nb/max/average normalized_alignments:610 30 1.151
+DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.105	max/average number of variants:42 10.81
+DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.108	max/average number of variants:6 1.15
+DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.110	max/average number of variants:10 1.21
+DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.111	max/average number of variants:7 1.26
+DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.122	max/average number of variants:8 1.35
 DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.130	no normalized_alignment
 DNA-10895-CG001Qv40Run85-20_S20.CG001v3.4.130	no variant
-DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.7	max number of variants:6
-DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.8	max number of variants:6
-DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.11	average number of variants:1.56
-DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.34	average number of variants:1.56
-DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.40	max number of variants:7
-DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.41	max number of variants:7
-DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.45	max number of variants:6
-DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.50	average number of variants:1.65
-DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.51	max number of variants:9
-DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.51	average number of variants:1.66
-DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.53	average number of variants:1.51
-DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.57	average number of variants:1.58
-DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.58	average number of variants:1.64
-DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.89	max number of variants:6
-DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.94	max number of variants:9
-DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.105	average normalized_alignments:1.127
-DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.105	max number of variants:42
-DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.105	average number of variants:9.0
-DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.111	max number of variants:7
-DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.118	average number of variants:1.52
-DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.125	average number of variants:1.53
+DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.7	max/average number of variants:6 1.17
+DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.8	max/average number of variants:6 1.3
+DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.11	max/average number of variants:4 1.56
+DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.34	max/average number of variants:4 1.56
+DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.40	max/average number of variants:7 1.27
+DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.41	max/average number of variants:7 1.27
+DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.45	max/average number of variants:6 1.23
+DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.50	max/average number of variants:3 1.65
+DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.51	max/average number of variants:9 1.66
+DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.53	max/average number of variants:3 1.51
+DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.57	max/average number of variants:4 1.58
+DNA-10895-CG001Qv40Run85-20_S20.CG001v4.0.58	max/average number of variants:3 1.64
+DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.89	max/average number of variants:6 1.29
+DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.94	max/average number of variants:9 1.5
+DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.105	aligned_clusters:592 nb/max/average normalized_alignments:667 8 1.127
+DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.105	max/average number of variants:42 9.0
+DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.111	max/average number of variants:7 1.25
+DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.118	max/average number of variants:4 1.52
+DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.125	max/average number of variants:4 1.53
 DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.130	no normalized_alignment
 DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.130	no variant
-DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.135	average number of variants:1.55
-DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.8	max number of variants:6
-DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.21	max number of variants:6
-DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.21	average number of variants:1.68
-DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.35	max number of variants:6
-DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.40	max number of variants:7
-DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.44	average number of variants:1.59
-DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.51	max number of variants:7
-DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.51	average number of variants:1.59
-DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.53	average number of variants:1.59
-DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.55	average number of variants:1.52
-DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.56	average number of variants:1.52
-DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.56	max number of variants:6
-DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.64	max number of variants:6
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.22	max number of variants:7
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.91	max normalized_alignments:95
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.91	average normalized_alignments:1.343
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.91	max number of variants:39
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.91	average number of variants:19.3
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.103	max number of variants:6
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.105	max normalized_alignments:16
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.105	max number of variants:43
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.105	average number of variants:6.92
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.111	max number of variants:8
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.113	max number of variants:7
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.122	max number of variants:7
+DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.135	max/average number of variants:4 1.55
+DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.8	max/average number of variants:6 1.23
+DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.21	max/average number of variants:6 1.68
+DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.35	max/average number of variants:6 1.5
+DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.40	max/average number of variants:7 1.24
+DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.44	max/average number of variants:4 1.59
+DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.51	max/average number of variants:7 1.59
+DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.53	max/average number of variants:3 1.59
+DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.55	max/average number of variants:3 1.52
+DNA-10896-CG001Qv40Run85-21_S21.CG001v4.0.56	max/average number of variants:3 1.52
+DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.56	max/average number of variants:6 1.19
+DNA-10896-CG001Qv40Run85-21_S21.CG001v3.4.64	max/average number of variants:6 1.17
+DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.22	max/average number of variants:7 1.22
+DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.91	aligned_clusters:265 nb/max/average normalized_alignments:356 95 1.343
+DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.91	max/average number of variants:39 19.3
+DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.103	max/average number of variants:6 1.44
+DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.105	aligned_clusters:552 nb/max/average normalized_alignments:602 16 1.091
+DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.105	max/average number of variants:43 6.92
+DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.111	max/average number of variants:8 1.21
+DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.113	max/average number of variants:7 1.23
+DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.122	max/average number of variants:7 1.21
 DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.130	no normalized_alignment
 DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.130	no variant
-DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.7	max number of variants:6
-DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.11	max number of variants:11
-DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.11	average number of variants:1.58
-DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.35	max normalized_alignments:36
-DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.35	max number of variants:29
-DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.35	average number of variants:6.47
-DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.40	max number of variants:6
-DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.51	average number of variants:1.62
-DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.53	average number of variants:1.57
-DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.58	average number of variants:1.55
-DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.59	max number of variants:10
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.56	max number of variants:7
-DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.56	average number of variants:2.07
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.7	max number of variants:9
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.16	max number of variants:6
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.50	max number of variants:6
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.89	max number of variants:6
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.94	max number of variants:9
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.105	max normalized_alignments:30
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.105	average normalized_alignments:1.268
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.105	max number of variants:42
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.105	average number of variants:13.57
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.110	max number of variants:6
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.113	max number of variants:9
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.125	average number of variants:1.62
+DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.7	max/average number of variants:6 1.14
+DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.11	max/average number of variants:11 1.58
+DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.35	aligned_clusters:342 nb/max/average normalized_alignments:374 36 1.094
+DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.35	max/average number of variants:29 6.47
+DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.40	max/average number of variants:6 1.23
+DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.51	max/average number of variants:5 1.62
+DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.53	max/average number of variants:4 1.57
+DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.58	max/average number of variants:4 1.55
+DNA-10897-CG001Qv40Run85-22_S22.CG001v4.0.59	max/average number of variants:10 1.37
+DNA-10897-CG001Qv40Run85-22_S22.CG001v3.4.56	max/average number of variants:7 2.07
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.7	max/average number of variants:9 1.23
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.16	max/average number of variants:6 1.29
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.50	max/average number of variants:6 1.2
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.89	max/average number of variants:6 1.36
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.94	max/average number of variants:9 1.26
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.105	aligned_clusters:714 nb/max/average normalized_alignments:905 30 1.268
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.105	max/average number of variants:42 13.57
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.110	max/average number of variants:6 1.25
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.113	max/average number of variants:9 1.23
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.125	max/average number of variants:5 1.62
 DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.130	no normalized_alignment
 DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.130	no variant
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.138	max number of variants:10
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.143	max number of variants:7
-DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.7	max number of variants:7
-DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.8	max number of variants:6
-DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.11	max number of variants:9
-DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.11	average number of variants:1.94
-DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.20	average number of variants:1.57
-DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.29	max number of variants:8
-DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.35	average number of variants:1.52
-DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.40	max number of variants:7
-DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.50	average number of variants:1.72
-DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.51	max number of variants:8
-DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.51	average number of variants:1.59
-DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.53	average number of variants:1.52
-DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.55	average number of variants:1.53
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.56	max number of variants:7
-DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.64	max number of variants:8
-DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.94	average number of variants:1.71
-DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.103	average number of variants:1.61
-DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.105	max normalized_alignments:26
-DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.105	average normalized_alignments:1.416
-DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.105	max number of variants:43
-DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.105	average number of variants:18.94
-DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.109	max number of variants:7
-DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.125	max number of variants:6
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.138	max/average number of variants:10 1.26
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.143	max/average number of variants:7 1.21
+DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.7	max/average number of variants:7 1.18
+DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.8	max/average number of variants:6 1.26
+DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.11	max/average number of variants:9 1.94
+DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.20	max/average number of variants:3 1.57
+DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.29	max/average number of variants:8 1.24
+DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.35	max/average number of variants:4 1.52
+DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.40	max/average number of variants:7 1.22
+DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.50	max/average number of variants:3 1.72
+DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.51	max/average number of variants:8 1.59
+DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.53	max/average number of variants:3 1.52
+DNA-10898-CG001Qv40Run85-23_S23.CG001v4.0.55	max/average number of variants:5 1.53
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.56	max/average number of variants:7 1.29
+DNA-10898-CG001Qv40Run85-23_S23.CG001v3.4.64	max/average number of variants:8 1.19
+DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.94	max/average number of variants:4 1.71
+DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.103	max/average number of variants:5 1.61
+DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.105	aligned_clusters:329 nb/max/average normalized_alignments:466 26 1.416
+DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.105	max/average number of variants:43 18.94
+DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.109	max/average number of variants:7 1.17
+DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.125	max/average number of variants:6 1.42
 DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.130	no normalized_alignment
 DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.130	no variant
-DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.135	average number of variants:1.56
-DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.143	max number of variants:7
-DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.11	max number of variants:7
-DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.11	average number of variants:1.83
-DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.21	average number of variants:1.54
-DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.44	average number of variants:1.55
-DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.51	average number of variants:1.67
-DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.53	average number of variants:1.68
-DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.58	average number of variants:1.66
-DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.59	average number of variants:1.61
-DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.66	max number of variants:8
-DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.56	max number of variants:6
-DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.56	average number of variants:1.55
-DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.7	max number of variants:7
-DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.20	max number of variants:6
-DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.28	max number of variants:6
-DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.49	max number of variants:6
-DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.94	average number of variants:1.72
-DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.105	max number of variants:42
-DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.105	average number of variants:4.12
-DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.118	average number of variants:1.51
-DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.130	max normalized_alignments:18
-DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.130	average normalized_alignments:12.523
-DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.130	max number of variants:18
-DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.130	average number of variants:14.4
-DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.5	max number of variants:8
-DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.11	average number of variants:1.59
-DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.34	max number of variants:6
-DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.34	average number of variants:1.72
-DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.40	max number of variants:6
-DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.49	max number of variants:6
-DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.51	average number of variants:1.57
-DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.53	average number of variants:1.65
-DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.56	average number of variants:1.53
-DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.56	max number of variants:6
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.26	max number of variants:9
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.50	max number of variants:6
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.82	max number of variants:6
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.89	max number of variants:6
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.94	average number of variants:1.7
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.103	max number of variants:6
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.103	average number of variants:1.51
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.105	average normalized_alignments:1.222
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.105	max number of variants:42
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.105	average number of variants:12.67
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.118	average number of variants:1.53
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.130	max normalized_alignments:24
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.130	average normalized_alignments:13.375
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.130	max number of variants:18
-DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.130	average number of variants:14.36
-DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.11	max number of variants:6
-DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.11	average number of variants:1.89
-DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.20	average number of variants:1.58
-DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.40	max number of variants:6
-DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.43	max number of variants:7
-DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.48	max number of variants:13
-DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.50	average number of variants:1.6
-DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.51	average number of variants:1.66
-DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.55	average number of variants:1.54
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.22	average number of variants:1.65
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.91	max normalized_alignments:23
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.91	average normalized_alignments:1.119
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.91	max number of variants:23
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.91	average number of variants:5.42
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.94	average number of variants:1.53
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.103	average number of variants:1.55
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.105	max number of variants:42
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.105	average number of variants:5.99
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.130	max normalized_alignments:24
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.130	average normalized_alignments:12.569
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.130	max number of variants:18
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.130	average number of variants:14.43
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.138	max number of variants:6
-DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.2	max number of variants:7
-DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.6	max number of variants:9
-DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.11	average number of variants:1.89
-DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.31	max number of variants:6
-DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.34	max number of variants:6
-DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.34	average number of variants:1.69
-DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.35	average number of variants:1.6
-DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.40	max number of variants:6
-DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.45	max number of variants:6
-DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.50	average number of variants:1.61
-DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.51	average number of variants:1.65
-DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.53	average number of variants:1.63
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.56	max number of variants:6
-DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.64	max number of variants:6
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.5	max number of variants:6
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.15	max number of variants:6
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.16	max number of variants:8
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.25	max number of variants:9
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.102	max normalized_alignments:12
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.102	max number of variants:33
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.102	average number of variants:4.23
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.103	max normalized_alignments:12
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.103	max number of variants:10
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.103	average number of variants:1.69
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.105	max normalized_alignments:20
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.105	average normalized_alignments:1.21
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.105	max number of variants:42
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.105	average number of variants:12.84
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.130	max normalized_alignments:18
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.130	average normalized_alignments:18.0
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.130	max number of variants:15
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.130	average number of variants:14.33
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.7	max number of variants:8
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.11	max number of variants:6
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.11	average number of variants:1.92
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.19	average number of variants:1.51
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.27	max number of variants:7
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.29	max number of variants:6
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.35	max number of variants:7
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.35	average number of variants:1.52
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.40	max number of variants:6
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.48	max number of variants:7
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.49	max number of variants:16
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.50	average number of variants:1.58
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.51	average number of variants:1.69
-DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.54	max number of variants:6
-DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.56	max number of variants:6
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.22	average number of variants:1.63
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.49	max number of variants:7
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.90	max number of variants:8
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.96	max normalized_alignments:12
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.96	max number of variants:24
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.96	average number of variants:2.59
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.103	average number of variants:1.56
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.105	max number of variants:42
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.105	average number of variants:6.21
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.109	max number of variants:7
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.118	average number of variants:1.58
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.130	max normalized_alignments:18
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.130	average normalized_alignments:12.863
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.130	max number of variants:18
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.130	average number of variants:14.42
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.131	max number of variants:6
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.7	max number of variants:7
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.8	max number of variants:7
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.11	max number of variants:10
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.11	average number of variants:2.03
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.34	average number of variants:1.55
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.35	average number of variants:1.6
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.40	max number of variants:7
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.50	average number of variants:1.58
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.51	average number of variants:1.72
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.55	average number of variants:1.66
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.56	average number of variants:1.56
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.57	average number of variants:1.63
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.58	average number of variants:1.7
-DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.59	average number of variants:1.59
-DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.56	max number of variants:7
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.5	max number of variants:6
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.7	max number of variants:7
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.43	max number of variants:10
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.89	max number of variants:6
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.94	max number of variants:6
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.103	max number of variants:12
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.105	max normalized_alignments:16
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.105	average normalized_alignments:1.118
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.105	max number of variants:42
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.105	average number of variants:9.72
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.111	max number of variants:6
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.130	max normalized_alignments:20
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.130	average normalized_alignments:12.991
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.130	max number of variants:18
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.130	average number of variants:14.45
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.143	max number of variants:6
-DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.11	average number of variants:1.59
-DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.20	average number of variants:1.62
-DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.38	max number of variants:8
-DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.40	max number of variants:6
-DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.44	average number of variants:1.6
-DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.45	max number of variants:8
-DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.51	average number of variants:1.62
-DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.52	max number of variants:8
-DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.54	max number of variants:7
-DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.56	max number of variants:7
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.22	max number of variants:8
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.22	average number of variants:1.57
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.25	max number of variants:11
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.102	max number of variants:35
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.102	average number of variants:3.05
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.103	average number of variants:1.53
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.105	max normalized_alignments:32
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.105	average normalized_alignments:1.24
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.105	max number of variants:42
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.105	average number of variants:12.14
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.110	max number of variants:6
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.118	average number of variants:1.53
+DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.135	max/average number of variants:4 1.56
+DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.143	max/average number of variants:7 1.3
+DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.11	max/average number of variants:7 1.83
+DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.21	max/average number of variants:3 1.54
+DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.44	max/average number of variants:4 1.55
+DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.51	max/average number of variants:3 1.67
+DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.53	max/average number of variants:4 1.68
+DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.58	max/average number of variants:3 1.66
+DNA-13345-CG001Qv40Run85-4_S4.CG001v4.0.59	max/average number of variants:3 1.61
+DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.66	max/average number of variants:8 1.2
+DNA-13345-CG001Qv40Run85-4_S4.CG001v3.4.56	max/average number of variants:6 1.55
+DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.7	max/average number of variants:7 1.4
+DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.20	max/average number of variants:6 1.27
+DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.28	max/average number of variants:6 1.2
+DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.49	max/average number of variants:6 1.2
+DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.94	max/average number of variants:5 1.72
+DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.105	max/average number of variants:42 4.12
+DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.118	max/average number of variants:3 1.51
+DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.130	aligned_clusters:128 nb/max/average normalized_alignments:1603 18 12.523
+DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.130	max/average number of variants:18 14.4
+DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.5	max/average number of variants:8 1.17
+DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.11	max/average number of variants:5 1.59
+DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.34	max/average number of variants:6 1.72
+DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.40	max/average number of variants:6 1.28
+DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.49	max/average number of variants:6 1.19
+DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.51	max/average number of variants:4 1.57
+DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.53	max/average number of variants:4 1.65
+DNA-13346-CG001Qv40Run85-5_S5.CG001v4.0.56	max/average number of variants:3 1.53
+DNA-13346-CG001Qv40Run85-5_S5.CG001v3.4.56	max/average number of variants:6 1.28
+DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.26	max/average number of variants:9 1.2
+DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.50	max/average number of variants:6 1.15
+DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.82	max/average number of variants:6 1.21
+DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.89	max/average number of variants:6 1.19
+DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.94	max/average number of variants:3 1.7
+DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.103	max/average number of variants:6 1.51
+DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.105	aligned_clusters:441 nb/max/average normalized_alignments:539 8 1.222
+DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.105	max/average number of variants:42 12.67
+DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.118	max/average number of variants:4 1.53
+DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.130	aligned_clusters:80 nb/max/average normalized_alignments:1070 24 13.375
+DNA-13347-CG001Qv40Run85-6_S6.CG001v3.4.130	max/average number of variants:18 14.36
+DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.11	max/average number of variants:6 1.89
+DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.20	max/average number of variants:3 1.58
+DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.40	max/average number of variants:6 1.2
+DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.43	max/average number of variants:7 1.3
+DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.48	max/average number of variants:13 1.24
+DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.50	max/average number of variants:3 1.6
+DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.51	max/average number of variants:4 1.66
+DNA-13347-CG001Qv40Run85-6_S6.CG001v4.0.55	max/average number of variants:3 1.54
+DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.22	max/average number of variants:5 1.65
+DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.91	aligned_clusters:176 nb/max/average normalized_alignments:197 23 1.119
+DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.91	max/average number of variants:23 5.42
+DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.94	max/average number of variants:3 1.53
+DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.103	max/average number of variants:4 1.55
+DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.105	max/average number of variants:42 5.99
+DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.130	aligned_clusters:109 nb/max/average normalized_alignments:1370 24 12.569
+DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.130	max/average number of variants:18 14.43
+DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.138	max/average number of variants:6 1.19
+DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.2	max/average number of variants:7 1.25
+DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.6	max/average number of variants:9 1.24
+DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.11	max/average number of variants:4 1.89
+DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.31	max/average number of variants:6 1.17
+DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.34	max/average number of variants:6 1.69
+DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.35	max/average number of variants:4 1.6
+DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.40	max/average number of variants:6 1.19
+DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.45	max/average number of variants:6 1.22
+DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.50	max/average number of variants:3 1.61
+DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.51	max/average number of variants:4 1.65
+DNA-13348-CG001Qv40Run85-7_S7.CG001v4.0.53	max/average number of variants:3 1.63
+DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.56	max/average number of variants:6 1.26
+DNA-13348-CG001Qv40Run85-7_S7.CG001v3.4.64	max/average number of variants:6 1.14
+DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.5	max/average number of variants:6 1.23
+DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.15	max/average number of variants:6 1.12
+DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.16	max/average number of variants:8 1.17
+DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.25	max/average number of variants:9 1.24
+DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.102	aligned_clusters:180 nb/max/average normalized_alignments:188 12 1.044
+DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.102	max/average number of variants:33 4.23
+DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.103	aligned_clusters:371 nb/max/average normalized_alignments:388 12 1.046
+DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.103	max/average number of variants:10 1.69
+DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.105	aligned_clusters:438 nb/max/average normalized_alignments:530 20 1.21
+DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.105	max/average number of variants:42 12.84
+DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.130	aligned_clusters:2 nb/max/average normalized_alignments:36 18 18.0
+DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.130	max/average number of variants:15 14.33
+DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.7	max/average number of variants:8 1.27
+DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.11	max/average number of variants:6 1.92
+DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.19	max/average number of variants:4 1.51
+DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.27	max/average number of variants:7 1.23
+DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.29	max/average number of variants:6 1.13
+DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.35	max/average number of variants:7 1.52
+DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.40	max/average number of variants:6 1.21
+DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.48	max/average number of variants:7 1.2
+DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.49	max/average number of variants:16 1.37
+DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.50	max/average number of variants:2 1.58
+DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.51	max/average number of variants:4 1.69
+DNA-13349-CG001Qv40Run85-8_S8.CG001v4.0.54	max/average number of variants:6 1.49
+DNA-13349-CG001Qv40Run85-8_S8.CG001v3.4.56	max/average number of variants:6 1.26
+DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.22	max/average number of variants:5 1.63
+DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.49	max/average number of variants:7 1.14
+DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.90	max/average number of variants:8 1.18
+DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.96	aligned_clusters:410 nb/max/average normalized_alignments:416 12 1.015
+DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.96	max/average number of variants:24 2.59
+DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.103	max/average number of variants:4 1.56
+DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.105	max/average number of variants:42 6.21
+DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.109	max/average number of variants:7 1.18
+DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.118	max/average number of variants:4 1.58
+DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.130	aligned_clusters:131 nb/max/average normalized_alignments:1685 18 12.863
+DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.130	max/average number of variants:18 14.42
+DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.131	max/average number of variants:6 1.11
+DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.7	max/average number of variants:7 1.21
+DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.8	max/average number of variants:7 1.23
+DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.11	max/average number of variants:10 2.03
+DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.34	max/average number of variants:5 1.55
+DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.35	max/average number of variants:5 1.6
+DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.40	max/average number of variants:7 1.18
+DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.50	max/average number of variants:3 1.58
+DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.51	max/average number of variants:4 1.72
+DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.55	max/average number of variants:4 1.66
+DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.56	max/average number of variants:3 1.56
+DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.57	max/average number of variants:4 1.63
+DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.58	max/average number of variants:3 1.7
+DNA-13350-CG001Qv40Run85-9_S9.CG001v4.0.59	max/average number of variants:2 1.59
+DNA-13350-CG001Qv40Run85-9_S9.CG001v3.4.56	max/average number of variants:7 1.48
+DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.5	max/average number of variants:6 1.24
+DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.7	max/average number of variants:7 1.31
+DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.43	max/average number of variants:10 1.36
+DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.89	max/average number of variants:6 1.23
+DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.94	max/average number of variants:6 1.22
+DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.103	max/average number of variants:12 1.45
+DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.105	aligned_clusters:442 nb/max/average normalized_alignments:494 16 1.118
+DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.105	max/average number of variants:42 9.72
+DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.111	max/average number of variants:6 1.26
+DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.130	aligned_clusters:111 nb/max/average normalized_alignments:1442 20 12.991
+DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.130	max/average number of variants:18 14.45
+DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.143	max/average number of variants:6 1.21
+DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.11	max/average number of variants:4 1.59
+DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.20	max/average number of variants:4 1.62
+DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.38	max/average number of variants:8 1.21
+DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.40	max/average number of variants:6 1.22
+DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.44	max/average number of variants:3 1.6
+DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.45	max/average number of variants:8 1.29
+DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.51	max/average number of variants:5 1.62
+DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.52	max/average number of variants:8 1.24
+DNA-13351-CG001Qv40Run85-10_S10.CG001v4.0.54	max/average number of variants:7 1.35
+DNA-13351-CG001Qv40Run85-10_S10.CG001v3.4.56	max/average number of variants:7 1.47
+DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.22	max/average number of variants:8 1.57
+DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.25	max/average number of variants:11 1.38
+DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.102	max/average number of variants:35 3.05
+DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.103	max/average number of variants:5 1.53
+DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.105	aligned_clusters:379 nb/max/average normalized_alignments:470 32 1.24
+DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.105	max/average number of variants:42 12.14
+DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.110	max/average number of variants:6 1.18
+DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.118	max/average number of variants:3 1.53
 DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.130	no normalized_alignment
 DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.130	no variant
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.143	max number of variants:6
-DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.2	max number of variants:6
-DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.8	max number of variants:6
-DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.11	average number of variants:1.81
-DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.19	average number of variants:1.58
-DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.34	average number of variants:1.62
-DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.35	average number of variants:1.57
-DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.37	max number of variants:6
-DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.40	max number of variants:7
-DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.48	max number of variants:7
-DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.50	average number of variants:1.62
-DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.51	average number of variants:1.65
-DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.59	average number of variants:1.73
-DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.56	max number of variants:6
-DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.1	average number of variants:1.53
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.7	max number of variants:7
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.15	max number of variants:8
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.25	max number of variants:10
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.49	max number of variants:6
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.50	max number of variants:12
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.65	average number of variants:1.52
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.91	max number of variants:12
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.94	average number of variants:1.65
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.102	max number of variants:6
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.103	average number of variants:1.6
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.105	average normalized_alignments:1.132
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.105	max number of variants:42
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.105	average number of variants:8.63
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.118	average number of variants:1.61
+DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.143	max/average number of variants:6 1.26
+DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.2	max/average number of variants:6 1.19
+DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.8	max/average number of variants:6 1.26
+DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.11	max/average number of variants:5 1.81
+DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.19	max/average number of variants:3 1.58
+DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.34	max/average number of variants:3 1.62
+DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.35	max/average number of variants:4 1.57
+DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.37	max/average number of variants:6 1.21
+DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.40	max/average number of variants:7 1.22
+DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.48	max/average number of variants:7 1.2
+DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.50	max/average number of variants:5 1.62
+DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.51	max/average number of variants:4 1.65
+DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.59	max/average number of variants:3 1.73
+DNA-13352-CG001Qv40Run85-11_S11.CG001v3.4.56	max/average number of variants:6 1.29
+DNA-13352-CG001Qv40Run85-11_S11.CG001v4.0.1	max/average number of variants:3 1.53
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.7	max/average number of variants:7 1.25
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.15	max/average number of variants:8 1.19
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.25	max/average number of variants:10 1.28
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.49	max/average number of variants:6 1.22
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.50	max/average number of variants:12 1.49
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.65	max/average number of variants:3 1.52
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.91	max/average number of variants:12 1.28
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.94	max/average number of variants:4 1.65
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.102	max/average number of variants:6 1.23
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.103	max/average number of variants:5 1.6
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.105	aligned_clusters:544 nb/max/average normalized_alignments:616 8 1.132
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.105	max/average number of variants:42 8.63
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.118	max/average number of variants:4 1.61
 DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.130	no normalized_alignment
 DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.130	no variant
-DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.11	max number of variants:7
-DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.11	average number of variants:1.95
-DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.30	max number of variants:7
-DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.35	max number of variants:6
-DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.41	max number of variants:6
-DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.44	average number of variants:1.56
-DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.48	max number of variants:8
-DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.51	average number of variants:1.62
-DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.53	average number of variants:1.64
-DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.58	average number of variants:1.6
-DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.56	max number of variants:6
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.5	max number of variants:6
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.7	max number of variants:7
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.8	max number of variants:7
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.22	average number of variants:1.66
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.24	max number of variants:6
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.25	max number of variants:26
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.25	average number of variants:1.9
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.94	average number of variants:1.78
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.103	average number of variants:1.58
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.105	average normalized_alignments:1.14
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.105	max number of variants:42
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.105	average number of variants:8.51
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.122	max number of variants:8
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.130	max normalized_alignments:18
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.130	average normalized_alignments:14.0
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.130	max number of variants:15
-DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.130	average number of variants:14.24
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.2	max number of variants:7
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.11	average number of variants:1.93
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.21	average number of variants:1.73
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.32	max number of variants:7
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.34	average number of variants:1.6
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.35	max number of variants:6
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.35	average number of variants:1.67
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.40	max number of variants:6
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.44	average number of variants:1.51
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.50	average number of variants:1.65
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.51	average number of variants:1.72
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.53	average number of variants:1.59
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.56	average number of variants:1.52
-DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.57	average number of variants:1.61
-DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.20	max number of variants:8
-DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.71	max number of variants:9
-DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.105	max normalized_alignments:20
-DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.105	average normalized_alignments:1.141
-DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.105	max number of variants:42
-DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.105	average number of variants:9.14
-DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.110	max number of variants:7
-DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.125	average number of variants:1.6
-DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.130	max normalized_alignments:18
-DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.130	average normalized_alignments:18.0
-DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.130	max number of variants:15
-DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.130	average number of variants:14.33
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.2	max number of variants:6
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.10	max number of variants:6
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.11	average number of variants:1.85
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.30	max number of variants:9
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.34	average number of variants:1.51
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.40	max number of variants:7
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.41	max normalized_alignments:12
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.41	max number of variants:11
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.41	average number of variants:2.05
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.49	max number of variants:6
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.51	average number of variants:1.64
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.53	average number of variants:1.55
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.55	average number of variants:1.59
-DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.57	average number of variants:1.54
-DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.56	max number of variants:6
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.94	max number of variants:8
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.94	average number of variants:1.56
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.103	max number of variants:6
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.103	average number of variants:1.62
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.105	max normalized_alignments:50
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.105	average normalized_alignments:1.412
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.105	max number of variants:42
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.105	average number of variants:14.48
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.108	max number of variants:7
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.118	average number of variants:1.63
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.125	average number of variants:1.69
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.130	max normalized_alignments:20
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.130	average normalized_alignments:12.034
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.130	max number of variants:18
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.130	average number of variants:14.44
-DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.11	average number of variants:1.92
-DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.21	average number of variants:1.74
-DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.40	max number of variants:7
-DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.44	average number of variants:1.56
-DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.51	average number of variants:1.69
-DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.55	average number of variants:1.58
-DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.56	average number of variants:1.54
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.56	max number of variants:7
-DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.56	average number of variants:1.51
-DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.5	max number of variants:13
-DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.97	max number of variants:6
-DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.103	max number of variants:9
-DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.103	average number of variants:1.61
-DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.105	average normalized_alignments:1.11
-DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.105	max number of variants:42
-DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.105	average number of variants:7.34
-DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.125	average number of variants:1.61
-DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.130	max normalized_alignments:24
-DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.130	average normalized_alignments:12.631
-DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.130	max number of variants:18
-DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.130	average number of variants:14.43
-DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.7	max number of variants:7
-DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.8	max number of variants:6
-DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.11	average number of variants:1.83
-DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.35	max number of variants:6
-DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.40	max number of variants:8
-DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.44	average number of variants:1.57
-DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.45	max number of variants:6
-DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.51	average number of variants:1.59
-DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.53	average number of variants:1.6
-DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.66	max number of variants:6
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.4	max number of variants:7
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.18	max number of variants:8
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.22	max number of variants:6
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.68	max number of variants:6
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.91	max number of variants:6
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.97	max number of variants:6
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.103	average number of variants:1.52
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.105	average normalized_alignments:1.207
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.105	max number of variants:45
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.105	average number of variants:11.8
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.125	max number of variants:9
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.125	average number of variants:1.56
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.130	max normalized_alignments:18
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.130	average normalized_alignments:18.0
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.130	max number of variants:15
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.130	average number of variants:14.33
-DNA-13358-CG001Qv40Run85-17_S17.CG001v4.0.11	max number of variants:6
-DNA-13358-CG001Qv40Run85-17_S17.CG001v4.0.11	average number of variants:1.95
-DNA-13358-CG001Qv40Run85-17_S17.CG001v4.0.40	max number of variants:6
-DNA-13358-CG001Qv40Run85-17_S17.CG001v4.0.44	average number of variants:1.55
-DNA-13358-CG001Qv40Run85-17_S17.CG001v4.0.51	average number of variants:1.64
-DNA-13358-CG001Qv40Run85-17_S17.CG001v4.0.53	average number of variants:1.56
-DNA-13358-CG001Qv40Run85-17_S17.CG001v4.0.59	average number of variants:1.6
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.66	max number of variants:15
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.66	average number of variants:1.54
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.56	max number of variants:7
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.56	average number of variants:1.6
-DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.64	max number of variants:9
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.5	max number of variants:6
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.7	max number of variants:6
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.15	max number of variants:6
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.20	max number of variants:8
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.22	average number of variants:1.56
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.24	max number of variants:10
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.96	max normalized_alignments:12
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.96	max number of variants:24
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.96	average number of variants:2.14
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.102	max number of variants:6
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.105	max normalized_alignments:24
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.105	average normalized_alignments:1.216
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.105	max number of variants:42
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.105	average number of variants:12.73
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.111	max number of variants:8
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.118	average number of variants:1.59
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.130	max normalized_alignments:18
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.130	average normalized_alignments:13.221
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.130	max number of variants:18
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.130	average number of variants:14.41
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.131	max number of variants:6
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.6	max number of variants:7
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.7	max normalized_alignments:24
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.7	max number of variants:26
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.7	average number of variants:4.83
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.11	average number of variants:1.6
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.12	max number of variants:8
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.12	average number of variants:1.65
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.35	max number of variants:9
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.35	average number of variants:1.7
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.40	max number of variants:8
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.41	max number of variants:6
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.44	average number of variants:1.56
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.45	max number of variants:6
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.50	average number of variants:1.65
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.51	average number of variants:1.62
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.53	average number of variants:1.63
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.58	average number of variants:1.59
-DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.59	average number of variants:1.74
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.56	max number of variants:7
-DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.56	average number of variants:1.63
-NF-CG001Qv40Run85-3_S3.CG001v3.4.5	max number of variants:6
-NF-CG001Qv40Run85-3_S3.CG001v3.4.7	max number of variants:6
-NF-CG001Qv40Run85-3_S3.CG001v3.4.8	max number of variants:9
-NF-CG001Qv40Run85-3_S3.CG001v3.4.18	max number of variants:10
-NF-CG001Qv40Run85-3_S3.CG001v3.4.22	max number of variants:6
-NF-CG001Qv40Run85-3_S3.CG001v3.4.24	max number of variants:8
-NF-CG001Qv40Run85-3_S3.CG001v3.4.26	max number of variants:10
-NF-CG001Qv40Run85-3_S3.CG001v3.4.27	max number of variants:8
-NF-CG001Qv40Run85-3_S3.CG001v3.4.43	max number of variants:7
-NF-CG001Qv40Run85-3_S3.CG001v3.4.92	max number of variants:8
-NF-CG001Qv40Run85-3_S3.CG001v3.4.94	average number of variants:1.61
-NF-CG001Qv40Run85-3_S3.CG001v3.4.96	max number of variants:6
-NF-CG001Qv40Run85-3_S3.CG001v3.4.103	max number of variants:9
-NF-CG001Qv40Run85-3_S3.CG001v3.4.103	average number of variants:1.53
-NF-CG001Qv40Run85-3_S3.CG001v3.4.105	max normalized_alignments:24
-NF-CG001Qv40Run85-3_S3.CG001v3.4.105	average normalized_alignments:1.201
-NF-CG001Qv40Run85-3_S3.CG001v3.4.105	max number of variants:43
-NF-CG001Qv40Run85-3_S3.CG001v3.4.105	average number of variants:12.01
-NF-CG001Qv40Run85-3_S3.CG001v3.4.125	max number of variants:7
-NF-CG001Qv40Run85-3_S3.CG001v3.4.130	max normalized_alignments:18
-NF-CG001Qv40Run85-3_S3.CG001v3.4.130	average normalized_alignments:18.0
-NF-CG001Qv40Run85-3_S3.CG001v3.4.130	max number of variants:15
-NF-CG001Qv40Run85-3_S3.CG001v3.4.130	average number of variants:14.33
-NF-CG001Qv40Run85-3_S3.CG001v4.0.2	max number of variants:6
-NF-CG001Qv40Run85-3_S3.CG001v4.0.11	max number of variants:6
-NF-CG001Qv40Run85-3_S3.CG001v4.0.11	average number of variants:1.9
-NF-CG001Qv40Run85-3_S3.CG001v4.0.20	average number of variants:1.59
-NF-CG001Qv40Run85-3_S3.CG001v4.0.29	max number of variants:9
-NF-CG001Qv40Run85-3_S3.CG001v4.0.34	max number of variants:7
-NF-CG001Qv40Run85-3_S3.CG001v4.0.34	average number of variants:1.58
-NF-CG001Qv40Run85-3_S3.CG001v4.0.35	max number of variants:8
-NF-CG001Qv40Run85-3_S3.CG001v4.0.40	max number of variants:7
-NF-CG001Qv40Run85-3_S3.CG001v4.0.51	max number of variants:13
-NF-CG001Qv40Run85-3_S3.CG001v4.0.51	average number of variants:1.71
-NF-CG001Qv40Run85-3_S3.CG001v4.0.53	average number of variants:1.66
-NF-CG001Qv40Run85-3_S3.CG001v4.0.58	average number of variants:1.65
-NF-CG001Qv40Run85-3_S3.CG001v4.0.59	average number of variants:1.7
-NF-CG001Qv40Run85-3_S3.CG001v3.4.56	max number of variants:6
-NF-CG001Qv40Run85-3_S3.CG001v3.4.64	max number of variants:7
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.22	max number of variants:7
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.26	max number of variants:6
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.42	max number of variants:9
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.43	max number of variants:8
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.91	max number of variants:6
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.94	average number of variants:1.66
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.96	max number of variants:6
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.105	average normalized_alignments:1.172
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.105	max number of variants:48
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.105	average number of variants:10.89
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.111	max number of variants:6
+DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.11	max/average number of variants:7 1.95
+DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.30	max/average number of variants:7 1.23
+DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.35	max/average number of variants:6 1.18
+DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.41	max/average number of variants:6 1.22
+DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.44	max/average number of variants:4 1.56
+DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.48	max/average number of variants:8 1.22
+DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.51	max/average number of variants:4 1.62
+DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.53	max/average number of variants:3 1.64
+DNA-13353-CG001Qv40Run85-12_S12.CG001v4.0.58	max/average number of variants:3 1.6
+DNA-13353-CG001Qv40Run85-12_S12.CG001v3.4.56	max/average number of variants:6 1.44
+DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.5	max/average number of variants:6 1.24
+DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.7	max/average number of variants:7 1.34
+DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.8	max/average number of variants:7 1.14
+DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.22	max/average number of variants:4 1.66
+DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.24	max/average number of variants:6 1.19
+DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.25	max/average number of variants:26 1.9
+DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.94	max/average number of variants:5 1.78
+DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.103	max/average number of variants:4 1.58
+DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.105	aligned_clusters:356 nb/max/average normalized_alignments:406 8 1.14
+DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.105	max/average number of variants:42 8.51
+DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.122	max/average number of variants:8 1.5
+DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.130	aligned_clusters:3 nb/max/average normalized_alignments:42 18 14.0
+DNA-13354-CG001Qv40Run85-13_S13.CG001v3.4.130	max/average number of variants:15 14.24
+DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.2	max/average number of variants:7 1.22
+DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.11	max/average number of variants:5 1.93
+DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.21	max/average number of variants:3 1.73
+DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.32	max/average number of variants:7 1.25
+DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.34	max/average number of variants:4 1.6
+DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.35	max/average number of variants:6 1.67
+DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.40	max/average number of variants:6 1.22
+DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.44	max/average number of variants:4 1.51
+DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.50	max/average number of variants:3 1.65
+DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.51	max/average number of variants:3 1.72
+DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.53	max/average number of variants:3 1.59
+DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.56	max/average number of variants:3 1.52
+DNA-13354-CG001Qv40Run85-13_S13.CG001v4.0.57	max/average number of variants:3 1.61
+DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.20	max/average number of variants:8 1.14
+DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.71	max/average number of variants:9 1.4
+DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.105	aligned_clusters:482 nb/max/average normalized_alignments:550 20 1.141
+DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.105	max/average number of variants:42 9.14
+DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.110	max/average number of variants:7 1.14
+DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.125	max/average number of variants:5 1.6
+DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.130	aligned_clusters:1 nb/max/average normalized_alignments:18 18 18.0
+DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.130	max/average number of variants:15 14.33
+DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.2	max/average number of variants:6 1.25
+DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.10	max/average number of variants:6 1.11
+DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.11	max/average number of variants:5 1.85
+DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.30	max/average number of variants:9 1.21
+DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.34	max/average number of variants:5 1.51
+DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.40	max/average number of variants:7 1.19
+DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.41	aligned_clusters:153 nb/max/average normalized_alignments:163 12 1.065
+DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.41	max/average number of variants:11 2.05
+DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.49	max/average number of variants:6 1.17
+DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.51	max/average number of variants:4 1.64
+DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.53	max/average number of variants:4 1.55
+DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.55	max/average number of variants:5 1.59
+DNA-13355-CG001Qv40Run85-14_S14.CG001v4.0.57	max/average number of variants:4 1.54
+DNA-13355-CG001Qv40Run85-14_S14.CG001v3.4.56	max/average number of variants:6 1.23
+DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.94	max/average number of variants:8 1.56
+DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.103	max/average number of variants:6 1.62
+DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.105	aligned_clusters:325 nb/max/average normalized_alignments:459 50 1.412
+DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.105	max/average number of variants:42 14.48
+DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.108	max/average number of variants:7 1.23
+DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.118	max/average number of variants:4 1.63
+DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.125	max/average number of variants:3 1.69
+DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.130	aligned_clusters:88 nb/max/average normalized_alignments:1059 20 12.034
+DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.130	max/average number of variants:18 14.44
+DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.11	max/average number of variants:4 1.92
+DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.21	max/average number of variants:3 1.74
+DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.40	max/average number of variants:7 1.21
+DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.44	max/average number of variants:3 1.56
+DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.51	max/average number of variants:4 1.69
+DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.55	max/average number of variants:3 1.58
+DNA-13356-CG001Qv40Run85-15_S15.CG001v4.0.56	max/average number of variants:3 1.54
+DNA-13356-CG001Qv40Run85-15_S15.CG001v3.4.56	max/average number of variants:7 1.51
+DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.5	max/average number of variants:13 1.39
+DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.97	max/average number of variants:6 1.17
+DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.103	max/average number of variants:9 1.61
+DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.105	aligned_clusters:435 nb/max/average normalized_alignments:483 8 1.11
+DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.105	max/average number of variants:42 7.34
+DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.125	max/average number of variants:4 1.61
+DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.130	aligned_clusters:130 nb/max/average normalized_alignments:1642 24 12.631
+DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.130	max/average number of variants:18 14.43
+DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.7	max/average number of variants:7 1.21
+DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.8	max/average number of variants:6 1.2
+DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.11	max/average number of variants:5 1.83
+DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.35	max/average number of variants:6 1.2
+DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.40	max/average number of variants:8 1.28
+DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.44	max/average number of variants:3 1.57
+DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.45	max/average number of variants:6 1.2
+DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.51	max/average number of variants:4 1.59
+DNA-13357-CG001Qv40Run85-16_S16.CG001v4.0.53	max/average number of variants:4 1.6
+DNA-13357-CG001Qv40Run85-16_S16.CG001v3.4.66	max/average number of variants:6 1.18
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.4	max/average number of variants:7 1.17
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.18	max/average number of variants:8 1.28
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.22	max/average number of variants:6 1.47
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.68	max/average number of variants:6 1.15
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.91	max/average number of variants:6 1.34
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.97	max/average number of variants:6 1.25
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.103	max/average number of variants:5 1.52
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.105	aligned_clusters:334 nb/max/average normalized_alignments:403 9 1.207
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.105	max/average number of variants:45 11.8
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.125	max/average number of variants:9 1.56
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.130	aligned_clusters:1 nb/max/average normalized_alignments:18 18 18.0
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.130	max/average number of variants:15 14.33
+DNA-13358-CG001Qv40Run85-17_S17.CG001v4.0.11	max/average number of variants:6 1.95
+DNA-13358-CG001Qv40Run85-17_S17.CG001v4.0.40	max/average number of variants:6 1.23
+DNA-13358-CG001Qv40Run85-17_S17.CG001v4.0.44	max/average number of variants:3 1.55
+DNA-13358-CG001Qv40Run85-17_S17.CG001v4.0.51	max/average number of variants:4 1.64
+DNA-13358-CG001Qv40Run85-17_S17.CG001v4.0.53	max/average number of variants:3 1.56
+DNA-13358-CG001Qv40Run85-17_S17.CG001v4.0.59	max/average number of variants:2 1.6
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.66	max/average number of variants:15 1.54
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.56	max/average number of variants:7 1.6
+DNA-13358-CG001Qv40Run85-17_S17.CG001v3.4.64	max/average number of variants:9 1.27
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.5	max/average number of variants:6 1.24
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.7	max/average number of variants:6 1.18
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.15	max/average number of variants:6 1.19
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.20	max/average number of variants:8 1.46
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.22	max/average number of variants:4 1.56
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.24	max/average number of variants:10 1.23
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.96	aligned_clusters:464 nb/max/average normalized_alignments:486 12 1.047
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.96	max/average number of variants:24 2.14
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.102	max/average number of variants:6 1.2
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.105	aligned_clusters:402 nb/max/average normalized_alignments:489 24 1.216
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.105	max/average number of variants:42 12.73
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.111	max/average number of variants:8 1.32
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.118	max/average number of variants:4 1.59
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.130	aligned_clusters:104 nb/max/average normalized_alignments:1375 18 13.221
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.130	max/average number of variants:18 14.41
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.131	max/average number of variants:6 1.14
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.6	max/average number of variants:7 1.3
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.7	aligned_clusters:232 nb/max/average normalized_alignments:255 24 1.099
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.7	max/average number of variants:26 4.83
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.11	max/average number of variants:5 1.6
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.12	max/average number of variants:8 1.65
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.35	max/average number of variants:9 1.7
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.40	max/average number of variants:8 1.24
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.41	max/average number of variants:6 1.18
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.44	max/average number of variants:3 1.56
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.45	max/average number of variants:6 1.25
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.50	max/average number of variants:3 1.65
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.51	max/average number of variants:3 1.62
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.53	max/average number of variants:3 1.63
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.58	max/average number of variants:3 1.59
+DNA-13359-CG001Qv40Run85-18_S18.CG001v4.0.59	max/average number of variants:3 1.74
+DNA-13359-CG001Qv40Run85-18_S18.CG001v3.4.56	max/average number of variants:7 1.63
+NF-CG001Qv40Run85-3_S3.CG001v3.4.5	max/average number of variants:6 1.28
+NF-CG001Qv40Run85-3_S3.CG001v3.4.7	max/average number of variants:6 1.25
+NF-CG001Qv40Run85-3_S3.CG001v3.4.8	max/average number of variants:9 1.18
+NF-CG001Qv40Run85-3_S3.CG001v3.4.18	max/average number of variants:10 1.3
+NF-CG001Qv40Run85-3_S3.CG001v3.4.22	max/average number of variants:6 1.45
+NF-CG001Qv40Run85-3_S3.CG001v3.4.24	max/average number of variants:8 1.2
+NF-CG001Qv40Run85-3_S3.CG001v3.4.26	max/average number of variants:10 1.2
+NF-CG001Qv40Run85-3_S3.CG001v3.4.27	max/average number of variants:8 1.24
+NF-CG001Qv40Run85-3_S3.CG001v3.4.43	max/average number of variants:7 1.24
+NF-CG001Qv40Run85-3_S3.CG001v3.4.92	max/average number of variants:8 1.24
+NF-CG001Qv40Run85-3_S3.CG001v3.4.94	max/average number of variants:3 1.61
+NF-CG001Qv40Run85-3_S3.CG001v3.4.96	max/average number of variants:6 1.47
+NF-CG001Qv40Run85-3_S3.CG001v3.4.103	max/average number of variants:9 1.53
+NF-CG001Qv40Run85-3_S3.CG001v3.4.105	aligned_clusters:692 nb/max/average normalized_alignments:831 24 1.201
+NF-CG001Qv40Run85-3_S3.CG001v3.4.105	max/average number of variants:43 12.01
+NF-CG001Qv40Run85-3_S3.CG001v3.4.125	max/average number of variants:7 1.44
+NF-CG001Qv40Run85-3_S3.CG001v3.4.130	aligned_clusters:1 nb/max/average normalized_alignments:18 18 18.0
+NF-CG001Qv40Run85-3_S3.CG001v3.4.130	max/average number of variants:15 14.33
+NF-CG001Qv40Run85-3_S3.CG001v4.0.2	max/average number of variants:6 1.18
+NF-CG001Qv40Run85-3_S3.CG001v4.0.11	max/average number of variants:6 1.9
+NF-CG001Qv40Run85-3_S3.CG001v4.0.20	max/average number of variants:4 1.59
+NF-CG001Qv40Run85-3_S3.CG001v4.0.29	max/average number of variants:9 1.39
+NF-CG001Qv40Run85-3_S3.CG001v4.0.34	max/average number of variants:7 1.58
+NF-CG001Qv40Run85-3_S3.CG001v4.0.35	max/average number of variants:8 1.44
+NF-CG001Qv40Run85-3_S3.CG001v4.0.40	max/average number of variants:7 1.22
+NF-CG001Qv40Run85-3_S3.CG001v4.0.51	max/average number of variants:13 1.71
+NF-CG001Qv40Run85-3_S3.CG001v4.0.53	max/average number of variants:3 1.66
+NF-CG001Qv40Run85-3_S3.CG001v4.0.58	max/average number of variants:3 1.65
+NF-CG001Qv40Run85-3_S3.CG001v4.0.59	max/average number of variants:3 1.7
+NF-CG001Qv40Run85-3_S3.CG001v3.4.56	max/average number of variants:6 1.22
+NF-CG001Qv40Run85-3_S3.CG001v3.4.64	max/average number of variants:7 1.18
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.22	max/average number of variants:7 1.43
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.26	max/average number of variants:6 1.19
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.42	max/average number of variants:9 1.21
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.43	max/average number of variants:8 1.26
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.91	max/average number of variants:6 1.18
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.94	max/average number of variants:3 1.66
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.96	max/average number of variants:6 1.5
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.105	aligned_clusters:617 nb/max/average normalized_alignments:723 9 1.172
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.105	max/average number of variants:48 10.89
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.111	max/average number of variants:6 1.17
 NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.130	no normalized_alignment
 NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.130	no variant
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.138	max number of variants:9
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.6	max number of variants:8
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.11	max number of variants:8
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.11	average number of variants:1.97
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.19	average number of variants:1.56
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.20	average number of variants:1.55
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.35	max number of variants:7
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.45	max number of variants:7
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.48	max number of variants:9
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.51	average number of variants:1.6
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.53	max number of variants:8
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.53	average number of variants:1.57
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.58	average number of variants:1.64
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.59	average number of variants:1.63
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.56	max number of variants:6
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.56	average number of variants:1.51
-NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.64	max number of variants:10
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.5	max number of variants:6
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.7	max number of variants:12
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.22	max number of variants:8
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.68	max number of variants:8
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.91	max normalized_alignments:95
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.91	average normalized_alignments:1.357
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.91	max number of variants:39
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.91	average number of variants:18.3
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.102	max normalized_alignments:16
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.102	max number of variants:41
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.102	average number of variants:4.48
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.103	max number of variants:7
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.103	average number of variants:1.53
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.105	average normalized_alignments:1.163
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.105	max number of variants:42
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.105	average number of variants:10.87
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.138	max/average number of variants:9 1.26
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.6	max/average number of variants:8 1.17
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.11	max/average number of variants:8 1.97
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.19	max/average number of variants:3 1.56
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.20	max/average number of variants:3 1.55
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.35	max/average number of variants:7 1.37
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.45	max/average number of variants:7 1.22
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.48	max/average number of variants:9 1.2
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.51	max/average number of variants:5 1.6
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.53	max/average number of variants:8 1.57
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.58	max/average number of variants:3 1.64
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v4.0.59	max/average number of variants:4 1.63
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.56	max/average number of variants:6 1.51
+NFforKapaLottoLot-CG001Qv40Run85-24_S24.CG001v3.4.64	max/average number of variants:10 1.2
+QMRS-CG001Qv40Run85-2_S2.CG001v3.4.5	max/average number of variants:6 1.31
+QMRS-CG001Qv40Run85-2_S2.CG001v3.4.7	max/average number of variants:12 1.31
+QMRS-CG001Qv40Run85-2_S2.CG001v3.4.22	max/average number of variants:8 1.36
+QMRS-CG001Qv40Run85-2_S2.CG001v3.4.68	max/average number of variants:8 1.29
+QMRS-CG001Qv40Run85-2_S2.CG001v3.4.91	aligned_clusters:266 nb/max/average normalized_alignments:361 95 1.357
+QMRS-CG001Qv40Run85-2_S2.CG001v3.4.91	max/average number of variants:39 18.3
+QMRS-CG001Qv40Run85-2_S2.CG001v3.4.102	aligned_clusters:300 nb/max/average normalized_alignments:312 16 1.04
+QMRS-CG001Qv40Run85-2_S2.CG001v3.4.102	max/average number of variants:41 4.48
+QMRS-CG001Qv40Run85-2_S2.CG001v3.4.103	max/average number of variants:7 1.53
+QMRS-CG001Qv40Run85-2_S2.CG001v3.4.105	aligned_clusters:683 nb/max/average normalized_alignments:794 8 1.163
+QMRS-CG001Qv40Run85-2_S2.CG001v3.4.105	max/average number of variants:42 10.87
 QMRS-CG001Qv40Run85-2_S2.CG001v3.4.130	no normalized_alignment
 QMRS-CG001Qv40Run85-2_S2.CG001v3.4.130	no variant
-QMRS-CG001Qv40Run85-2_S2.CG001v4.0.7	max number of variants:8
-QMRS-CG001Qv40Run85-2_S2.CG001v4.0.11	max number of variants:6
-QMRS-CG001Qv40Run85-2_S2.CG001v4.0.11	average number of variants:1.82
-QMRS-CG001Qv40Run85-2_S2.CG001v4.0.27	max number of variants:6
-QMRS-CG001Qv40Run85-2_S2.CG001v4.0.40	max number of variants:11
-QMRS-CG001Qv40Run85-2_S2.CG001v4.0.41	max number of variants:6
-QMRS-CG001Qv40Run85-2_S2.CG001v4.0.51	average number of variants:1.56
-QMRS-CG001Qv40Run85-2_S2.CG001v4.0.53	average number of variants:1.61
-QMRS-CG001Qv40Run85-2_S2.CG001v4.0.57	average number of variants:1.56
-QMRS-CG001Qv40Run85-2_S2.CG001v3.4.56	max number of variants:6
+QMRS-CG001Qv40Run85-2_S2.CG001v4.0.7	max/average number of variants:8 1.17
+QMRS-CG001Qv40Run85-2_S2.CG001v4.0.11	max/average number of variants:6 1.82
+QMRS-CG001Qv40Run85-2_S2.CG001v4.0.27	max/average number of variants:6 1.43
+QMRS-CG001Qv40Run85-2_S2.CG001v4.0.40	max/average number of variants:11 1.22
+QMRS-CG001Qv40Run85-2_S2.CG001v4.0.41	max/average number of variants:6 1.19
+QMRS-CG001Qv40Run85-2_S2.CG001v4.0.51	max/average number of variants:3 1.56
+QMRS-CG001Qv40Run85-2_S2.CG001v4.0.53	max/average number of variants:3 1.61
+QMRS-CG001Qv40Run85-2_S2.CG001v4.0.57	max/average number of variants:4 1.56
+QMRS-CG001Qv40Run85-2_S2.CG001v3.4.56	max/average number of variants:6 1.31

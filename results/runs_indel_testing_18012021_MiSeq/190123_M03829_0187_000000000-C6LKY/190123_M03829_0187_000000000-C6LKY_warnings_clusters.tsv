@@ -1,7 +1,7 @@
 DNA-10529-CG001Qv40Run65-24_S24.CG001v4.0.40	ratio of reads in largest cluster:0.0
 DNA-12748-CG001Qv40Run65-18_S18.CG001v4.0.40	ratio of reads in largest cluster:0.0
-DNA-12749-CG001Qv40Run65-22_S22.CG001v3.4.130	no read in clusters
-DNA-12749-CG001Qv40Run65-22_S22.CG001v4.0.11	no read in clusters
+DNA-12749-CG001Qv40Run65-22_S22.CG001v3.4.130	clusters:0 reads:0 max_cluster:0
+DNA-12749-CG001Qv40Run65-22_S22.CG001v4.0.11	clusters:0 reads:0 max_cluster:0
 DNA-12749-CG001Qv40Run65-22_S22.CG001v4.0.40	ratio of reads in largest cluster:0.0
 DNA-12755-CG001Qv40Run65-19_S19.CG001v4.0.40	ratio of reads in largest cluster:0.0
 DNA-12757-CG001Qv40Run65-20_S20.CG001v4.0.40	ratio of reads in largest cluster:0.0
@@ -9,10 +9,10 @@ DNA-12759-CG001Qv40Run65-21_S21.CG001v4.0.40	ratio of reads in largest cluster:0
 DNA-12764-CG001Qv40Run65-23_S23.CG001v4.0.40	ratio of reads in largest cluster:0.0
 DNA-12785-CG001Qv40Run65-12_S12.CG001v4.0.40	ratio of reads in largest cluster:0.0
 DNA-12787-CG001Qv40Run65-13_S13.CG001v4.0.40	ratio of reads in largest cluster:0.0
-DNA-12799-CG001Qv40Run65-9_S9.CG001v3.4.130	no read in clusters
+DNA-12799-CG001Qv40Run65-9_S9.CG001v3.4.130	clusters:0 reads:0 max_cluster:0
 DNA-12799-CG001Qv40Run65-9_S9.CG001v4.0.40	ratio of reads in largest cluster:0.0
 DNA-12800-CG001Qv40Run65-10_S10.CG001v4.0.40	ratio of reads in largest cluster:0.0
-DNA-12801-CG001Qv40Run65-11_S11.CG001v3.4.130	no read in clusters
+DNA-12801-CG001Qv40Run65-11_S11.CG001v3.4.130	clusters:0 reads:0 max_cluster:0
 DNA-12801-CG001Qv40Run65-11_S11.CG001v4.0.40	ratio of reads in largest cluster:0.0
 DNA-12860-CG001Qv40Run65-16_S16.CG001v4.0.40	ratio of reads in largest cluster:0.0
 DNA-12862-CG001Qv40Run65-17_S17.CG001v4.0.40	ratio of reads in largest cluster:0.0
@@ -21,9 +21,9 @@ DNA-12880-CG001Qv40Run65-4_S4.CG001v4.0.40	ratio of reads in largest cluster:0.0
 DNA-12881-CG001Qv40Run65-5_S5.CG001v4.0.40	ratio of reads in largest cluster:0.0
 DNA-12882-CG001Qv40Run65-6_S6.CG001v4.0.40	ratio of reads in largest cluster:0.0
 DNA-12892-CG001Qv40Run65-7_S7.CG001v4.0.40	ratio of reads in largest cluster:0.0
-DNA-12894-CG001Qv40Run65-8_S8.CG001v3.4.130	no read in clusters
+DNA-12894-CG001Qv40Run65-8_S8.CG001v3.4.130	clusters:0 reads:0 max_cluster:0
 DNA-12894-CG001Qv40Run65-8_S8.CG001v4.0.40	ratio of reads in largest cluster:0.0
 DNA-12902-CG001Qv40Run65-14_S14.CG001v4.0.40	ratio of reads in largest cluster:0.0
-NF-CG001Qv40Run65-3_S3.CG001v3.4.130	no read in clusters
+NF-CG001Qv40Run65-3_S3.CG001v3.4.130	clusters:0 reads:0 max_cluster:0
 NF-CG001Qv40Run65-3_S3.CG001v4.0.40	ratio of reads in largest cluster:0.0
 QMRS-CG001Qv40Run65-2_S2.CG001v4.0.40	ratio of reads in largest cluster:0.0
