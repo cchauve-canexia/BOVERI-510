@@ -64,6 +64,9 @@ if __name__ == "__main__":
         else:
             print(f"{in_dump_file} missing")
     for sample_type, indels_dump in indels.items():
+        print(
+            f"INFO\tindels calls in {sample_type} samples:\t{len(indels_dump)}"
+        )
         indels_dump.sort(key=lambda x: float(x[5]))
         indels_dump.sort(key=lambda x: x[0].replace('-CG001', ' '))
         indels_dump.sort(key=itemgetter(3, 4))
