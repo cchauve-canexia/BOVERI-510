@@ -119,12 +119,19 @@ def check_output_files(run_id, sample_id_list, s3_files):
 # VCF files dumping
 
 
-def dump_sample_vcf_file(sample_id, in_file, out_file, append=True):
+def dump_sample_vcf_file(run_id,
+                         sample_id,
+                         in_file,
+                         out_file,
+                         log_file,
+                         append=True):
     """
     Dump a VCF file for a sample into a TSV file
+    :param: run_id (str): run ID
     :param: sample_id (str): sample ID
     :param: in_file (str): path to input VCF file
     :param: out_file (str): path to output TSV file
+    :param: log_file (opened file): log file
     :param: append (bool): if True, dump is appended otherwise new file created
     """
     if not append:
@@ -132,25 +139,29 @@ def dump_sample_vcf_file(sample_id, in_file, out_file, append=True):
         out_file.write(VCF_DUMP_FIELDS_SEP.join(VCF_DUMP_HEADER))
     else:
         out_file = open(out_file, 'a')
-    sample_vcf_reader = vcf.Reader(open(in_file, 'r'))
-    for record in sample_vcf_reader:
-        record_str = [record.CHROM, record.POS, record.REF, record.ALT[0]]
-        info = record.INFO
-        source_str = VCF_DUMP_VALUES_SEP.join(info[SOURCE])
-        info_str = [
-            info['VAF'], info[SOURCE_COV], info[TOTAL_COV], info[MAX_COV],
-            source_str
-        ]
-        annotations = info['ANN']
-        ann_str = []
-        for annotation in annotations:
-            ann_split = annotation.split('|')
-            ann_str.append('|'.join(ann_split[1:4]))
-        ann_str = list(set(ann_str))
+    if os.stat(in_file).st_size == 0:
+        log_file.write(
+            f"{WARNING}:{run_id}.{sample_id}\t{in_file} empty VCF file\n")
+    else:
+        sample_vcf_reader = vcf.Reader(open(in_file, 'r'))
+        for record in sample_vcf_reader:
+            record_str = [record.CHROM, record.POS, record.REF, record.ALT[0]]
+            info = record.INFO
+            source_str = VCF_DUMP_VALUES_SEP.join(info[SOURCE])
+            info_str = [
+                info['VAF'], info[SOURCE_COV], info[TOTAL_COV], info[MAX_COV],
+                source_str
+            ]
+            annotations = info['ANN']
+            ann_str = []
+            for annotation in annotations:
+                ann_split = annotation.split('|')
+                ann_str.append('|'.join(ann_split[1:4]))
+            ann_str = list(set(ann_str))
 
-        out_str = [sample_id] + record_str + info_str + [','.join(ann_str)]
-        out_file.write('\n')
-        out_file.write(VCF_DUMP_FIELDS_SEP.join([str(x) for x in out_str]))
+            out_str = [sample_id] + record_str + info_str + [','.join(ann_str)]
+            out_file.write('\n')
+            out_file.write(VCF_DUMP_FIELDS_SEP.join([str(x) for x in out_str]))
     out_file.close()
 
 
@@ -171,6 +182,7 @@ def get_sample_vcf_file(run_id, sample_id, prefix, v_type):
 def extract_vcf_files(run_id,
                       sample_id_list,
                       s3_bucket,
+                      log_file,
                       v_type=INDELS,
                       prefix='.',
                       to_dump=False,
@@ -180,6 +192,7 @@ def extract_vcf_files(run_id,
     :param: run_id (str): ID of the run
     :param: sample_id_list (list(str)): list of sample ID
     :param: s3_bucket (str): s3 bucket where to fetch the results
+    :param: log_file (opened file): log file
     :param: v_type (str): SNPS or INDELS
     :param: prefix (str): prefix of the output directory
     :param: to_dump (bool): if True a dump file is created
@@ -194,7 +207,12 @@ def extract_vcf_files(run_id,
         out_dump_file = get_vcf_dump_file(run_id, prefix, v_type, init=True)
         for sample_id in sample_id_list:
             in_vcf = get_sample_vcf_file(run_id, sample_id, prefix, v_type)
-            dump_sample_vcf_file(sample_id, in_vcf, out_dump_file, append=True)
+            dump_sample_vcf_file(run_id,
+                                 sample_id,
+                                 in_vcf,
+                                 out_dump_file,
+                                 log_file,
+                                 append=True)
             if not to_keep:
                 os.remove(in_vcf)
     os.remove(vcf_file_name)
@@ -353,6 +371,7 @@ if __name__ == "__main__":
             extract_vcf_files(run_id,
                               sample_id_list,
                               args.s3_bucket,
+                              log_file,
                               v_type=INDELS,
                               prefix=args.output_dir,
                               to_dump=True,
