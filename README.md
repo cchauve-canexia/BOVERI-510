@@ -8,6 +8,8 @@ The repo contains three main scripts:
 - bin/run_utils.py to launch AWS jobs  
 - bin/analysis_utils.py to retrieve results  
 - bin/extract_colocated_indels.py
+- bin/aggregate_dump_files.py
+- bin/retrieve_run.py
 
 ### run_utils
 The script bin/run_utils.py checks the input data for a list of runs and submits
@@ -89,3 +91,31 @@ Arguments:
   indels
 - gap_len (optional): integer defining ghe maximum gap between consecutive
   indels to put them into the same group; default = 5
+
+### aggregate_dump_files
+The script aggregates all TSV dump files for indels into a aggregated TSV dump files
+for a set of runs. For a set of runs, it splus the samples in three groups:
+- patient samples (name starts by DNA)
+- control samples (name starts by NF, QMRS or BLANK)
+- misc samples (all other cases)
+For each group it generates 2 TSV files:
+- <group>_samples_indels_dump.tsv
+  one line per individual call, in the same format than the run-specific dump files
+- <group>_grouped_samples_indels_dump.tsv
+  calls are grouped by the key (chr, position, reference, alternate)
+  and for each group it shows in how many samples it occurs, the mean and standard
+  deviation of the VAF, and the samples it occurs in (with the corresponding VAF).
+
+Arguments:
+ - output_dir: directory where to fetch the run-specific dump files and write the
+   aggregated dump files.
+
+### retrieve_run
+The script downloads from an S3 bucket all main.tar.gz and vcf.tar.gz files for a
+given run.
+
+Arguments:
+- run_id: ID of the run
+- output_dir: files are downloaded and unarchived in this directory, in a
+  subdirectory run_id
+- s3: bucket where to fetch the files (in directory run_id)

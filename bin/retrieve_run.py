@@ -26,14 +26,14 @@ if __name__ == "__main__":
       fetch indels pipeline output files.
     """
     # Run ID
-    ARGS_RUNS_ID = ['run_id', None, 'Run ID']
+    ARGS_RUN_ID = ['run_id', None, 'Run ID']
     # Results directory
     ARGS_OUTPUT_DIR = ['output_dir', None, 'Output directory']
     # S3 bucket containing the reuslts
     ARGS_S3_BUCKET = ['-s3', '--s3_bucket', 'S3 bucket containing the results']
     parser = argparse.ArgumentParser(
         description='Indels pipeline: analysis of results on AWS')
-    parser.add_argument(ARGS_RUNS_ID[0], type=str, help=ARGS_RUNS_ID[2])
+    parser.add_argument(ARGS_RUN_ID[0], type=str, help=ARGS_RUN_ID[2])
     parser.add_argument(ARGS_OUTPUT_DIR[0], type=str, help=ARGS_OUTPUT_DIR[2])
     parser.add_argument(ARGS_S3_BUCKET[0],
                         ARGS_S3_BUCKET[1],

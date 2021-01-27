@@ -38,15 +38,21 @@ def aggregate_group(variant, group):
 
 if __name__ == "__main__":
     """
-    Aggregate all VCF dump files for a set of runs in three files:
+    Aggregate all VCF dump files for a set of runs in six files:
     - a file DNA_samples_dump.tsv for indels calls from patient samples
       (starting with DNA-)
-    - a file control_samples_dump.tsv indels calls from control samples
-      (starting with nf-, qmrs-, blank-)
+    - a file DNA_grouped_samples_indels_dump.tsv where indels have been grouped
+      by the key (chr, position, reference, alternate)
+    - a file ctrl_samples_dump.tsv indels calls from control samples
+      (starting with nf, qmrs, blank)
+    - a file ctrl_grouped_samples_indels_dump.tsv where indels have been
+      grouped by the key (chr, position, reference, alternate)
     - a file misc_samples_dump.tsv indels calls from all other samples
+    - a file misc_grouped_samples_indels_dump.tsv where indels have been
+      grouped by the key (chr, position, reference, alternate)
+
     Arguments:
     - output_dir: directory where the results are read and written
-
     """
     # Results directory
     ARGS_OUTPUT_DIR = ['output_dir', None, 'Output directory']
