@@ -33,6 +33,7 @@ Arguments:
   default value: cchauve (AWS_DEF)  
 - aws_queue: queue to send the jobs to, --job-queue value for aws  
   default value: cchauve-orchestration-default (AWS_QUEUE)  
+- trace: if 1 generate execution reports
 
 It checks the directory <s3_input>/input/<run_id> for each run and looks into
 every subdirectory ending by -XX_SYY where XX and YY are integers (not assumed to

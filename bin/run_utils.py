@@ -165,6 +165,7 @@ if __name__ == "__main__":
       default value: cchauve (AWS_DEF)
     - aws_queue: queue to send the jobs to, --job-queue value for aws
       default value: cchauve-orchestration-default (AWS_QUEUE)
+    - trace: optional parameters, if 1 reports are produced other none
 
     Checks the directory <s3_input>/input/<run_id> for each run and looks into
     every directory ending by -XX_SYY where XX and YY are integers that there
@@ -190,6 +191,8 @@ if __name__ == "__main__":
     ARGS_AWS_DEF = ['-d', '--aws_def', 'AWS definition']
     # AWS queue
     ARGS_AWS_QUEUE = ['-q', '--aws_queue', 'AWS queue']
+    # Tracing
+    ARGS_TRACE = ['-t', '--trace', 'tracing options']
 
     parser = argparse.ArgumentParser(description='Indels pipeline: run on AWS')
     parser.add_argument(ARGS_RUNS_FILE[0], type=str, help=ARGS_RUNS_FILE[2])
@@ -211,6 +214,11 @@ if __name__ == "__main__":
                         default=AWS_QUEUE,
                         type=str,
                         help=ARGS_AWS_QUEUE[2])
+    parser.add_argument(ARGS_TRACE[0],
+                        ARGS_TRACE[1],
+                        default=0,
+                        type=int,
+                        help=ARGS_TRACE[2])
     args = parser.parse_args()
 
     # Creating a log file located in the same directory than the YAML
@@ -245,6 +253,13 @@ if __name__ == "__main__":
                     '\"--output_dir\"', f"\"s3://{args.s3_output}/\""
                 ]
             cmd_options += ['\"-resume\"']
+            if args.trace == 1:
+                exec_report = f"\"{run_id}_execution_report.html\""
+                cmd_options += ['\"-with-report\"', exec_report]
+                timeline_report = f"\"{run_id}_timeline_report.html\""
+                cmd_options += ['\"-with-timeline\"', timeline_report]
+                flowchart_image = f"\"{run_id}_flowchart.png\""
+                cmd_options += ['\"-with-dag\"', flowchart_image]
             aws_cmd += [','.join(cmd_options)]
             aws_cmd += ['--region', 'ca-central-1']
             log_file.write(f"{INFO}:{run_id}\t{ERROR_NONE}\n")
