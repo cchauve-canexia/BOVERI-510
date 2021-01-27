@@ -4,11 +4,12 @@
 This repo contains scripts to launch AWS jobs for the indels pipeline and
 retrieve the results.
 
-The repo contains three main scripts:  
+The repo contains the following scripts:  
 - bin/run_utils.py to launch AWS jobs  
 - bin/analysis_utils.py to retrieve results  
 - bin/extract_colocated_indels.py
 - bin/aggregate_dump_files.py
+- bin/add_aliquots.py
 - bin/retrieve_run.py
 - bin/count_samples.py
 
@@ -110,6 +111,14 @@ For each group it generates 2 TSV files:
 Arguments:
  - output_dir: directory where to fetch the run-specific dump files and write the
    aggregated dump files.
+
+### add_aliquots
+The script add information about aliquots for the patient samples aggregated
+dump TSV file
+
+Arguments:
+- input_tsv_file: input aggregated dump TSV file
+- output_tsv_file: output file with aliquots information added
 
 ### retrieve_run
 The script downloads from an S3 bucket all main.tar.gz and vcf.tar.gz files for a
