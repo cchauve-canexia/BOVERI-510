@@ -11,7 +11,7 @@ from operator import itemgetter
 
 from analysis_utils import INDELS
 from common_utils import (VCF_DUMP_FIELDS_SEP, get_aggregated_dump_file,
-                          get_vcf_dump_file, read_input_log_file)
+                          get_vcf_dump_file)
 
 
 def sort_chr(chrom):
@@ -30,26 +30,24 @@ if __name__ == "__main__":
       (starting with nf-, qmrs-, blank-)
     - a file misc_samples_dump.tsv indels calls from all other samples
     Arguments:
-    - input_log_file: input log file from a set of runs
-    - output_dir: directory where the results are written
+    - output_dir: directory where the results are read and written
 
     """
-    # Input file
-    ARGS_RUNS_FILE = ['input_log_file', None, 'Input log file']
     # Results directory
     ARGS_OUTPUT_DIR = ['output_dir', None, 'Output directory']
     parser = argparse.ArgumentParser(
         description='Indels pipeline: analysis of results on AWS')
-    parser.add_argument(ARGS_RUNS_FILE[0], type=str, help=ARGS_RUNS_FILE[2])
     parser.add_argument(ARGS_OUTPUT_DIR[0], type=str, help=ARGS_OUTPUT_DIR[2])
     args = parser.parse_args()
 
-    (sample_id_lists,
-     unprocessed_runs) = read_input_log_file(args.input_log_file)
+    run_id_list = []
+    for x in os.listdir(args.output_dir):
+        if os.path.isdir(os.path.join(args.output_dir, x)):
+            run_id_list.append(x)
 
     indels = {}
     indels['DNA'], indels['ctrl'], indels['misc'] = [], [], []
-    for (run_id, run_name), sample_id_list in sample_id_lists.items():
+    for run_id in run_id_list:
         prefix = args.output_dir
         in_dump_file = get_vcf_dump_file(run_id, prefix, INDELS, init=False)
         if os.path.isfile(in_dump_file):
