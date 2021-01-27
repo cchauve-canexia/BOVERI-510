@@ -192,7 +192,9 @@ if __name__ == "__main__":
     # AWS queue
     ARGS_AWS_QUEUE = ['-q', '--aws_queue', 'AWS queue']
     # Tracing
-    ARGS_TRACE = ['-t', '--trace', 'tracing options']
+    ARGS_TRACE = [
+        '-t', '--trace_path', 'path to directory containing trace files'
+    ]
 
     parser = argparse.ArgumentParser(description='Indels pipeline: run on AWS')
     parser.add_argument(ARGS_RUNS_FILE[0], type=str, help=ARGS_RUNS_FILE[2])
@@ -216,8 +218,8 @@ if __name__ == "__main__":
                         help=ARGS_AWS_QUEUE[2])
     parser.add_argument(ARGS_TRACE[0],
                         ARGS_TRACE[1],
-                        default=0,
-                        type=int,
+                        default='s3://cchauve-orchestration-ch/_trace',
+                        type=str,
                         help=ARGS_TRACE[2])
     args = parser.parse_args()
 
@@ -253,12 +255,13 @@ if __name__ == "__main__":
                     '\"--output_dir\"', f"\"s3://{args.s3_output}/\""
                 ]
             cmd_options += ['\"-resume\"']
-            if args.trace == 1:
-                exec_report = f"\"{run_id}_execution_report.html\""
+            if args.trace is not None:
+                prefix = args.trace
+                exec_report = f"\"{prefix}/{run_id}_execution_report.html\""
                 cmd_options += ['\"-with-report\"', exec_report]
-                timeline_report = f"\"{run_id}_timeline_report.html\""
+                timeline_report = f"\"{prefix}/{run_id}_timeline_report.html\""
                 cmd_options += ['\"-with-timeline\"', timeline_report]
-                flowchart_image = f"\"{run_id}_flowchart.png\""
+                flowchart_image = f"\"{prefix}/{run_id}_flowchart.png\""
                 cmd_options += ['\"-with-dag\"', flowchart_image]
             aws_cmd += [','.join(cmd_options)]
             aws_cmd += ['--region', 'ca-central-1']
