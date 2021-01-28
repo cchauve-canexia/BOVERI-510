@@ -257,12 +257,8 @@ if __name__ == "__main__":
             cmd_options += ['\"-resume\"']
             if args.trace_path is not None:
                 prefix = args.trace_path
-                exec_report = f"\"{prefix}/{run_id}_execution_report.html\""
-                cmd_options += ['\"-with-report\"', exec_report]
                 timeline_report = f"\"{prefix}/{run_id}_timeline_report.html\""
                 cmd_options += ['\"-with-timeline\"', timeline_report]
-                flowchart_image = f"\"{prefix}/{run_id}_flowchart.dot\""
-                cmd_options += ['\"-with-dag\"', flowchart_image]
                 trace_file = f"\"{prefix}/{run_id}_trace.txt\""
                 cmd_options += ['\"-with-trace\"', trace_file]
             aws_cmd += [','.join(cmd_options)]
