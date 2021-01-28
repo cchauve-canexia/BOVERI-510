@@ -110,5 +110,4 @@ INFO    indels groups in misc samples:    37
     results/runs_indel_testing_18012021_MiSeq/DNA_grouped_samples_with_aliquots_indels_dump.tsv
 
 # NextSeq test with amplicon manifest 5
-# Not submitted because of pending questions about indicating path to trace files
-# > ./bin/run_utils.py data/200831_NB551381_0081_AHFY5KAFX2.csv ch-testdata BOVERI-448 -t s3://cchauve-orchestration-ch/_trace
+> ./bin/run_utils.py data/200831_NB551381_0081_AHFY5KAFX2.csv ch-testdata BOVERI-448 -t s3://cchauve-orchestration-ch/_trace

@@ -123,14 +123,17 @@ Arguments:
 - output_tsv_file: output file with aliquots information added
 
 ### retrieve_run
-The script downloads from an S3 bucket all main.tar.gz and vcf.tar.gz files for a
-given run.
+The script downloads from an S3 bucket
+- either all main.tar.gz and vcf.tar.gz files for a given run,
+- or all data for a given run
 
 Arguments:
+- cmd: data or results
 - run_id: ID of the run
 - output_dir: files are downloaded and unarchived in this directory, in a
   subdirectory run_id
-- s3: bucket where to fetch the files (in directory run_id)
+- s3: bucket where to fetch the files (in directory run_id for results and input/run_id
+  for data)
 
 ### count_samples
 Counts the number of samples of each group in a set of runs.

@@ -255,8 +255,8 @@ if __name__ == "__main__":
                     '\"--output_dir\"', f"\"s3://{args.s3_output}/\""
                 ]
             cmd_options += ['\"-resume\"']
-            if args.trace is not None:
-                prefix = args.trace
+            if args.trace_path is not None:
+                prefix = args.trace_path
                 exec_report = f"\"{prefix}/{run_id}_execution_report.html\""
                 cmd_options += ['\"-with-report\"', exec_report]
                 timeline_report = f"\"{prefix}/{run_id}_timeline_report.html\""
@@ -268,6 +268,7 @@ if __name__ == "__main__":
             log_file.write(f"{INFO}:{run_id}\t{ERROR_NONE}\n")
             log_file.write(f"{AWS_CMD}:{run_id}\t{' '.join(aws_cmd)}\n")
             subprocess.call(aws_cmd)
+            # print(' '.join(aws_cmd))
         else:
             log_file.write(f"{WARNING}:{run_id}\t{ERROR_RUN_UNPROCESSED}\n")
     log_file.close()
