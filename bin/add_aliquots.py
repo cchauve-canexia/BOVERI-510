@@ -28,8 +28,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     out_file = open(args.output_tsv_file, 'w')
-    header = 'nb_samples\tnb_aliquots\tchr\tpos\tref\talt\tannotation\t'
-    header += 'avg_vaf\tstd_vaf\taliquots:count\tsamples:vaf'
+    header = ['nb_samples', 'nb_aliquots', 'chr', 'pos', 'ref', 'alt']
+    header += ['annotation', 'avg_vaf', 'std_vaf', 'aliquots:count']
+    header += ['samples:vaf']
     out_file.write(f"{header}\n")
     out_file.close()
     indels_ext = []
@@ -54,6 +55,6 @@ if __name__ == "__main__":
                 indel_ext += [VCF_DUMP_VALUES_SEP.join(aliquots_list)]
                 indel_ext += [indel[8]]
                 indels_ext.append(indel_ext)
-    with open(args.output_tsv_file, 'a') as out_file:
+    with open(args.output_tsv_file, 'w') as out_file:
         writer = csv.writer(out_file, delimiter=VCF_DUMP_FIELDS_SEP)
-        writer.writerows(indels_ext)
+        writer.writerows([header] + indels_ext)

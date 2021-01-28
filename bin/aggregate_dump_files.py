@@ -98,10 +98,12 @@ if __name__ == "__main__":
         out_dump_file = get_aggregated_dump_file(f"{sample_type}_samples",
                                                  prefix,
                                                  INDELS,
-                                                 init=True)
-        with open(out_dump_file, 'a') as out_dump:
+                                                 init=False)
+        header = ['chr', 'pos', 'ref', 'alt', 'VAF', 'source_coverage']
+        header += ['total_coverage', 'max_coverage', 'source', 'annotation']
+        with open(out_dump_file, 'w') as out_dump:
             writer = csv.writer(out_dump, delimiter=VCF_DUMP_FIELDS_SEP)
-            writer.writerows(indels_dump)
+            writer.writerows([header] + indels_dump)
 
     for sample_type, indels_dump in indels.items():
         aggregated_groups = []
@@ -113,13 +115,10 @@ if __name__ == "__main__":
             f"{sample_type}_grouped_samples", prefix, INDELS, init=False)
         nb_groups = len(aggregated_groups)
         print(f"INFO\tindels groups in {sample_type} samples:\t{nb_groups}")
-        out_dump = open(out_dump_file, 'w')
-        header = 'nb\tchr\tpos\tref\talt\tannotation\t'
-        header += 'avg_vaf\tstd_vaf\tsamples:vaf\n'
-        out_dump.write(header)
-        out_dump.close()
+        header = ['nb', 'chr', 'pos', 'ref', 'alt', 'annotation']
+        header += ['avg_vaf', 'std_vaf', 'samples:vaf']
         for aggregated_group in aggregated_groups:
             aggregated_group[8] = VCF_DUMP_VALUES_SEP.join(aggregated_group[8])
-        with open(out_dump_file, 'a') as out_dump:
+        with open(out_dump_file, 'w') as out_dump:
             writer = csv.writer(out_dump, delimiter=VCF_DUMP_FIELDS_SEP)
-            writer.writerows(aggregated_groups)
+            writer.writerows([header] + aggregated_groups)

@@ -1,4 +1,5 @@
-sample	chr	pos	ref	alt	VAF	source_coverage	total_coverage	max_coverage	source	annotationQMRS-CG001Qv40Run135-2_S2	chr1	14155396	C	CCG	0.00621	1449	9	5	CG001v4.0.53	downstream_gene_variant|MODIFIER|PRDM2,intergenic_region|MODIFIER|PRDM2-KAZN
+chr	pos	ref	alt	VAF	source_coverage	total_coverage	max_coverage	source	annotation
+QMRS-CG001Qv40Run135-2_S2	chr1	14155396	C	CCG	0.00621	1449	9	5	CG001v4.0.53	downstream_gene_variant|MODIFIER|PRDM2,intergenic_region|MODIFIER|PRDM2-KAZN
 QMRS-CG001Qv40Run16-2_S2	chr1	14155396	C	CCG	0.00543	1473	8	6	CG001v4.0.53	intergenic_region|MODIFIER|PRDM2-KAZN,downstream_gene_variant|MODIFIER|PRDM2
 QMRS-CG001Qv40Run177-2_S2	chr1	14155396	C	CCG	0.00553	1085	6	6	CG001v4.0.53	intergenic_region|MODIFIER|PRDM2-KAZN,downstream_gene_variant|MODIFIER|PRDM2
 QMRS-CG001Qv42Run231-2_S2	chr1	14155396	C	CCG	0.00543	1105	6	6	CG001v4.0.53	intergenic_region|MODIFIER|PRDM2-KAZN,downstream_gene_variant|MODIFIER|PRDM2
