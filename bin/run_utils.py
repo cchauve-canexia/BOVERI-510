@@ -263,7 +263,8 @@ if __name__ == "__main__":
                 cmd_options += ['\"-with-timeline\"', timeline_report]
                 flowchart_image = f"\"{prefix}/{run_id}_flowchart.dot\""
                 cmd_options += ['\"-with-dag\"', flowchart_image]
-                cmd_options += ['\"-with-trace\"']
+                trace_file = f"\"{prefix}/{run_id}_trace.txt\""
+                cmd_options += ['\"-with-trace\"', trace_file]
             aws_cmd += [','.join(cmd_options)]
             aws_cmd += ['--region', 'ca-central-1']
             log_file.write(f"{INFO}:{run_id}\t{ERROR_NONE}\n")
