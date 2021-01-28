@@ -1,4 +1,4 @@
-chr	pos	ref	alt	VAF	source_coverage	total_coverage	max_coverage	source	annotation
+sample	chr	pos	ref	alt	VAF	source_coverage	total_coverage	max_coverage	source	annotation
 DNA-11181-CG001Qv40Run112-redo2-7_S7	chr1	14155396	C	CCA	0.00512	1171	6	6	CG001v4.0.53	intergenic_region|MODIFIER|PRDM2-KAZN,downstream_gene_variant|MODIFIER|PRDM2
 DNA-11754-CG001Qv40Run37-8_S8	chr1	14155396	C	CCA	0.00561	713	4	4	CG001v4.0.53	intergenic_region|MODIFIER|PRDM2-KAZN,downstream_gene_variant|MODIFIER|PRDM2
 DNA-12762-CG001Qv40Run53-16_S16	chr1	14155396	C	CCA	0.00705	851	6	5	CG001v4.0.53	intergenic_region|MODIFIER|PRDM2-KAZN,downstream_gene_variant|MODIFIER|PRDM2

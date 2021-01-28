@@ -99,7 +99,9 @@ if __name__ == "__main__":
                                                  prefix,
                                                  INDELS,
                                                  init=False)
-        header = ['chr', 'pos', 'ref', 'alt', 'VAF', 'source_coverage']
+        header = [
+            'sample', 'chr', 'pos', 'ref', 'alt', 'VAF', 'source_coverage'
+        ]
         header += ['total_coverage', 'max_coverage', 'source', 'annotation']
         with open(out_dump_file, 'w') as out_dump:
             writer = csv.writer(out_dump, delimiter=VCF_DUMP_FIELDS_SEP)
