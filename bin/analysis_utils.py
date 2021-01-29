@@ -44,10 +44,30 @@ CALLS_FILE_SUFFIX = {INDELS: INDELS_FILE_SUFFIX, SNPS: SNPS_FILE_SUFFIX}
 AWS_CP = ['aws', 's3', 'cp']
 
 # Variant features to print: taken from indesl-pipeline/bin/feature_utils.py
+# Variant features to print: taken from indesl-pipeline/bin/feature_utils.py
 SOURCE_COV = 'SCOV'
 TOTAL_COV = 'TCOV'
 MAX_COV = 'MCOV'
 SOURCE = 'AMPLICONS'
+WT_RU = 'WRU1'
+WT_RU_CNB = 'WRU2'
+WT_RU_LEFT_CNB = 'WRU3'
+WT_RU_RIGHT_CNB = 'WRU4'
+V_RU = 'VRU1'
+V_RU_CNB = 'VRU2'
+V_RU_LEFT_CNB = 'VRU3'
+V_RU_RIGHT_CNB = 'VRU4'
+HP_LEFT_LEN = 'HPL1'
+HP_LEFT_BASE = 'HPL2'
+HP_RIGHT_LEN = 'HPR1'
+HP_RIGHT_BASE = 'HPR2'
+
+FEATURES_COV = [SOURCE_COV, TOTAL_COV, MAX_COV]
+FEATURES_SEQ = [
+    WT_RU, WT_RU_CNB, WT_RU_LEFT_CNB, WT_RU_RIGHT_CNB, V_RU, V_RU_CNB,
+    V_RU_LEFT_CNB, V_RU_RIGHT_CNB, HP_LEFT_LEN, HP_LEFT_BASE, HP_RIGHT_LEN,
+    HP_RIGHT_BASE
+]
 
 # Log steps
 WARNINGS_OUTPUT_SUFFIX = {
@@ -146,20 +166,21 @@ def dump_sample_vcf_file(run_id,
         sample_vcf_reader = vcf.Reader(open(in_file, 'r'))
         for record in sample_vcf_reader:
             record_str = [record.CHROM, record.POS, record.REF, record.ALT[0]]
-            info = record.INFO
-            source_str = VCF_DUMP_VALUES_SEP.join(info[SOURCE])
-            info_str = [
-                info['VAF'], info[SOURCE_COV], info[TOTAL_COV], info[MAX_COV],
-                source_str
+            v_info = record.INFO
+            features_cov = [
+                f"{feature}:{v_info[feature]}" for feature in FEATURES_COV
             ]
-            annotations = info['ANN']
-            ann_str = []
-            for annotation in annotations:
-                ann_split = annotation.split('|')
-                ann_str.append('|'.join(ann_split[1:4]))
-            ann_str = list(set(ann_str))
-
-            out_str = [sample_id] + record_str + info_str + [','.join(ann_str)]
+            features_seq = [
+                f"{feature}:{v_info[feature]}" for feature in FEATURES_SEQ
+            ]
+            source = VCF_DUMP_VALUES_SEP.join(v_info[SOURCE])
+            annotation = v_info['ANN']
+            v_info_str = [
+                v_info['VAF'], source,
+                VCF_DUMP_VALUES_SEP.join(features_cov),
+                VCF_DUMP_VALUES_SEP.join(features_seq), annotation
+            ]
+            out_str = [sample_id] + record_str + v_info_str
             out_file.write('\n')
             out_file.write(VCF_DUMP_FIELDS_SEP.join([str(x) for x in out_str]))
     out_file.close()
