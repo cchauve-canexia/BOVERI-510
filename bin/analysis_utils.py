@@ -174,7 +174,7 @@ def dump_sample_vcf_file(run_id,
                 f"{feature}:{v_info[feature]}" for feature in FEATURES_SEQ
             ]
             source = VCF_DUMP_VALUES_SEP.join(v_info[SOURCE])
-            annotation = v_info['ANN']
+            annotation = VCF_DUMP_VALUES_SEP.join(v_info['ANN'])
             v_info_str = [
                 v_info['VAF'], source,
                 VCF_DUMP_VALUES_SEP.join(features_cov),
