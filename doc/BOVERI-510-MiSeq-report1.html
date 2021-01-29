@@ -13029,6 +13029,8 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
+}div#notebook-container{
+  padding: 6ex 12ex 8ex 12ex;
 }@media print {
   div.cell {
     display: block;
@@ -13074,16 +13076,14 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Analysis-of-indel-calls-in-MiSeq-runs">Analysis of indel calls in MiSeq runs<a class="anchor-link" href="#Analysis-of-indel-calls-in-MiSeq-runs">&#182;</a></h1><h3 id="Cedric-Chauve,-January-28,-2021.">Cedric Chauve, January 28, 2021.<a class="anchor-link" href="#Cedric-Chauve,-January-28,-2021.">&#182;</a></h3><p>This notebook provides a high-level analysis of the indels calls from <a href="https://github.com/contextual-genomics/indels-pipeline">https://github.com/contextual-genomics/indels-pipeline</a> on a set of 248 MiSeq runs.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Experiments-and-results">Experiments and results<a class="anchor-link" href="#Experiments-and-results">&#182;</a></h2><p>The experiment consisted in running the indels pipeline (branch BOVERI-448, January 26 2020) on the set of MiSeq runs listed in the file<br>
 <code>data/runs_indel_testing_18012021_MiSeq.csv</code><br>
@@ -13111,6 +13111,21 @@ and the corresponding log files are
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<style>.container { width:100% !important; }</style>
+</div>
+
+</div>
+
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
@@ -13146,8 +13161,7 @@ Number of samples:
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="General-statistics">General statistics<a class="anchor-link" href="#General-statistics">&#182;</a></h3>
 </div>
@@ -13176,8 +13190,7 @@ Number of samples:
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Distribution-by-VAF">Distribution by VAF<a class="anchor-link" href="#Distribution-by-VAF">&#182;</a></h3><p>We first look at the distribution of the number of calls per VAF (for individual calls) and mean VAF (for grouped calls).</p>
 
@@ -13223,8 +13236,7 @@ Number of indels calls, VAF &gt; 5%
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As expected, most indel calls have a low VAF.<br>
 Calls with a low VAF seem to co-occur more often in several samples, so are more likely to be false positives.
@@ -13266,8 +13278,7 @@ Deletions are the most common calls.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We now look at calls with a VAF below 1% and in (1%, 5%].</p>
 
@@ -13340,8 +13351,7 @@ Deletions are the most common calls.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Correlation-between-VAF-and-number-of-occurrences">Correlation between VAF and number of occurrences<a class="anchor-link" href="#Correlation-between-VAF-and-number-of-occurrences">&#182;</a></h3><p>We plot the VAF against the number of samples containing a variant</p>
 
@@ -13393,8 +13403,7 @@ Deletions are the most common calls.</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Groups-of-co-localized-calls">Groups of co-localized calls<a class="anchor-link" href="#Groups-of-co-localized-calls">&#182;</a></h3><p>We group together indel calls that are separated by at most 5 bases.</p>
 
