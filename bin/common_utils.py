@@ -23,8 +23,8 @@ VCF_DUMP_FIELDS_SEP = '\t'
 VCF_DUMP_VALUES_SEP = ','
 VCF_DUMP_EXT = '_dump.tsv'
 VCF_DUMP_HEADER = [
-    'sample', 'chr', 'pos', 'ref', 'alt', 'VAF', 'source_coverage',
-    'total_coverage', 'max_coverage', 'source', 'annotation'
+    'sample', 'chr', 'pos', 'ref', 'alt', 'VAF', 'source', 'features_cov',
+    'features_seq', 'annotation'
 ]
 
 
