@@ -19,12 +19,18 @@ AWS_CMD = 'AWS'
 RUN_SAMPLES = 'RUN.SAMPLES'
 
 # Dump files separators
-VCF_DUMP_FIELDS_SEP = '\t'
-VCF_DUMP_VALUES_SEP = ','
+DUMP_FIELDS_SEP = '\t'
+DUMP_VALUES_SEP = ','
+
+# VCF and algorithms dump files extensions and headers
 VCF_DUMP_EXT = '_dump.tsv'
 VCF_DUMP_HEADER = [
     'sample', 'chr', 'pos', 'ref', 'alt', 'VAF', 'source', 'features_cov',
     'features_seq', 'annotation'
+]
+ALG_DUMP_EXT = '_alignments_dump.tsv'
+ALG_DUMP_HEADER = [
+    'sample', 'chr', 'pos', 'ref', 'alt', 'source', 'alignments'
 ]
 
 
@@ -47,13 +53,13 @@ def get_files_in_s3(prefix, s3_bucket):
         return [obj['Key'] for obj in s3_objects['Contents']]
 
 
-def init_vcf_dump_file(dump_file):
+def init_dump_file(dump_file, header):
     """
     Create a dump_file with the dump header
     :param: dump_file (str): path to the dump file
     """
     out_dump = open(dump_file, 'w')
-    out_dump.write(VCF_DUMP_FIELDS_SEP.join(VCF_DUMP_HEADER))
+    out_dump.write(DUMP_FIELDS_SEP.join(header))
     out_dump.close()
 
 
@@ -69,11 +75,25 @@ def get_vcf_dump_file(run_id, prefix, v_type, init=True):
     dump_file = os.path.join(prefix, run_id,
                              f"{run_id}_{v_type}{VCF_DUMP_EXT}")
     if init:
-        init_vcf_dump_file(dump_file)
+        init_dump_file(dump_file, VCF_DUMP_HEADER)
     return dump_file
 
 
-def get_aggregated_dump_file(file_name, prefix, v_type, init=True):
+def get_alg_dump_file(run_id, prefix, init=True):
+    """
+    Returns the path to a variant dump file for a run
+    :param: run_id (str): run ID
+    :param: prefix (str): prefix of the path to output directory
+
+    :return: str: path to dump file
+    """
+    dump_file = os.path.join(prefix, run_id, f"{run_id}{ALG_DUMP_EXT}")
+    if init:
+        init_dump_file(dump_file, ALG_DUMP_HEADER)
+    return dump_file
+
+
+def get_aggregated_vcf_dump_file(file_name, prefix, v_type, init=True):
     """
     Returns the path to a variant dump file for all runs
     :param: file_name (str): file name prefix
@@ -84,7 +104,21 @@ def get_aggregated_dump_file(file_name, prefix, v_type, init=True):
     """
     dump_file = os.path.join(prefix, f"{file_name}_{v_type}{VCF_DUMP_EXT}")
     if init:
-        init_vcf_dump_file(dump_file)
+        init_dump_file(dump_file, VCF_DUMP_HEADER)
+    return dump_file
+
+
+def get_aggregated_alg_dump_file(file_name, prefix, init=True):
+    """
+    Returns the path to a alignments dump file for all runs
+    :param: file_name (str): file name prefix
+    :param: prefix (str): prefix of the path to output directory
+
+    :return: str: path to dump file
+    """
+    dump_file = os.path.join(prefix, f"{file_name}{ALG_DUMP_EXT}")
+    if init:
+        init_dump_file(dump_file, ALG_DUMP_HEADER)
     return dump_file
 
 

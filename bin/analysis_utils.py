@@ -5,17 +5,20 @@ Functions to analyze the results of a run of the indels pipeline on AWS
 
 # Standard imports
 import argparse
+import csv
 import os
+import shutil
 import subprocess
 import tarfile
+from collections import defaultdict
 
 # Third-party imports
 import vcf
 # Local imports
-from common_utils import (ERROR_NONE, INFO, VCF_DUMP_FIELDS_SEP,
-                          VCF_DUMP_HEADER, VCF_DUMP_VALUES_SEP, WARNING,
-                          get_files_in_s3, get_vcf_dump_file,
-                          read_input_log_file)
+from common_utils import (ALG_DUMP_HEADER, DUMP_FIELDS_SEP, DUMP_VALUES_SEP,
+                          ERROR_NONE, INFO, VCF_DUMP_HEADER, WARNING,
+                          get_alg_dump_file, get_files_in_s3,
+                          get_vcf_dump_file, read_input_log_file)
 from smart_open import open
 
 # Default S3 directory containing results
@@ -31,6 +34,7 @@ MAIN_FILE_SUFFIX = '_main.tar.gz'
 MAIN_LOG_FILE_SUFFIX = '_main.log'
 PRE_LOG_FILE_SUFFIX = '_preprocessing.log'
 FASTQ_FILES_SUFFIX = '_L001_annotated.fq.tar.gz'
+V_GRAPH_SUFFIX = '_variants_graph.txt'
 
 # Keys to differentiate indels and SNPs
 INDELS, SNPS = 'indels', 'snps'
@@ -43,7 +47,6 @@ CALLS_FILE_SUFFIX = {INDELS: INDELS_FILE_SUFFIX, SNPS: SNPS_FILE_SUFFIX}
 # AWS cp command
 AWS_CP = ['aws', 's3', 'cp']
 
-# Variant features to print: taken from indesl-pipeline/bin/feature_utils.py
 # Variant features to print: taken from indesl-pipeline/bin/feature_utils.py
 SOURCE_COV = 'SCOV'
 TOTAL_COV = 'TCOV'
@@ -78,10 +81,38 @@ WARNINGS_OUTPUT_SUFFIX = {
     'bin.variants_graph_utils': '_variants_graph.tsv'
 }
 
+# Amplicons manifests
+MANIFESTS = [
+    'CG001.v3.4_Amplicon_Manifest_Panel3.4.4_20170921.tsv',
+    'CG001v4.0_Amplicon_Manifest_Panel4.0.3_20181101.tsv',
+    'CG001v5.1_Amplicon_Manifest_Panel5.1.12_20200911.tsv'
+]
+MANIFESTS_DIR = 'assets'
+
+# Prefix of directory where temporary files are unzipped
+TMP_DIR_PREFIX = 'tmp'
+
+
+def get_amplicons_coords(manifests=MANIFESTS):
+    """
+    :param: manifests (list(str)): list of manifests files to consider
+    :return: dict(str, (str, int)): amplicon ID -> chr, start for all amplicons
+    in all manifests
+    """
+    amplicons_coords = {}
+    for manifest_file in manifests:
+        manifest_path = os.path.join(MANIFESTS_DIR, manifest_file)
+        with open(manifest_path) as manifest:
+            manifest_reader = csv.DictReader(manifest, delimiter='\t')
+            for row in manifest_reader:
+                amplicons_coords[row['Amplicon_ID']] = (row['Chr'],
+                                                        int(row['Start']))
+    return amplicons_coords
+
 
 def out_dir(run_id, prefix):
     """
-    Returns the path to the output directory for a run
+    Returns the path to the output directory for run run_id
     :param: run_id (str) run ID
     :param: prefix (str): prefix of the path
 
@@ -156,7 +187,7 @@ def dump_sample_vcf_file(run_id,
     """
     if not append:
         out_file = open(out_file, 'w')
-        out_file.write(VCF_DUMP_FIELDS_SEP.join(VCF_DUMP_HEADER))
+        out_file.write(DUMP_FIELDS_SEP.join(VCF_DUMP_HEADER))
     else:
         out_file = open(out_file, 'a')
     if os.stat(in_file).st_size == 0:
@@ -173,70 +204,152 @@ def dump_sample_vcf_file(run_id,
             features_seq = [
                 f"{feature}:{v_info[feature]}" for feature in FEATURES_SEQ
             ]
-            source = VCF_DUMP_VALUES_SEP.join(v_info[SOURCE])
-            annotation = VCF_DUMP_VALUES_SEP.join(v_info['ANN'])
+            source = DUMP_VALUES_SEP.join(v_info[SOURCE])
+            annotation = DUMP_VALUES_SEP.join(v_info['ANN'])
             v_info_str = [
                 v_info['VAF'], source,
-                VCF_DUMP_VALUES_SEP.join(features_cov),
-                VCF_DUMP_VALUES_SEP.join(features_seq), annotation
+                DUMP_VALUES_SEP.join(features_cov),
+                DUMP_VALUES_SEP.join(features_seq), annotation
             ]
             out_str = [sample_id] + record_str + v_info_str
             out_file.write('\n')
-            out_file.write(VCF_DUMP_FIELDS_SEP.join([str(x) for x in out_str]))
+            out_file.write(DUMP_FIELDS_SEP.join([str(x) for x in out_str]))
     out_file.close()
 
 
-def get_sample_vcf_file(run_id, sample_id, prefix, v_type):
+def get_sample_vcf_file(sample_id, prefix, v_type):
     """
     Returns the path to a VCF file for a given sample of a run
-    :param: run_id (str): run ID
     :param: sample_id (str): sample ID
     :param: prefix (str): prefix of the path to output directory
     :param: v_type (str): SNPS or INDELS
 
     :return: str: path to VCF file
     """
-    return os.path.join(prefix, run_id,
-                        f"{sample_id}{CALLS_FILE_SUFFIX[v_type]}")
+    return os.path.join(prefix, f"{sample_id}{CALLS_FILE_SUFFIX[v_type]}")
 
 
 def extract_vcf_files(run_id,
                       sample_id_list,
                       s3_bucket,
                       log_file,
+                      tmp_run_dir,
                       v_type=INDELS,
-                      prefix='.',
-                      to_dump=False,
-                      to_keep=True):
+                      prefix='.'):
     """
     Reads and optionally dump indels VCF files of run run_id.
     :param: run_id (str): ID of the run
     :param: sample_id_list (list(str)): list of sample ID
     :param: s3_bucket (str): s3 bucket where to fetch the results
     :param: log_file (opened file): log file
+    :param: tmp_run_dir (str): prefix of tmp dir to extract files
     :param: v_type (str): SNPS or INDELS
     :param: prefix (str): prefix of the output directory
-    :param: to_dump (bool): if True a dump file is created
-    :param: to_keep (bool): if True VCF file from the archive are not deleted
     """
     vcf_file_name = f"{run_id}{CALLS_FILE_SUFFIX_TGZ[v_type]}"
     vcf_file_path = os.path.join('s3://', s3_bucket, run_id, vcf_file_name)
     subprocess.call(AWS_CP + [vcf_file_path, '.'])
-    tarfile.open(vcf_file_name,
-                 'r:gz').extractall(path=out_dir(run_id, prefix))
-    if to_dump:
-        out_dump_file = get_vcf_dump_file(run_id, prefix, v_type, init=True)
-        for sample_id in sample_id_list:
-            in_vcf = get_sample_vcf_file(run_id, sample_id, prefix, v_type)
-            dump_sample_vcf_file(run_id,
-                                 sample_id,
-                                 in_vcf,
-                                 out_dump_file,
-                                 log_file,
-                                 append=True)
-            if not to_keep:
-                os.remove(in_vcf)
+    tarfile.open(vcf_file_name, 'r:gz').extractall(path=tmp_run_dir)
+    out_dump_file = get_vcf_dump_file(run_id, prefix, v_type, init=True)
+    for sample_id in sample_id_list:
+        in_vcf = get_sample_vcf_file(sample_id, tmp_run_dir, v_type)
+        dump_sample_vcf_file(run_id,
+                             sample_id,
+                             in_vcf,
+                             out_dump_file,
+                             log_file,
+                             append=True)
+        os.remove(in_vcf)
     os.remove(vcf_file_name)
+
+
+def extract_variants_from_dump_file(dump_file):
+    """
+    Exracts variant string and list of supporting amplicons from a dump file
+    :param: dump_file (str): path to variants dump file
+    :return: (list(str, str, list(str))): list of str version of variants
+    to consider and for each the sample and list of amplicons it appears in
+    """
+    variants = []
+    with open(dump_file) as variants_dump:
+        variants_reader = csv.DictReader(variants_dump,
+                                         delimiter=DUMP_FIELDS_SEP)
+        for row in variants_reader:
+            sample_id = row['sample']
+            v_str = f"{row['chr']}:{row['pos']}:{row['ref']}:{row['alt']}"
+            source = row['source'].split(DUMP_VALUES_SEP)
+            variants.append((sample_id, v_str, source))
+    return (variants)
+
+
+# Main files
+
+
+def extract_main_files(run_id,
+                       sample_id_list,
+                       s3_bucket,
+                       tmp_run_dir,
+                       prefix='.'):
+    """
+    Reads and optionally dump indels VCF files of run run_id.
+    :param: run_id (str): ID of the run
+    :param: sample_id_list (list(str)): list of sample ID
+    :param: s3_bucket (str): s3 bucket where to fetch the results
+    :param: tmp_run_dir (str): prefix of tmp dir to extract files
+    :param: prefix (str): prefix of the output directory
+    """
+    for sample_id in sample_id_list:
+        main_file_name = f"{sample_id}{MAIN_FILE_SUFFIX}"
+        main_file_path = os.path.join('s3://', s3_bucket, run_id,
+                                      main_file_name)
+        subprocess.call(AWS_CP + [main_file_path, '.'])
+        tarfile.open(main_file_name, 'r:gz').extractall(path=tmp_run_dir)
+        os.remove(main_file_name)
+
+
+# Alignments
+
+
+def extract_alignments(run_id, tmp_run_dir, dump_file, variants,
+                       amplicons_coords):
+    """
+    Associate to every variant in variants the alignments supporting it in all
+    amplicons it occurs into and write this into dump_file.
+    """
+    variants_split = defaultdict(list)
+    for (sample_id, v_str, source) in variants:
+        for amplicon_id in source:
+            variants_split[(sample_id, amplicon_id)].append(v_str)
+    out_dump = open(dump_file, 'w')
+    out_dump.write(DUMP_FIELDS_SEP.join(ALG_DUMP_HEADER))
+    for (sample_id, amplicon_id), v_str_list in variants_split.items():
+        amplicon_chr = amplicons_coords[amplicon_id][0]
+        amplicon_start = amplicons_coords[amplicon_id][1]
+        # Reading variants graph
+        v_graph_file = os.path.join(
+            tmp_run_dir, f"{sample_id}_{amplicon_id}{V_GRAPH_SUFFIX}")
+        v_graph_data = {}
+        v_graph = open(v_graph_file, 'r').readlines()
+        for variant in v_graph:
+            variant_data = variant.rstrip().split('\t')
+            v_str1 = variant_data[1].split(':')
+            v_start = amplicon_start + int(v_str1[2])
+            v_str = f"{amplicon_chr}:{v_start}:{v_str1[4]}:{v_str1[5]}"
+            alignments = variant_data[2]
+            v_graph_data[v_str] = alignments.replace('_', DUMP_VALUES_SEP)
+        for v_str in v_str_list:
+            v_str_split = v_str.split(':')
+            chr = v_str_split[0]
+            pos = v_str_split[1]
+            ref = v_str_split[2]
+            alt = v_str_split[3]
+            out_str = (
+                f"\n{sample_id}{DUMP_FIELDS_SEP}{chr}{DUMP_FIELDS_SEP}{pos}"
+                f"{DUMP_FIELDS_SEP}{ref}{DUMP_FIELDS_SEP}{alt}"
+                f"{DUMP_FIELDS_SEP}{amplicon_id}"
+                f"{DUMP_FIELDS_SEP}{v_graph_data[v_str]}")
+            out_dump.write(out_str)
+    out_dump.close()
 
 
 # Analysis of log files
@@ -366,11 +479,14 @@ if __name__ == "__main__":
     log_file_path = args.input_log_file.replace('_input.log', '_output.log')
     log_file = open(log_file_path, 'w')
 
+    amplicons_coords = get_amplicons_coords()
+
     (sample_id_lists,
      unprocessed_runs) = read_input_log_file(args.input_log_file)
 
+    os.makedirs(TMP_DIR_PREFIX, exist_ok=True)
     for (run_id, run_name), sample_id_list in sample_id_lists.items():
-        os.makedirs(out_dir(run_id, args.output_dir), exist_ok=True)
+        prefix = args.output_dir
         s3_files = get_files_in_s3(run_id, args.s3_bucket)
         if s3_files is None:
             log_file.write(f"{WARNING}:{run_id}\tno output\n")
@@ -383,20 +499,41 @@ if __name__ == "__main__":
             unprocessed_runs.append((run_id, run_name))
         else:
             log_file.write(f"{INFO}:{run_id}\t{ERROR_NONE}\n")
+            os.makedirs(out_dir(run_id, prefix), exist_ok=True)
+            tmp_run_dir = os.path.join(TMP_DIR_PREFIX, run_id)
+            os.makedirs(tmp_run_dir, exist_ok=True)
             # Extracting warnings
             extract_main_warnings(run_id,
                                   sample_id_list,
                                   args.s3_bucket,
-                                  prefix=args.output_dir)
+                                  prefix=prefix)
             # Extracting indels calls
             extract_vcf_files(run_id,
                               sample_id_list,
                               args.s3_bucket,
                               log_file,
+                              tmp_run_dir,
                               v_type=INDELS,
-                              prefix=args.output_dir,
-                              to_dump=True,
-                              to_keep=False)
+                              prefix=prefix)
+            # Extracting main files
+            extract_main_files(run_id,
+                               sample_id_list,
+                               args.s3_bucket,
+                               tmp_run_dir,
+                               prefix=prefix)
+            # Collecting variants
+            indels_dump_file = get_vcf_dump_file(run_id,
+                                                 prefix,
+                                                 INDELS,
+                                                 init=False)
+            indels = extract_variants_from_dump_file(indels_dump_file)
+            # Extracting alignments
+            alg_dump_file = get_alg_dump_file(run_id, prefix, init=False)
+            extract_alignments(run_id, tmp_run_dir, alg_dump_file, indels,
+                               amplicons_coords)
+            # Cleaning temporary directory
+            shutil.rmtree(tmp_run_dir)
+
     # Exporting the list of runs to reprocess
     _, log_file_name = os.path.split(log_file_path)
     unprocessed_file_path = os.path.join(
