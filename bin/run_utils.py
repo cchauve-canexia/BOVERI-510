@@ -193,10 +193,6 @@ if __name__ == "__main__":
     ARGS_AWS_DEF = ['-d', '--aws_def', 'AWS definition']
     # AWS queue
     ARGS_AWS_QUEUE = ['-q', '--aws_queue', 'AWS queue']
-    # Tracing
-    ARGS_TRACE = [
-        '-t', '--trace_path', 'path to directory containing trace files'
-    ]
 
     parser = argparse.ArgumentParser(description='Indels pipeline: run on AWS')
     parser.add_argument(ARGS_RUNS_FILE[0], type=str, help=ARGS_RUNS_FILE[2])
@@ -218,25 +214,7 @@ if __name__ == "__main__":
                         default=AWS_QUEUE,
                         type=str,
                         help=ARGS_AWS_QUEUE[2])
-    parser.add_argument(ARGS_TRACE[0],
-                        ARGS_TRACE[1],
-                        default='s3://cchauve-orchestration-ch/_trace',
-                        type=str,
-                        help=ARGS_TRACE[2])
     args = parser.parse_args()
-
-    def remove_s3_file_if_exists(file_path):
-        """
-        Removes a file from S3 if it exists
-        :param: filepath (str): full S3 path of the considered file
-        """
-        file_path_split = file_path.split('/')
-        s3_file_bucket = file_path_split[2]
-        s3_file_prefix = '/'.join(file_path_split[3:-1])
-        s3_files = get_files_in_s3(s3_file_prefix, s3_file_bucket)
-        s3_file_path = '/'.join(file_path.split('/')[3:])
-        if s3_file_path in s3_files:
-            subprocess.call(AWS_RM + [file_path])
 
     # Creating a log file located in the same directory than the YAML
     # configuration file and with the same name with .yaml replaced by .log
@@ -270,16 +248,6 @@ if __name__ == "__main__":
                     '\"--output_dir\"', f"\"s3://{args.s3_output}/\""
                 ]
             cmd_options += ['\"-resume\"']
-            if args.trace_path is not None:
-                # Creating timeline report and trace file
-                prefix = args.trace_path
-                timeline_file = f"{prefix}/{run_id}_timeline_report.html"
-                cmd_options += ['\"-with-timeline\"', timeline_file]
-                trace_file = f"{prefix}/{run_id}_trace.txt"
-                cmd_options += ['\"-with-trace\"', trace_file]
-                # Removing report files if already there
-                remove_s3_file_if_exists(timeline_file)
-                remove_s3_file_if_exists(trace_file)
             aws_cmd += [','.join(cmd_options)]
             aws_cmd += ['--region', 'ca-central-1']
             log_file.write(f"{INFO}:{run_id}\t{ERROR_NONE}\n")
