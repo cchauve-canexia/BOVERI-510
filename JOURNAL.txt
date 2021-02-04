@@ -109,5 +109,34 @@ INFO    indels groups in misc samples:    37
     results/runs_indel_testing_18012021_MiSeq/DNA_grouped_samples_indels_dump.tsv \
     results/runs_indel_testing_18012021_MiSeq/DNA_grouped_samples_with_aliquots_indels_dump.tsv
 
-# NextSeq test with amplicon manifest 5
-> ./bin/run_utils.py data/200831_NB551381_0081_AHFY5KAFX2.csv ch-testdata BOVERI-448 -t s3://cchauve-orchestration-ch/_trace
+# January 30, 2021
+
+> ./bin/extract_alignments.py log/runs_indel_testing_18012021_MiSeq_input.log results/runs_indel_testing_18012021_MiSeq
+> ./bin/extract_alignments.py log/runs_indel_testing_18012021_MiSeq_failed_input.log results/runs_indel_testing_18012021_MiSeq
+> ./bin/extract_alignments.py log/runs_indel_testing_18012021_MiSeq_failed_failed_input.log results/runs_indel_testing_18012021_MiSeq
+> ./bin/extract_alignments.py log/runs_indel_testing_18012021_MiSeq_failed_empty_input.log results/runs_indel_testing_18012021_MiSeq
+> ./bin/aggregate_alignments.py results/runs_indel_testing_18012021_MiSeq
+
+# Code to extract alignments was added to bin/analysis_utils.py
+# Code to aggregate alignments was added to bin/aggregate_dump_files.py
+
+# February 3, 2021, NextSeq runs
+> ./bin/run_utils.py data/runs_indel_testing_02022021_NextSeq.csv ch-testdata BOVERI-448
+
+
+# February 4th, 2021
+> ./bin/analysis_utils.py log/runs_indel_testing_02022021_NextSeq_input.log results/runs_indel_testing_02022021_NextSeq
+
+> ./bin/run_utils.py data/runs_indel_testing_02022021_NextSeq_failed.csv ch-testdata BOVERI-448
+
+# February 5th, 2021
+> ./bin/analysis_utils.py log/runs_indel_testing_02022021_NextSeq_failed_input.log results/runs_indel_testing_02022021_NextSeq
+
+> ./bin/aggregate_dump_files.py results/runs_indel_testing_02022021_NextSeq
+INFO    indels calls in DNA samples:    1745
+INFO    indels calls in ctrl samples:   413
+INFO    indels calls in misc samples:   0
+INFO    indels groups in DNA samples:   184
+INFO    indels groups in ctrl samples:  112
+INFO    indels groups in misc samples:  0
+
