@@ -105,9 +105,6 @@ INFO    indels groups in DNA samples:     662
 INFO    indels groups in ctrl samples:    40
 INFO    indels groups in misc samples:    37
 
-> ./bin/add_aliquots.py \
-    results/runs_indel_testing_18012021_MiSeq/DNA_grouped_samples_indels_dump.tsv \
-    results/runs_indel_testing_18012021_MiSeq/DNA_grouped_samples_with_aliquots_indels_dump.tsv
 
 # January 30, 2021
 
