@@ -137,3 +137,7 @@ INFO    indels groups in DNA samples:   184
 INFO    indels groups in ctrl samples:  112
 INFO    indels groups in misc samples:  0
 
+
+./bin/run_utils.py data/BOVERI-532.csv  ch-testdata BOVERI-448
+
+./bin/analysis_utils.py log/BOVERI-532_input.log results/BOVERI-532/
