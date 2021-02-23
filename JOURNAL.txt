@@ -165,3 +165,23 @@ INFO    indels groups in DNA samples:   78
 INFO    indels groups in ctrl samples:  11
 INFO    indels groups in misc samples:  0
 
+> ./bin/analysis_utils.py log/BOVERI-555_v5_input.log results/BOVERI-555_v5
+
+> ./bin/run_utils.py data/BOVERI-555_v5_failed.csv ch-testdata experiments
+
+# February 212, 2021
+Re-running the runs of BOVERI-568
+
+> ./bin/run_utils.py data/BOVERI-568.csv  ch-testdata experiments
+
+> ./bin/analysis_utils.py log/BOVERI-568_input.log results/BOVERI-568
+
+> ./bin/analysis_utils.py log/BOVERI-568_input.log results/BOVERI-568
+(indels36) cchauve@ip-10-11-1-103:BOVERI-510 > ./bin/aggregate_dump_files.py results/BOVERI-568
+INFO    indels calls in DNA samples:    237
+INFO    indels calls in ctrl samples:   24
+INFO    indels calls in misc samples:   0
+INFO    indels groups in DNA samples:   16
+INFO    indels groups in ctrl samples:  6
+INFO    indels groups in misc samples:  0
+
