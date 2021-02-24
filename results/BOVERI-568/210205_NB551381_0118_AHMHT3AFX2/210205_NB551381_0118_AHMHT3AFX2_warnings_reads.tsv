@@ -6,7 +6,9 @@ DNA-25524-CG001Qv51Next032-11_S11.CG001v3.4.4	average quality of merged reads ba
 DNA-25524-CG001Qv51Next032-11_S11.CG001v3.4.4	nb/ratio of ambiguous positions:150148 0.0446
 DNA-25524-CG001Qv51Next032-11_S11.CG001v3.4.103	ratio of unmerged reads:0.06
 DNA-25524-CG001Qv51Next032-11_S11.CG001v3.4.103	nb/ratio of ambiguous positions:76185 0.02883
+DNA-25524-CG001Qv51Next032-11_S11.CG001v3.4.130	ratio of unmerged reads:0.73
 DNA-25524-CG001Qv51Next032-11_S11.CG001v5.0.91	no read
+DNA-25524-CG001Qv51Next032-11_S11.CG001v5.0.67	ratio of unmerged reads:0.06
 DNA-25524-CG001Qv51Next032-18_S18.CG001v3.4.89	nb/ratio of ambiguous positions:76913 0.01739
 DNA-25524-CG001Qv51Next032-18_S18.CG001v3.4.96	ratio of unmerged reads:0.07
 DNA-25524-CG001Qv51Next032-18_S18.CG001v3.4.96	nb/ratio of ambiguous positions:144601 0.0135
@@ -15,19 +17,22 @@ DNA-25524-CG001Qv51Next032-18_S18.CG001v3.4.4	average quality of merged reads ba
 DNA-25524-CG001Qv51Next032-18_S18.CG001v3.4.4	nb/ratio of ambiguous positions:136333 0.0423
 DNA-25524-CG001Qv51Next032-18_S18.CG001v3.4.103	ratio of unmerged reads:0.06
 DNA-25524-CG001Qv51Next032-18_S18.CG001v3.4.103	nb/ratio of ambiguous positions:66484 0.02558
-DNA-25524-CG001Qv51Next032-18_S18.CG001v3.4.130	no read
+DNA-25524-CG001Qv51Next032-18_S18.CG001v3.4.130	ratio of unmerged reads:0.83
 DNA-25524-CG001Qv51Next032-18_S18.CG001v5.0.91	no read
+DNA-25524-CG001Qv51Next032-18_S18.CG001v5.0.67	ratio of unmerged reads:0.06
 DNA-25524-CG001Qv51Next032-4_S4.CG001v3.4.89	nb/ratio of ambiguous positions:71535 0.01676
 DNA-25524-CG001Qv51Next032-4_S4.CG001v3.4.96	ratio of unmerged reads:0.07
 DNA-25524-CG001Qv51Next032-4_S4.CG001v3.4.96	nb/ratio of ambiguous positions:139599 0.0129
 DNA-25524-CG001Qv51Next032-4_S4.CG001v3.4.4	ratio of unmerged reads:0.1
 DNA-25524-CG001Qv51Next032-4_S4.CG001v3.4.4	average quality of merged reads bases:29.02
-DNA-25524-CG001Qv51Next032-4_S4.CG001v3.4.4	nb/ratio of ambiguous positions:141246 0.0448
+DNA-25524-CG001Qv51Next032-4_S4.CG001v3.4.4	nb/ratio of ambiguous positions:141248 0.0448
 DNA-25524-CG001Qv51Next032-4_S4.CG001v3.4.103	ratio of unmerged reads:0.06
 DNA-25524-CG001Qv51Next032-4_S4.CG001v3.4.103	nb/ratio of ambiguous positions:70026 0.03005
-DNA-25524-CG001Qv51Next032-4_S4.CG001v3.4.130	no read
+DNA-25524-CG001Qv51Next032-4_S4.CG001v3.4.130	ratio of unmerged reads:0.58
 DNA-25524-CG001Qv51Next032-4_S4.CG001v5.0.91	no read
-DNA-26519-CG001Qv51Next032-10_S10.CG001v3.4.89	nb/ratio of ambiguous positions:74499 0.01562
+DNA-25524-CG001Qv51Next032-4_S4.CG001v5.0.62	ratio of unmerged reads:0.06
+DNA-25524-CG001Qv51Next032-4_S4.CG001v5.0.67	ratio of unmerged reads:0.09
+DNA-26519-CG001Qv51Next032-10_S10.CG001v3.4.89	nb/ratio of ambiguous positions:74499 0.01561
 DNA-26519-CG001Qv51Next032-10_S10.CG001v3.4.96	ratio of unmerged reads:0.06
 DNA-26519-CG001Qv51Next032-10_S10.CG001v3.4.4	ratio of unmerged reads:0.09
 DNA-26519-CG001Qv51Next032-10_S10.CG001v3.4.4	average quality of merged reads bases:29.18
@@ -64,7 +69,7 @@ DNA-27489-CG001Qv51Next032-19_S19.CG001v3.4.103	nb/ratio of ambiguous positions:
 DNA-27489-CG001Qv51Next032-19_S19.CG001v5.0.91	no read
 DNA-27489-CG001Qv51Next032-5_S5.CG001v3.4.89	nb/ratio of ambiguous positions:83125 0.01692
 DNA-27489-CG001Qv51Next032-5_S5.CG001v3.4.96	ratio of unmerged reads:0.06
-DNA-27489-CG001Qv51Next032-5_S5.CG001v3.4.96	nb/ratio of ambiguous positions:87490 0.01004
+DNA-27489-CG001Qv51Next032-5_S5.CG001v3.4.96	nb/ratio of ambiguous positions:87491 0.01004
 DNA-27489-CG001Qv51Next032-5_S5.CG001v3.4.4	ratio of unmerged reads:0.1
 DNA-27489-CG001Qv51Next032-5_S5.CG001v3.4.4	average quality of merged reads bases:29.09
 DNA-27489-CG001Qv51Next032-5_S5.CG001v3.4.4	nb/ratio of ambiguous positions:145064 0.04321
@@ -113,7 +118,8 @@ DNA-27491-CG001Qv51Next032-7_S7.CG001v3.4.4	nb/ratio of ambiguous positions:1894
 DNA-27491-CG001Qv51Next032-7_S7.CG001v3.4.103	ratio of unmerged reads:0.06
 DNA-27491-CG001Qv51Next032-7_S7.CG001v3.4.103	nb/ratio of ambiguous positions:87974 0.02958
 DNA-27491-CG001Qv51Next032-7_S7.CG001v5.0.91	no read
-DNA-27492-CG001Qv51Next032-15_S15.CG001v3.4.89	nb/ratio of ambiguous positions:72034 0.0155
+DNA-27491-CG001Qv51Next032-7_S7.CG001v5.0.67	ratio of unmerged reads:0.06
+DNA-27492-CG001Qv51Next032-15_S15.CG001v3.4.89	nb/ratio of ambiguous positions:72036 0.0155
 DNA-27492-CG001Qv51Next032-15_S15.CG001v3.4.96	nb/ratio of ambiguous positions:91628 0.01002
 DNA-27492-CG001Qv51Next032-15_S15.CG001v3.4.4	ratio of unmerged reads:0.11
 DNA-27492-CG001Qv51Next032-15_S15.CG001v3.4.4	average quality of merged reads bases:28.91
@@ -125,7 +131,7 @@ DNA-27492-CG001Qv51Next032-22_S22.CG001v3.4.4	ratio of unmerged reads:0.09
 DNA-27492-CG001Qv51Next032-22_S22.CG001v3.4.4	average quality of merged reads bases:29.06
 DNA-27492-CG001Qv51Next032-22_S22.CG001v3.4.4	nb/ratio of ambiguous positions:152261 0.0446
 DNA-27492-CG001Qv51Next032-22_S22.CG001v3.4.103	ratio of unmerged reads:0.06
-DNA-27492-CG001Qv51Next032-22_S22.CG001v3.4.103	nb/ratio of ambiguous positions:112679 0.02953
+DNA-27492-CG001Qv51Next032-22_S22.CG001v3.4.103	nb/ratio of ambiguous positions:112679 0.02952
 DNA-27492-CG001Qv51Next032-22_S22.CG001v5.0.91	no read
 DNA-27492-CG001Qv51Next032-8_S8.CG001v3.4.89	nb/ratio of ambiguous positions:88410 0.01681
 DNA-27492-CG001Qv51Next032-8_S8.CG001v3.4.4	ratio of unmerged reads:0.09
@@ -133,6 +139,7 @@ DNA-27492-CG001Qv51Next032-8_S8.CG001v3.4.4	average quality of merged reads base
 DNA-27492-CG001Qv51Next032-8_S8.CG001v3.4.4	nb/ratio of ambiguous positions:170237 0.04303
 DNA-27492-CG001Qv51Next032-8_S8.CG001v3.4.103	nb/ratio of ambiguous positions:82946 0.02878
 DNA-27492-CG001Qv51Next032-8_S8.CG001v5.0.91	no read
+DNA-27492-CG001Qv51Next032-8_S8.CG001v5.0.67	ratio of unmerged reads:0.07
 DNA-27493-CG001Qv51Next032-16_S16.CG001v3.4.89	nb/ratio of ambiguous positions:84932 0.01757
 DNA-27493-CG001Qv51Next032-16_S16.CG001v3.4.96	ratio of unmerged reads:0.06
 DNA-27493-CG001Qv51Next032-16_S16.CG001v3.4.4	ratio of unmerged reads:0.09
@@ -164,7 +171,7 @@ NF-CG001Qv51Next032-3_S3.CG001v3.4.4	average quality of merged reads bases:29.17
 NF-CG001Qv51Next032-3_S3.CG001v3.4.4	nb/ratio of ambiguous positions:175932 0.04234
 NF-CG001Qv51Next032-3_S3.CG001v3.4.103	ratio of unmerged reads:0.06
 NF-CG001Qv51Next032-3_S3.CG001v3.4.103	nb/ratio of ambiguous positions:92805 0.02876
-NF-CG001Qv51Next032-3_S3.CG001v3.4.130	no read
+NF-CG001Qv51Next032-3_S3.CG001v3.4.130	ratio of unmerged reads:0.67
 NF-CG001Qv51Next032-3_S3.CG001v5.0.91	no read
 QMRS-CG001Qv51Next032-2_S2.CG001v3.4.89	nb/ratio of ambiguous positions:61562 0.01957
 QMRS-CG001Qv51Next032-2_S2.CG001v3.4.96	ratio of unmerged reads:0.06
@@ -174,5 +181,5 @@ QMRS-CG001Qv51Next032-2_S2.CG001v3.4.4	average quality of merged reads bases:29.
 QMRS-CG001Qv51Next032-2_S2.CG001v3.4.4	nb/ratio of ambiguous positions:175115 0.04399
 QMRS-CG001Qv51Next032-2_S2.CG001v3.4.103	ratio of unmerged reads:0.1
 QMRS-CG001Qv51Next032-2_S2.CG001v3.4.103	nb/ratio of ambiguous positions:83431 0.0321
-QMRS-CG001Qv51Next032-2_S2.CG001v3.4.130	no read
+QMRS-CG001Qv51Next032-2_S2.CG001v3.4.130	ratio of unmerged reads:1.0
 QMRS-CG001Qv51Next032-2_S2.CG001v5.0.91	no read
